@@ -180,7 +180,6 @@ height: 2em;
 }
 #page6{
 	background-color:skyblue;
-	margin:0px 93px 0px 93px;
 	border-radius:5px;
 	padding-bottom:20px;
 }
@@ -190,10 +189,13 @@ height: 2em;
 	padding-top:27px;
 }
 #page6 p{
-	margin-left:140px;
+	margin-left:34px;
 }
 #page6 input{
-	margin-left:160px;
+	margin-left:60px;
+}
+#page6 span{
+	margin-left:80px;
 }
 #page7{
 	background-color:skyblue;
