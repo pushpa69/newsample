@@ -1,10 +1,6 @@
-<html>
-	<head>	
-		<link rel="stylesheet" type="text/css" href="css/mystyle.css"></link>
-		<link rel="stylesheet" type="text/css" href="css/reset.css"></link>
-	</head>
-		<body>
+	<div class="wrapper">
 			<?php include("menu.php");?>
+		<div class="container">
 			<div id="page7">
 				<div>
 					<h1>RESULTS AND RECOMMENDATIONS.</h1><br>
@@ -30,7 +26,8 @@
 			<div style="text-align:left;margin-left:20px;">
 				<a href="Stage3CMS.php"><button>Back</button></a>
 			</div>
-		</body>
+			<div class="push"></div>
+		</div>
 		<?php include("footer.php");?>
-		
+	</div>	
 </html>
