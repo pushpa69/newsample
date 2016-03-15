@@ -1,6 +1,6 @@
 	<div class="wrapper">
 			<?php include("menu.php");?>
-			<div class="container">
+		<div class="container">
 			<div id="page5">
 				<div>
 					<h1>CLOUD PREPARATION STAGE: Focuses on preparation of enterprise for cloud migration.</h1><br>
@@ -135,9 +135,11 @@
 			<div style="text-align:right;margin-right:20px;">
 			<a href="Stage3CMS.php"><button onclick="return validate();">Next</button></a>
 			</div>
-
-			
-			<script language="javascript">
+		</div>	
+		<div class="push"></div>			
+	</div>	<br>		
+	<?php include("footer.php");?>		
+<script language="javascript">
 			function validate()
 			{
 				var chks = document.getElementsByTagName('input');
@@ -158,7 +160,4 @@
 				}
 			return true;
 			}
-			</script>
-		</body>
-		<?php include("footer.php");?>
-</html>
+</script>
