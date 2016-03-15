@@ -30,7 +30,7 @@
 			<div style="text-align:right;margin-right:20px;">
 			<a href="ParticpantInfo.php"><button>Next</button></a>
 			</div>	
-				<h1></h1>
+				<h1>hello</h1>
 		</body>
 		<?php include("footer.php");?>	 
 </html>
