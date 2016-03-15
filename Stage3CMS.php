@@ -6,7 +6,7 @@
 					<h1>CLOUD MIGRATION STAGE: Focuses on migration.</h1><br>
 				</div>
 				<div>
-					<form>
+					<form action="" method="post" name="myform" onsubmit="return validate();">
 						<div>
 							<p>1. Cloud service provider and contract: Attributes to look for CSP selection and negotiating cloud contracts</p><br>
 							<input type="checkbox" id="" name="" value="">Assure that CSP is transparent in pricing when it comes to subscriptions, pay as you go models, <span>upgrades, maintenance, exit cost and any other liabilities.</span></input><br>
@@ -37,9 +37,42 @@
 			<a href="Stage2CPS.php"><button>Back</button></a>
 			</div>
 			<div style="text-align:right;margin-right:20px;">
-			<a href="ConfirmationFinish.php"><button>Next</button></a>
+			<a href="ConfirmationFinish.php"><button onclick="return validate()">Next</button></a>
 			</div>
+<<<<<<< .mine
+			
+			<script language="javascript">
+			function validate()
+			{
+				var chks = document.getElementsByTagName('input');
+				var hasChecked = false;
+			for (var i = 0; i < chks.length; i++)
+			{
+				if (chks[i].checked)
+				{
+				hasChecked = true;
+				
+				break;
+				}
+				
+			}
+				if (hasChecked == false)
+				{
+				alert("Please answer at least one question.");
+				return false;
+				}
+			return true;
+			window.location.href = 'http://localhost/salford/trunk/ConfirmationFinish.php';
+			}
+			</script>
+		</body>
+		<?php include("footer.php");?>
+</html>||||||| .r7
+		</body>
+		<?php include("footer.php");?>
+</html>=======
 		<div class="push"></div>
 		</div>
 	</div>	
 	<?php include("footer.php");?>
+>>>>>>> .r25
