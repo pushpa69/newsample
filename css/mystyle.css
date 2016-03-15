@@ -47,14 +47,18 @@ body{
 	background-color:palegreen;
 	color:green;
 }
-#footer {
-	background-color:cadetblue;
+#footer{
+	background-color:cadetblue;	
+	text-align:center;
     margin:0 auto;
-    width:834px;
+    width: 1376px;
+    padding: 17px 0px 17px 0px;
     height:auto;
     overflow:hidden;
-    position: fixed;
+    position: inherit;
     bottom: 0px;
+}
+	
 }
 #page1 img{	
 	margin:-53px 0px -36px 326px;
