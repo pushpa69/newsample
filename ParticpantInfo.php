@@ -26,12 +26,12 @@
 					<div style="margin:17px 0px 0px 340px;">
 						<input type="submit" id="button" onclick="" value="submit">
 					</div>					
-				</form>
-			</div>
-			<div>
-				<a href="index.php" style="float:left;margin-left:20px;"><button>Back</button></a>
-				<a href="ProposedFramework.php" style="float:right;margin-left:20px;"><button>Next</button></a>
-			</div>
+				</form>				
+			</div><br>			
+		</div>
+		<div>
+			<a href="index.php" style="float:left;margin-left:20px;"><button>Back</button></a>
+			<a href="ProposedFramework.php" style="float:right;margin-left:20px;"><button>Next</button></a>
 		</div>
 			<div class="push"></div>
 	</div><br>	
