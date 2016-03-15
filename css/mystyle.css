@@ -76,19 +76,19 @@ height: 2em;
 	margin:-53px 0px -36px 326px;
 }
 #page1 h2{
-	padding:1px 30px 16px 92px;
-	margin:-24px 4px 12px 429px;
+	margin-left:207px;
+	margin-top:-50px;
 }
-#login{
-	
+#pagelogo img{
+	margin-top:-56px;
 }
 #login form{
-		margin:0 auto;
-		width:263px;
+		width:304px;
 		padding:50px 63px 43px 97px;
 		background-color:skyblue;
 		border-radius:10px 10px 10px 10px;
-		
+		margin-top:56px;
+		margin-left:208px;
 }
 #pwd{
 		margin-left:10px;
@@ -129,8 +129,8 @@ height: 2em;
 }
 #page4{
 	background-color: skyblue;
-    margin-left: 224px;
-    margin-right: 275px;
+    margin-left: 0px;
+    margin-right: 0px;
 	padding: 19px 0px 3px 0px ;
 	border-radius:5px;
 	margin-top:-29px;
@@ -180,7 +180,7 @@ height: 2em;
 }
 #page6{
 	background-color:skyblue;
-	margin:0px 93px 0px 93px;
+	margin:0px;
 	border-radius:5px;
 	padding-bottom:20px;
 }
@@ -190,19 +190,19 @@ height: 2em;
 	padding-top:27px;
 }
 #page6 p{
-	margin-left:140px;
+	margin-left:21px;
 }
 #page6 input{
-	margin-left:160px;
+	margin-left:56px;
 }
 #page6 span{
-	margin-left:180px;
+	margin-left:79px;
 }
 #page7{
 	background-color:skyblue;
-	margin:0px 293px 0px 293px;
+	margin:0px;
 	border-radius:5px;
-	padding-bottom:20px;
+	
 }
 #page7 h1{
 	font-size:20px;
