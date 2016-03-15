@@ -11,7 +11,7 @@ height: 100%;
 margin: 0 auto -2em;
 }
 .footer, .push {
-height: 4em;
+height: 2em;
 }
 .active{
 	background:palegreen !important;
@@ -194,6 +194,9 @@ height: 4em;
 }
 #page6 input{
 	margin-left:160px;
+}
+#page6 span{
+	margin-left:180px;
 }
 #page7{
 	background-color:skyblue;
