@@ -1,19 +1,19 @@
 <?php 
 ini_set('display_errors', 'off');
-	$pageactive = $_SERVER['REQUEST_URI'];	
-	if($pageactive == '/vijay/project3/index.php'){
+	$pageactive = $_SERVER['REQUEST_URI'];
+	if($pageactive == '/salford/trunk/index.php'){
 		$home = active;
-	}elseif ($pageactive == '/vijay/project3/ParticpantInfo.php'){
+	}elseif ($pageactive == '/salford/trunk/ParticpantInfo.php'){
 		$ParticpantInfo = active;
-	}elseif ($pageactive == '/vijay/project3/ProposedFramework.php'){
+	}elseif ($pageactive == '/salford/trunk/ProposedFramework.php'){
 		$ProposedFramework = active;
-	}elseif ($pageactive == '/vijay/project3/Stage1CRS.php'){
+	}elseif ($pageactive == '/salford/trunk/Stage1CRS.php'){
 		$Stage1CRS = active;
-	}elseif ($pageactive == '/vijay/project3/Stage2CPS.php'){
+	}elseif ($pageactive == '/salford/trunk/Stage2CPS.php'){
 		$Stage2CPS = active;
-	}elseif ($pageactive == '/vijay/project3/Stage3CMS.php'){
+	}elseif ($pageactive == '/salford/trunk/Stage3CMS.php'){
 		$Stage3CMS = active;
-	}elseif($pageactive == '/vijay/project3/ConfirmationFinish.php'){
+	}elseif($pageactive == '/salford/trunk/ConfirmationFinish.php'){
 		$ConfirmationFinish = active;
 	}
 ?>
@@ -24,6 +24,7 @@ ini_set('display_errors', 'off');
 		<link rel="stylesheet" type="text/css" href="css/reset.css"></link>
 		<link rel="stylesheet" href="css/hover.css" media="all"></link>
 	</head>
+	<title>Cloud Framework Tool</title>
 		<body>
 			<div id="header">
 				<div id="logo">
