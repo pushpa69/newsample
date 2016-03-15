@@ -71,17 +71,17 @@ height: 2em;
 	
 }
 #page1 img{	
-	margin:-53px 0px -36px 326px;
+	margin:-53px 0px -36px 0px;
 }
 #page1 h2{
 	padding:1px 30px 16px 92px;
-	margin:-24px 4px 12px 429px;
+	margin:-24px 4px 12px 110px;
 }
 #login{
 	
 }
 #login form{
-		margin-left:516px;
+		margin-left:268px;
 		margin-right:250px;
 		width:263px;
 		padding:50px 63px 43px 97px;
@@ -197,9 +197,7 @@ height: 2em;
 }
 #page7{
 	background-color:skyblue;
-	margin:0px 293px 0px 293px;
 	border-radius:5px;
-	padding-bottom:20px;
 }
 #page7 h1{
 	font-size:20px;
