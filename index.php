@@ -19,13 +19,24 @@
 							<label>Password:</label>
 							<input type="password" id="pwd" name="pwd" value=""  onblur="myfunction()"/><br><br>
 						</div>
-						<div style="margin:17px 0px 0px 166px;">
-							<input type="submit" id="button" onclick="" value="sign in">
+						<div style="margin:17px 0px 0px 166px;" class="btn">
+							<input type="submit" id="button" 
+							onclick="" value="sign in"/>
 						</div>
 					</form>
 				</div>
+<<<<<<< .mine
+			</div>			
+			<div style="float:right;margin-right:400px;margin-top:60px;">
+			<a href="ParticpantInfo.php"><button >Next</button></a>
+||||||| .r11
+			</div>			
+			<div style="text-align:right;margin-right:20px;">
+			<a href="ParticpantInfo.php"><button>Next</button></a>
+=======
 				<div style="text-align:right;margin-right:20px;">
 			<a href="ParticpantInfo.php"><button>Next</button></a>
+>>>>>>> .r28
 			</div>	
 			</div>	
 	</div>	
