@@ -50,11 +50,13 @@
 					</form>
 				</div>
 			</div>
-			<div style="text-align:left;margin-left:20px;">
+			<div class="foot">
+			<div class="nextback">
 			<a href="ProposedFramework.php"><button>Back</button></a>
 			</div>
-			<div style="text-align:right;margin-right:20px;">
+			<div class="nextback1">
 			<a href="Stage2CPS.php"><button>Next</button></a>
+			</div>
 			</div>
 			<script>
 			function validate()
