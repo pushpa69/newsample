@@ -93,7 +93,7 @@ height: 2em;
 		margin-left:10px;
 }
 #page2{
-	width:400px;
+	width:540px;
 	background-color: skyblue;
 	border-radius: 10px;
 	float:left;
@@ -109,7 +109,7 @@ height: 2em;
 	width:492px;
 }
 #page2 label{
-	width:250px;
+	width:300px;
 	float:left;
 	margin-top:26px;
 }
