@@ -11,7 +11,7 @@ height: 100%;
 margin: 0 auto -2em;
 }
 .footer, .push {
-height: 4em;
+height: 2em;
 }
 .container{
 	width:1024px;
@@ -161,7 +161,7 @@ height: 4em;
 } 
 #page5{
 	background-color:skyblue;
-	margin:0px 93px 0px 93px;
+	
 	border-radius:5px;
 }
 #page5 h1{
