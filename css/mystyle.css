@@ -78,10 +78,11 @@ body{
 }
 #page2{
 	width:400px;
-	margin:0 auto;
 	background-color: skyblue;
-    padding: 20px 114px 215px 87px;
 	border-radius: 10px;
+	float:left;
+	padding:24px 150px 45px 90px;
+	margin-left:176px;
 }
 #page2 form{
 	
@@ -89,7 +90,7 @@ body{
 #page2 h2{
 	text-align:center;
 	font-size:23px;
-	width:490px;
+	width:492px;
 }
 #page2 label{
 	width:250px;
