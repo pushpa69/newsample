@@ -1,9 +1,6 @@
-<html>
-	<head>	
-		
-	</head>
-		<body>
+	<div class="wrapper">
 			<?php include("menu.php");?>
+			<div class="container">
 			<div id="page5">
 				<div>
 					<h1>CLOUD PREPARATION STAGE: Focuses on preparation of enterprise for cloud migration.</h1><br>
@@ -133,11 +130,12 @@
 				</div>				
 			</div>
 			<div style="text-align:left;margin-left:20px;">
-			<a href="Stage1CRS.php"><button>Back</button></a>
+				<a href="Stage1CRS.php"><button>Back</button></a>
 			</div>
 			<div style="text-align:right;margin-right:20px;">
-			<a href="Stage3CMS.php"><button>Next</button></a>
+				<a href="Stage3CMS.php"><button>Next</button></a>
 			</div>
-		</body>
-		<?php include("footer.php");?>
-</html>
+			<div class="push"></div>
+	</div>
+	</div>
+	<?php include("footer.php");?>
