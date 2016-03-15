@@ -1,7 +1,13 @@
-
+<html>
+	<head>	
+		<link rel="stylesheet" type="text/css" href="css/mystyle.css"></link>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"></link>
+		<link rel="stylesheet" href="css/hover.css" media="all"></link>
+	</head>
 		<body>
-			<?php include("menu.php");?>
-			<div class="container">
+			<?php 
+			include("menu.php");		
+			?>
 			<div id="page2">
 				<form>
 					<div>
@@ -27,21 +33,13 @@
 						<input type="submit" id="button" onclick="" value="submit">
 					</div>					
 				</form>
-					<div style="text-align:left;margin-left:20px;">
-						<a href="index.php"><button>Back</button></a>
-					</div>
-					<div style="text-align:right;margin-right:20px;">
-						<a href="ProposedFramework.php"><button>Next</button></a>
-					</div>
-					</div>
-				<div style="text-align:left;margin-left:20px;">
-					<a href="index.php"><button>Back</button></a>
-				</div>
-				<div style="text-align:right;margin-right:20px;">
-					<a href="ProposedFramework.php"><button>Next</button></a>
 			</div>
-			<div class="push"></div>
-			</div>	
-			<?php include("footer.php");?>
+			<div style="text-align:left;margin-left:20px;">
+			<a href="index.php"><button>Back</button></a>
+			</div>
+			<div style="text-align:right;margin-right:20px;">
+			<a href="ProposedFramework.php"><button>Next</button></a>
+			</div>
 		</body>
+		<?php include("footer.php");?>
 </html>
