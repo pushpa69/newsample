@@ -1,6 +1,4 @@
-
-
-	<body style="background-color:FloralWhite">
+<body style="background-color:FloralWhite">
 	<div class="wrapper">
 		<?php include("menu.php");?>
 		<div class="container">
@@ -24,53 +22,41 @@
 							onclick="" value="sign in"/>
 						</div>
 					</form>
-				</div>
-<<<<<<< .mine
+				</div><br>
+				<div>
+					<a href="ParticpantInfo.php" style="float:right;margin-right:20px;"><button>Next</button></a>
+				</div>	
 			</div>			
-			<div style="float:right;margin-right:400px;margin-top:60px;">
-			<a href="ParticpantInfo.php"><button >Next</button></a>
-||||||| .r11
-			</div>			
-			<div style="text-align:right;margin-right:20px;">
-			<a href="ParticpantInfo.php"><button>Next</button></a>
-=======
-				<div style="text-align:right;margin-right:20px;">
-			<a href="ParticpantInfo.php"><button>Next</button></a>
->>>>>>> .r28
-			</div>	
-			</div>	
-	</div>	
-<div class="push"></div>			
-	</div>			
-					<?php include("footer.php");?>	 
-		<script>
-			function validate()
-			{
-				//alert("ok");
-				var fname=document.myform.user_id.value;
-				var pass=document.myform.pwd.value;
-				var fexp=/^[a-z0-9._]+@+[a-z0-9]+.+[a-z]{2,4}/;
-				var epsd=/^[0-9a-zA-Z]+$/;
-				if(!fname.match(fexp))
-				{                             
-					document.getElementById("user_id").style.border="1px solid red";
-					document.myform.user_id.focus();
-					return false;
-				}
-				if(!pass.match(epsd))
-				{                             
-					document.getElementById("pwd").style.border="1px solid red";
-					document.myform.pwd.focus();
-					return false;
-				}
-				
-				
+		</div>	
+		<div class="push"></div>			
+	</div>	<br>		
+	<?php include("footer.php");?>	 
+	<script>
+		function validate()
+		{
+			//alert("ok");
+			var fname=document.myform.user_id.value;
+			var pass=document.myform.pwd.value;
+			var fexp=/^[a-z0-9._]+@+[a-z0-9]+.+[a-z]{2,4}/;
+			var epsd=/^[0-9a-zA-Z]+$/;
+			if(!fname.match(fexp))
+			{                             
+				document.getElementById("user_id").style.border="1px solid red";
+				document.myform.user_id.focus();
+				return false;
 			}
-			function myfunction()
-				{
-					document.getElementById("user_id").style.border="";
-					document.getElementById("pwd").style.border="";
-				}
-		</script>
-		</body>
-</html>
+			if(!pass.match(epsd))
+			{                             
+				document.getElementById("pwd").style.border="1px solid red";
+				document.myform.pwd.focus();
+				return false;
+			}
+			
+			
+		}
+		function myfunction()
+			{
+				document.getElementById("user_id").style.border="";
+				document.getElementById("pwd").style.border="";
+			}
+	</script>
