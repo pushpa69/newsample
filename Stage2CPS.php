@@ -21,7 +21,7 @@
 							<p>2.1 Governance: How well policies and rules have been implemented to ensure smooth operation within enterprise.</p><br>
 							<input type="checkbox" id="" name="">Assessing business oriented decisions in predicting performance and taking responsibilities.</input><br>
 							<input type="checkbox" id="" name="">Availability of IT governance, which is combination of business and IT members of an enterprise.</input><br>
-							<input type="checkbox" id="" name="">Proper implementation of IT governance(maintenance, control and contribution of available assests )to accomplish business strategy and goals.</input><br>
+							<input type="checkbox" id="" name="">Proper implementation of IT governance(maintenance, control and contribution of available assests )to accomplish business strategy and <span>goals.</span></input><br>
 							<input type="checkbox" id="" name="">For medium and some small enterprises, ensure Service Oriented Architecture (SOA) is running which manages a relationship</input><br>
 							<input type="checkbox" id="" name="">between customer and provider in various management activities.</input><br>
 						</div><br>
@@ -92,7 +92,7 @@
 						<div>
 							<p>2.3.1 Security standards:</p><br>
 							<input type="checkbox" id="" name="">Ensure ISO/IEC27001, which enables enterprises to secure their information assets.</input><br>
-							<input type="checkbox" id="" name="">Availability of Cloud Controls Matrix and Consensus assessments initiative questionnaire, which enables customers to question CSP for data protection and risk management.</input><br>
+							<input type="checkbox" id="" name="">Availability of Cloud Controls Matrix and Consensus assessments initiative questionnaire, which enables customers to question CSP for data <span>protection and risk management.</span></input><br>
 						</div><br>
 						<div>
 							<p>2.3.2 Confidentiality standards:</p><br>
@@ -119,7 +119,7 @@
 							<input type="checkbox" id="" name="">Select CSP who demonstrates cloud services prior to migration and is transparent to SLAs.</input><br>
 							<input type="checkbox" id="" name="">Involve cloud insurers as they are better in assessing and monitoring cloud associated risks.</input><br>
 							<input type="checkbox" id="" name="">Ensure interoperability among legacy systems and cloud is addressed using mulesoft, Unified Cloud interface.</input><br>
-							<input type="checkbox" id="" name=""/>Ensure CSP complies with open standardizations like: Open cloud computing interface, Webs service agreement specification, cloud infrastructure <span>Management Interface, Open virtualization format and cloud data management interface, to avoid interoperability issues.</span><br>
+							<input type="checkbox" id="" name=""/>Ensure CSP complies with open standardizations like: Open cloud computing interface, Webs service agreement specification, <span>cloud infrastructure Management Interface, Open virtualization format and cloud data management interface, to avoid interoperability issues.</span><br>
 							<input type="checkbox" id="" name="">Ask for solutions that provides data location of the users at all time. <br>
 							<input type="checkbox" id="" name="">Ensure CSP use two layered data ware houses for data storage and are at least in European economic Zone.</input><br>
 						</div><br>
