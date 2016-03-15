@@ -1,11 +1,7 @@
-<html>
-	<head>	
-		<link rel="stylesheet" type="text/css" href="css/mystyle.css"></link>
-		<link rel="stylesheet" type="text/css" href="css/reset.css"></link>
-	</head>
-		<body>
+	<div class="wrapper">
 			<?php include("menu.php");?>
-		<div id="page4">
+		<div class="container">
+			<div id="page4">
 				<div>
 					<h1>CLOUD REQUIREMENT STAGE: WHAT'S REQUIRED FOR YOUR ENTERPRISE.</h1><br><br>
 					<h2>General Info About Enterprise.</h2><br>
@@ -101,6 +97,4 @@
 					document.getElementById("turnover").style.border="";
 			}
 		</script>
-		</body>
-		<?php include("footer.php");?>	
-</html>
+		
