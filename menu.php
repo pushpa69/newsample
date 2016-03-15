@@ -27,11 +27,14 @@ ini_set('display_errors', 'off');
 		<body>
 			<div id="header">
 				<div id="logo">
+				<div class="container">
 					<img src="images/logo.png"  style="width:209px;height:94px;">
 					<h1 id="title">Cloud Framework Tool</h1>
 				</div>
+				</div>
 			</div>
 					<div id="navbar">
+					<div class="container">
 							<ul>
 								<li><a href="index.php" class="<?php echo $home ?>">Login</a></li>
 								<li><a href="ParticpantInfo.php" class="<?php echo $ParticpantInfo ?>">ParticpantInfo</a></li>
@@ -42,5 +45,5 @@ ini_set('display_errors', 'off');
 								<li><a href="ConfirmationFinish.php" class="<?php echo $ConfirmationFinish ?>">ConfirmationFinish</a></li>
 							</ul>
 					</div>					
-		</body><br><br><br>		
-</html>	
+					</div>					
+		<br><br><br>		
