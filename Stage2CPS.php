@@ -6,13 +6,13 @@
 					<h1>CLOUD PREPARATION STAGE: Focuses on preparation of enterprise for cloud migration.</h1><br>
 				</div>
 				<div>
-					<form>
+					<form action="" method="POST" name="myform" onsubmit="return validate();">
 						<div>
 							<p>1. Feasibility Study: Financial and technical suitability for an enterprise to migrate on cloud computing.</p><br>
-							<input type="checkbox" id="" name="">Study of an existing data and applications to get desired output by embracing cloud solution.</input><br>
-							<input type="checkbox" id="" name="">Availability of supporting hardware for proposed cloud solution</input><br>
-							<input type="checkbox" id="" name="">Detailed carry out feasibility analysis of an enterprise.outline of cost/benefit model  of an enterprise.</input><br>
-							<input type="checkbox" id="" name="">Recommended tools like maturity, technical and business feasibility tools to </input><br>						
+							<input type="checkbox" id="" name="colors[]">Study of an existing data and applications to get desired output by embracing cloud solution.</input><br>
+							<input type="checkbox" id="" name="colors[]">Availability of supporting hardware for proposed cloud solution</input><br>
+							<input type="checkbox" id="" name="colors[]">Detailed carry out feasibility analysis of an enterprise.outline of cost/benefit model  of an enterprise.</input><br>
+							<input type="checkbox" id="" name="colors[]">Recommended tools like maturity, technical and business feasibility tools to </input><br>						
 						</div><br>
 						<div>
 							<p>2. Assessing Enterprise readiness: Factors comprising enterprise preparedness.</p><br>
@@ -133,9 +133,32 @@
 				<a href="Stage1CRS.php"><button>Back</button></a>
 			</div>
 			<div style="text-align:right;margin-right:20px;">
-				<a href="Stage3CMS.php"><button>Next</button></a>
+			<a href="Stage3CMS.php"><button onclick="return validate();">Next</button></a>
 			</div>
-			<div class="push"></div>
-	</div>
-	</div>
-	<?php include("footer.php");?>
+
+			
+			<script language="javascript">
+			function validate()
+			{
+				var chks = document.getElementsByTagName('input');
+				var hasChecked = false;
+			for (var i = 0; i < chks.length; i++)
+			{
+				if (chks[i].checked)
+				{
+				hasChecked = true;
+				break;
+				}
+				
+			}
+				if (hasChecked == false)
+				{
+				alert("Please answer at least one question.");
+				return false;
+				}
+			return true;
+			}
+			</script>
+		</body>
+		<?php include("footer.php");?>
+</html>
