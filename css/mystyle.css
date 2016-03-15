@@ -1,9 +1,25 @@
 body{
 	overflow-x:hidden;
 }
+html, body {
+height: 100%;
+}
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -2em;
+}
+.footer, .push {
+height: 4em;
+}
 .active{
 	background:palegreen !important;
 	color:green !important;
+}
+.container{
+	width:1024px;
+	margin:0 auto;
 }
 #header{
 	background-color:wheat;
@@ -23,7 +39,7 @@ body{
 #navbar{
 	background-color:cadetblue  ;
 	margin-top:4px;
-	padding:13px 3px 7px 27px;
+	padding:13px 3px 7px 0;
 	
 }
 #navbar ul {
@@ -48,15 +64,11 @@ body{
 	color:green;
 }
 #footer{
-	background-color:cadetblue;	
+	background-color:cadetblue;
+
 	text-align:center;
     margin:0 auto;
-    width: 1376px;
-    padding: 17px 0px 17px 0px;
-    height:auto;
-    overflow:hidden;
-    position: inherit;
-    bottom: 0px;
+
 }
 	
 }
@@ -71,8 +83,7 @@ body{
 	
 }
 #login form{
-		margin-left:516px;
-		margin-right:250px;
+		margin:0 auto;
 		width:263px;
 		padding:50px 63px 43px 97px;
 		background-color:skyblue;
@@ -150,7 +161,7 @@ body{
 } 
 #page5{
 	background-color:skyblue;
-	margin:0px 93px 0px 93px;
+	margin:0;
 	border-radius:5px;
 }
 #page5 h1{
