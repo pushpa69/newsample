@@ -29,7 +29,8 @@
 			</div>			
 			<div style="text-align:right;margin-right:20px;">
 			<a href="ParticpantInfo.php"><button>Next</button></a>
-			</div>			
+			</div>
+			
 		</body>
-		<?php include("footer.php");?>	
+		<?php include("footer.php");?>	 
 </html>
