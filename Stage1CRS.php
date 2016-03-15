@@ -15,7 +15,7 @@
 						<div>
 							<label>1.Size of your enterprise.</label>
 							<select name="size_of_enter" id="size_of_enter" onblur="myfunction();">
-								<option value="default" >select size of your enterprize</option>
+								<option value="default" >---select size of your enterprize---</option>
 								<option value="micro" >Micro ( 1-10) employees</option>
 								<option value="small" >Small ( 11-50) employees</option>
 								<option value="medium" >Medium ( 51-250) employees</option>
@@ -24,7 +24,7 @@
 						<div>
 							<label>2.Type of enterprise are you?</label>
 							<select name="select_type" id="select_type" onblur="myfunction();">
-								<option value="default" >select type of enterprise</option>
+								<option value="default" >---select type of enterprise---</option>
 								<option value="private" >Private</option>
 								<option value="public" >Public</option><br><br>
 							</select><br><br><br>
@@ -32,12 +32,13 @@
 						<div>
 							<label>3. Type of service(s) is offered by your enterprise.</label>
 							<input style="margin-left:138px; width:200px;" type="text"
-							id="services" name="services" value="" onblur="myfunction();"></input><br>
+							id="services" 
+							name="services" value="" onblur="myfunction();"/><br>
 						</div><br><br>
 						<div>
 							<label>4. Turnover of your enterprise.</label>
 							<select name="turnover" id="turnover" onblur="myfunction();">
-								<option value="default" >select turnover of your enterprise</option>
+								<option value="default" >---select turnover of your enterprise---</option>
 								<option value="micro" >Less than 2M£</option>
 								<option value="small" >Less than 10M£</option>
 								<option value="medium" >Less than 43M£</option>
