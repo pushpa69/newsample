@@ -1,6 +1,6 @@
 	<div class="wrapper">
 			<?php include("menu.php");?>
-			<div class="container">
+		<div class="container">
 			<div id="page6">
 				<div>
 					<h1>CLOUD MIGRATION STAGE: Focuses on migration.</h1><br>
@@ -31,15 +31,15 @@
 							<input type="submit" value="submit" onclick="" style="margin-left:587px;">
 						</div>
 					</form>
-				</div>
+				</div><br>
 			</div><br><br>
 			<div>
 				<a href="Stage2CPS.php" style="float:left;margin-left:20px;"><button>Back</button></a>			
 				<a href="ConfirmationFinish.php" style="float:right;margin-right:20px;"><button onclick="return validate()">Next</button></a>
 			</div>		
-	</div>
-	<div class="push"></div>	
-</div>	<br><br>	
+		</div>
+		<div class="push"></div>	
+	</div>	<br><br>	
 <?php include("footer.php");?>
 			<script language="javascript">
 			function validate()
