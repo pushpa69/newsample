@@ -1,6 +1,22 @@
 body{
 	overflow-x:hidden;
 }
+html, body {
+height: 100%;
+}
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -2em;
+}
+.footer, .push {
+height: 4em;
+}
+.container{
+	width:1024px;
+	margin:0 auto;
+}
 .active {
 	background:palegreen !important;
 	color:green !important;
