@@ -18,6 +18,7 @@ ini_set('display_errors', 'off');
 	}
 ?>
 <html>
+
 	<head>	
 		<link rel="stylesheet" type="text/css" href="css/mystyle.css"></link>
 		<link rel="stylesheet" type="text/css" href="css/reset.css"></link>
