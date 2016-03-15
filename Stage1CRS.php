@@ -45,15 +45,15 @@
 						</div>
 					</form>
 				</div>
+			</div><br><br>
+			<div>
+				<a href="Stage1CRS.php"  style="float:left;margin-left:20px;"><button>Back</button></a>			
+				<a href="Stage3CMS.php" style="float:right;margin-left:20px;"><button onclick="return validate();">Next</button></a>
 			</div>
-			<div class="foot">
-			<div class="nextback">
-			<a href="ProposedFramework.php"><button>Back</button></a>
-			</div>
-			<div class="nextback1">
-			<a href="Stage2CPS.php"><button>Next</button></a>
-			</div>
-			</div>
+		</div>	
+		<div class="push"></div>			
+	</div>	<br>		
+	<?php include("footer.php");?>	
 			<script>
 			function validate()
 			{
