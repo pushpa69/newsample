@@ -1,13 +1,7 @@
-<html>
-	<head>	
-		<link rel="stylesheet" type="text/css" href="css/mystyle.css"></link>
-		<link rel="stylesheet" type="text/css" href="css/reset.css"></link>
-		<link rel="stylesheet" href="css/hover.css" media="all"></link>
-	</head>
-		<body>
-			<?php 
-			include("menu.php");		
-			?>
+<body style="background-color:FloralWhite">
+	<div class="wrapper">
+		<?php include("menu.php");?>
+		<div class="container">
 			<div id="page2">
 				<form>
 					<div>
@@ -34,12 +28,12 @@
 					</div>					
 				</form>
 			</div>
-			<div style="text-align:left;margin-left:20px;">
-			<a href="index.php"><button>Back</button></a>
+			<div>
+				<a href="index.php" style="float:left;margin-left:20px;"><button>Back</button></a>
+				<a href="ProposedFramework.php" style="float:right;margin-left:20px;"><button>Next</button></a>
 			</div>
-			<div style="text-align:right;margin-right:20px;">
-			<a href="ProposedFramework.php"><button>Next</button></a>
-			</div>
-		</body>
+		</div>
+			<div class="push"></div>
+	</div><br>	
 		<?php include("footer.php");?>
-</html>
+	
