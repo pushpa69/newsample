@@ -128,12 +128,10 @@
 						</div>
 					</form>
 				</div>				
-			</div>
-			<div style="text-align:left;margin-left:20px;">
-				<a href="Stage1CRS.php"><button>Back</button></a>
-			</div>
-			<div style="text-align:right;margin-right:20px;">
-			<a href="Stage3CMS.php"><button onclick="return validate();">Next</button></a>
+			</div><br><br>
+			<div>
+				<a href="Stage1CRS.php"  style="float:left;margin-left:20px;"><button>Back</button></a>			
+				<a href="Stage3CMS.php" style="float:right;margin-left:20px;"><button onclick="return validate();">Next</button></a>
 			</div>
 		</div>	
 		<div class="push"></div>			
