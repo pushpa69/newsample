@@ -47,18 +47,14 @@ body{
 	background-color:palegreen;
 	color:green;
 }
-#footer{
+#footer {
 	background-color:cadetblue;
-	padding:15px;
-	/* margin-top:105px; */
-	text-align:center;
-    position:relative; //can't be fixed as content might overlap if extended    
-    height:100%;
-    width:100%; //fill the entire screen horizontally
-    bottom:0px;
-    /* margin-top:345px; //used to make sure content doesn't overlap */
-}
-	
+    margin:0 auto;
+    width:834px;
+    height:auto;
+    overflow:hidden;
+    position: fixed;
+    bottom: 0px;
 }
 #page1 img{	
 	margin:-53px 0px -36px 326px;
