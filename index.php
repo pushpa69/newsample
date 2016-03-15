@@ -1,11 +1,9 @@
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="css/mystyle.css"></link>
-		<link rel="stylesheet" type="text/css" href="css/reset.css"></link>
-		<link rel="stylesheet" href="css/hover.css" media="all"></link>
-	</head>
+
+
 	<body style="background-color:FloralWhite">
+	<div class="wrapper">
 		<?php include("menu.php");?>
+		<div class="container">
 			<div id="page1">
 				<div id="pagelogo">
 					<img src="images/logo.png"/>
@@ -26,10 +24,14 @@
 						</div>
 					</form>
 				</div>
-			</div>			
-			<div style="text-align:right;margin-right:20px;">
+				<div style="text-align:right;margin-right:20px;">
 			<a href="ParticpantInfo.php"><button>Next</button></a>
 			</div>	
+			</div>	
+	</div>	
+<div class="push"></div>			
+	</div>			
+					<?php include("footer.php");?>	 
 		<script>
 			function validate()
 			{
@@ -60,5 +62,4 @@
 				}
 		</script>
 		</body>
-		<?php include("footer.php");?>	 
 </html>
