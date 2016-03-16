@@ -1,3 +1,4 @@
+
 <body style="background-color:FloralWhite">
 	<div class="wrapper">
 		<?php include("menu.php");?>
@@ -7,6 +8,36 @@
 					<img src="images/logo.png"/>
 					<h2>School of computer science and engineering</h2>
 				</div>
+				<?php
+			session_start();
+				include('db.php');
+				if(isset($_POST['submit']))
+				{
+					$email=$_POST['user_id'];
+					$pswd=$_POST['pwd'];
+					$sql=mysql_query("select * from users where email='".$email."' and password='".$pswd."'");
+					if(mysql_num_rows($sql)==1)
+					{
+						$row=mysql_fetch_assoc($sql);
+						if($row['status']==0)
+						{
+							echo "please activate your account";
+						}
+						else
+						{
+							$_SESSION['uid']=$row['id'];
+							header("location:ParticpantInfo.php");
+						}
+						
+					}
+					else
+					{?>
+						<p style="text-align:center;color:red;font-size:16px;">
+						<?php echo "worng creditionals";?></p>
+					<?php
+					}
+				}
+               ?>
 				<div id="login">
 					<form action="" method="POST" onsubmit="return validate();" name="myform">
 						<div>
@@ -18,18 +49,25 @@
 							<input type="password" id="pwd" name="pwd" value=""  onblur="myfunction()"/><br><br>
 						</div>
 						<div style="margin:17px 0px 0px 166px;" class="btn">
-							<input type="submit" id="button" 
+							<input type="submit" id="button" name="submit"
 							onclick="" value="sign in"/>
 						</div>
 					</form>
 				</div><br>
-				<div>
-					<a href="ParticpantInfo.php" style="float:right;margin-right:20px;"><button>Next</button></a>
-				</div>	
+				
+				  <!--<div>
+					 <a href="ParticpantInfo.php" 
+					 style="float:right;margin-right:20px;"><button>Next</button></a>
+				 </div> -->
 			</div>			
 		</div>	
 		<div class="push"></div>			
-	</div>	<br>		
+	</div>	<br>
+	
+	<?php
+	
+	?>
+	
 	<?php include("footer.php");?>	 
 	<script>
 		function validate()
