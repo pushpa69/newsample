@@ -44,6 +44,7 @@ ini_set('display_errors', 'off');
 								<li><a href="Stage2CPS.php" class="<?php echo $Stage2CPS ?>">Stage2CPS</a></li>
 								<li><a href="Stage3CMS.php" class="<?php echo $Stage3CMS ?>">Stage3CMS</a></li>
 								<li><a href="ConfirmationFinish.php" class="<?php echo $ConfirmationFinish ?>">ConfirmationFinish</a></li>
+								<li><a href="index.php" class="<?php echo $Logout ?>">Logout</a></li>
 							</ul>
 					</div>					
 					</div>					
