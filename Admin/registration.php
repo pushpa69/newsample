@@ -56,7 +56,7 @@
 				<label>DOB</label>
 					<input type="text"name="DOB" placeholder="enter your mobile DOB"/><br>
 				<label>Address</label>
-					<textarea rows="3"cols="20" name="Add" maxlength="20" required></textarea><br>
+					<textarea rows="3"cols="20" name="Add" maxlength="20" required ></textarea><br>
 				<label>Gender</label>
 					Male<input type="radio" name="Gender" id="Gender" value="male"/>
 				
