@@ -16,24 +16,6 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`salford` /*!40100 DEFAULT CHARACTER SET
 
 USE `salford`;
 
-/*Table structure for table `confirmation` */
-
-DROP TABLE IF EXISTS `confirmation`;
-
-CREATE TABLE `confirmation` (
-  `con_id` int(11) NOT NULL AUTO_INCREMENT,
-  `con_u_id` int(50) NOT NULL,
-  `stage` int(11) NOT NULL,
-  `question_id` varchar(50) NOT NULL,
-  `q_answers` varchar(50) NOT NULL,
-  `q_unansewred` varchar(50) NOT NULL,
-  `created_at` datetime NOT NULL,
-  `status` smallint(2) NOT NULL,
-  PRIMARY KEY (`con_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-/*Data for the table `confirmation` */
-
 /*Table structure for table `general_information` */
 
 DROP TABLE IF EXISTS `general_information`;
@@ -49,10 +31,35 @@ CREATE TABLE `general_information` (
   `type_enterprise` varchar(50) NOT NULL,
   `services_enterprise` varchar(50) NOT NULL,
   `turover_enterprise` varchar(50) NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `updated_by` int(11) NOT NULL,
+  `created_at` datetime NOT NULL,
   PRIMARY KEY (`gi_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 /*Data for the table `general_information` */
+
+insert  into `general_information`(`gi_id`,`gi_u_id`,`name_oraganization`,`designation`,`expereince`,`other_info`,`size_enterprise`,`type_enterprise`,`services_enterprise`,`turover_enterprise`,`updated_at`,`updated_by`,`created_at`) values (1,1,'pushpa','siva1456','hello','hfh123','small','private','bgf','micro','2016-03-09 00:00:00',1,'0000-00-00 00:00:00'),(2,1,'htghgf','hggdh','ghgfh','hfh','hgh','hfh','hfgh','hgh','2016-03-09 00:00:00',1,'0000-00-00 00:00:00'),(3,1,'htghgf','hggdh','ghgfh','','small','private','gfsag','micro','2016-03-17 05:49:05',3,'0000-00-00 00:00:00'),(4,1,'htghgf','hggdh','ghgfh','','','','','','0000-00-00 00:00:00',0,'0000-00-00 00:00:00'),(5,1,'htghgf','hggdh','ghgfh','','','','','','0000-00-00 00:00:00',0,'0000-00-00 00:00:00'),(6,1,'htghgf','hggdh','ghgfh','','','','','','0000-00-00 00:00:00',0,'0000-00-00 00:00:00'),(7,1,'htghgf','hggdh','ghgfh','','','','','','0000-00-00 00:00:00',0,'0000-00-00 00:00:00'),(8,1,'htghgf','hggdh','ghgfh','','','','','','0000-00-00 00:00:00',0,'0000-00-00 00:00:00'),(9,1,'htghgf','hggdh','ghgfh','','','','','','0000-00-00 00:00:00',0,'0000-00-00 00:00:00'),(10,1,'htghgf','hggdh','ghgfh','','','','','','0000-00-00 00:00:00',0,'0000-00-00 00:00:00'),(11,1,'htghgf','dfdf','dfsdf','','','','','','0000-00-00 00:00:00',0,'2016-03-17 03:19:05');
+
+/*Table structure for table `q_answers` */
+
+DROP TABLE IF EXISTS `q_answers`;
+
+CREATE TABLE `q_answers` (
+  `con_id` int(11) NOT NULL AUTO_INCREMENT,
+  `con_u_id` int(50) NOT NULL,
+  `stage` int(11) NOT NULL,
+  `question_id` varchar(50) NOT NULL,
+  `q_answers` varchar(50) NOT NULL,
+  `q_unansewred` varchar(50) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `status` smallint(2) NOT NULL,
+  PRIMARY KEY (`con_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+/*Data for the table `q_answers` */
+
+insert  into `q_answers`(`con_id`,`con_u_id`,`stage`,`question_id`,`q_answers`,`q_unansewred`,`created_at`,`status`) values (1,1,1,'werwr','rewre','ewrew','2016-03-09 00:00:00',1);
 
 /*Table structure for table `users` */
 
@@ -74,9 +81,11 @@ CREATE TABLE `users` (
   `updated_at` datetime NOT NULL,
   `status` smallint(2) NOT NULL,
   PRIMARY KEY (`u_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 /*Data for the table `users` */
+
+insert  into `users`(`u_id`,`created_by`,`updated_by`,`firstname`,`lastname`,`email`,`password`,`mobile`,`date_of_birth`,`address`,`gender`,`created_at`,`updated_at`,`status`) values (1,1,0,'pushpa','d','pushpa@gmail.com','123','900000000','12-3-15','','','2016-03-14 00:21:33','0000-00-00 00:00:00',1),(3,1,1,'hyth','hshgh','p@gmail.com','123','wettr','rtert','tertt','reyte','2016-03-16 00:00:00','2016-03-23 00:00:00',1);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
