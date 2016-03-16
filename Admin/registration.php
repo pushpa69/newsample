@@ -14,15 +14,12 @@
 		$mobile=$_POST['Mobile'];
 		$dob=$_POST['DOB'];
 		$address=$_POST['Add'];
-		/* $gender=$_POST['Gender'];
-		echo $gender;die */;
-		
+		$gender=$_POST['Gender'];		
 	
-	$sql = "INSERT INTO users (id ,firstname ,lastname 
-	,email ,password ,mobile ,dob ,address ,gender ,date_of_reg)
-		VALUES ('' , '".$fname."', '".$lname."', '".$email."', '".$pwd."', 
+	$sql = "INSERT INTO users (firstname ,lastname 
+	,email ,u_password ,mobile ,dob ,address ,gender)
+		VALUES ( '".$fname."', '".$lname."', '".$email."', '".$pwd."', 
 	'".$mobile."', '".$dob."', '".$address."', '".$gender."')";
-	/* print_r($sql);die; */
 		mysql_query( $sql);
 	}
 	
