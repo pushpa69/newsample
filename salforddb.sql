@@ -25,8 +25,9 @@ CREATE TABLE `confirmation` (
   `u_id` varchar(50) NOT NULL,
   `question_name` varchar(50) NOT NULL,
   `q_answers` varchar(50) NOT NULL,
-  `date_of_inserted` varchar(50) NOT NULL,
-  `inserted_by` varchar(50) NOT NULL,
+  `q_unansewred` varchar(50) NOT NULL,
+  `date_of_inserted` datetime NOT NULL,
+  `status` smallint(2) NOT NULL,
   PRIMARY KEY (`q_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -37,7 +38,8 @@ CREATE TABLE `confirmation` (
 DROP TABLE IF EXISTS `general_information`;
 
 CREATE TABLE `general_information` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `gi_id` int(11) NOT NULL AUTO_INCREMENT,
+  `gi_u_id` int(10) NOT NULL,
   `name_oraganization` varchar(50) NOT NULL,
   `designation` varchar(50) NOT NULL,
   `expereince` varchar(50) NOT NULL,
@@ -48,7 +50,7 @@ CREATE TABLE `general_information` (
   `turover_enterprise` varchar(50) NOT NULL,
   `date_of_updated` varchar(50) NOT NULL,
   `updated_by` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`gi_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `general_information` */
@@ -58,7 +60,9 @@ CREATE TABLE `general_information` (
 DROP TABLE IF EXISTS `users`;
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `u_id` int(11) NOT NULL AUTO_INCREMENT,
+  `created_by` int(11) NOT NULL,
+  `updated_by` int(11) NOT NULL,
   `firstname` varchar(50) NOT NULL,
   `lastname` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
@@ -67,9 +71,10 @@ CREATE TABLE `users` (
   `date_of_birth` varchar(50) NOT NULL,
   `address` text NOT NULL,
   `gender` varchar(10) NOT NULL,
-  `date_of_reg` datetime NOT NULL,
-  `status` smallint(2) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `status` smallint(2) NOT NULL,
+  PRIMARY KEY (`u_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `users` */
