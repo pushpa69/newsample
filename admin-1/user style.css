@@ -1,0 +1,139 @@
+
+h1 {
+    color: red;
+    font-size: 44px;
+    margin-left: 370px;
+    margin-top: 27px;
+}
+/* #width {
+    color: brown;
+    font-size: 23px;
+    width: 210px;
+} */
+#Add {
+    margin-left: 1111px;
+}
+#Add a {
+    text-decoration: none;
+}
+#table table{
+    margin-left: 145px;
+	 border-collapse: collapse;
+}
+#table table td{
+	border:1px solid #ddd;
+	padding:10px;
+}
+#table table th{
+	border:1px solid #ddd;
+	padding:10px;color: brown;
+    font-size: 23px;
+    width: 210px;
+}
+
+
+h2 {
+    color: #0000ff;
+    text-align: center;
+}
+#heading {
+    margin-left: 295px;
+    margin-top: 127px;
+}
+#logo1 {
+    margin-left: 155px;
+}
+#logo2 {
+    margin-top: -325px;
+}
+#menu1 {
+    margin-left: 33px;
+    margin-right: 20px;
+    margin-top: -80px;
+}
+#menu {
+    background: #f5deb3 none repeat scroll 0 0;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-top: -149px;
+    padding: 120px 0 0;
+	
+}
+ul {
+    background: cadetblue none repeat scroll 0 0;
+    font-size: 20px;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+footer {
+    background: cadetblue none repeat scroll 0 0;
+    font-size: 20px;
+    list-style-type: none;
+    margin: 160px 0 0 -8px;
+    overflow: hidden;
+    padding: 0;
+	height:50px;
+}
+p{margin-left:20px;
+}
+  
+
+li {
+    float: left;
+}
+li a {
+    color: brown;
+    display: inline-block;
+    padding: 14px 16px;
+	text-decoration:none;
+}
+li a:hover {
+    background-color: #c7b097;
+}
+#menu2 {
+    height: 50%;
+    width: 100%;
+}
+#form h1{
+color:black;
+    
+}
+#back{
+margin-top:-18px;}
+#form label {
+    float: left;
+    margin-top: 20px;
+    margin-left: 385px;
+    width: 200px;
+	font-size:19px;
+}
+#form input {
+    margin-top: 20px;
+	font-size:19px;
+	padding: 0px 65px 3px;
+}
+	}
+
+#form textarea {
+    margin-top: 20px;
+}
+form button {
+    background-color: #BFD8D8;
+    border-radius: 13px;
+    height: 48px;
+    margin-top: 33px;
+    width: 76px;
+}
+body form {
+    /* background: #f0f8ff none repeat scroll 0 0; */
+	
+}
+#hed{
+color:#f5deb3 none repeat ;
+margin-top:5px;}
+#report{
+text-align:center;
+color:blue;
+margin-right:565px;}
