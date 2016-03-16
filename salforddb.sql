@@ -21,14 +21,15 @@ USE `salford`;
 DROP TABLE IF EXISTS `confirmation`;
 
 CREATE TABLE `confirmation` (
-  `q_id` int(11) NOT NULL AUTO_INCREMENT,
-  `u_id` varchar(50) NOT NULL,
-  `question_name` varchar(50) NOT NULL,
+  `con_id` int(11) NOT NULL AUTO_INCREMENT,
+  `con_u_id` int(50) NOT NULL,
+  `stage` int(11) NOT NULL,
+  `question_id` varchar(50) NOT NULL,
   `q_answers` varchar(50) NOT NULL,
   `q_unansewred` varchar(50) NOT NULL,
-  `date_of_inserted` datetime NOT NULL,
+  `created_at` datetime NOT NULL,
   `status` smallint(2) NOT NULL,
-  PRIMARY KEY (`q_id`)
+  PRIMARY KEY (`con_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `confirmation` */
@@ -48,8 +49,6 @@ CREATE TABLE `general_information` (
   `type_enterprise` varchar(50) NOT NULL,
   `services_enterprise` varchar(50) NOT NULL,
   `turover_enterprise` varchar(50) NOT NULL,
-  `date_of_updated` varchar(50) NOT NULL,
-  `updated_by` varchar(50) NOT NULL,
   PRIMARY KEY (`gi_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
