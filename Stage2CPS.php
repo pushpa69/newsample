@@ -1,14 +1,17 @@
 <?php
 	session_start();
 		include('db.php');
-		$id=$_SESSION['uid'];
+		//$id=$_SESSION['uid'];
 		$stage='2';
 	if(isset($_POST['submit']))
 	{
-		$h_id=$_POST['hid'];
-		echo $h_id;exit;
-		$checkBox = implode(',', $_POST['Days']); 
-		/* $query="INSERT INTO q_answers ( con_u_id, stage, question_id, q_answers, q_unansewred, created_at, status) VALUES ( '$id', '$stage', 'werwr', 'rewre', 'ewrew', '2016-03-09 00:00:00', '1')"; */
+		//$h_id=$_POST['hid'];
+		//echo $h_id;exit;
+		$checkBox = implode(',', $_POST['colors']); 
+		//echo '<pre>'; print_r($checkBox);
+		$q_id = $_POST['question'];
+		//echo '<pre>'; print_r($qqq);
+		 //$query="INSERT INTO q_answers ( con_u_id, stage, question_id, q_answers, q_unansewred, created_at, status) VALUES ( '$id', '$stage', 'werwr', 'rewre', 'ewrew', '2016-03-09 00:00:00', '1')"; 
 	}
 ?>
 	<div class="wrapper">
@@ -21,11 +24,11 @@
 				<div>
 					<form action="" method="POST" name="myform" onsubmit="return validate();">
 						<div>
-							<p>1. Feasibility Study: Financial and technical suitability for an enterprise to migrate on cloud computing.</p><br>
-							<input type="checkbox" id="" name="colors[]">Study of an existing data and applications to get desired output by embracing cloud solution.</input><br>
-							<input type="checkbox" id="" name="colors[]">Availability of supporting hardware for proposed cloud solution</input><br>
-							<input type="checkbox" id="" name="colors[]">Detailed carry out feasibility analysis of an enterprise.outline of cost/benefit model  of an enterprise.</input><br>
-							<input type="checkbox" id="" name="colors[]">Recommended tools like maturity, technical and business feasibility tools to </input><br>
+							<p><input type="hidden" name="question[]" value="Q1">1. Feasibility Study: Financial and technical suitability for an enterprise to migrate on cloud computing.</p><br>
+							<input type="checkbox" id="" name="colors[]" value ="1" checked/>Study of an existing data and applications to get desired output by embracing cloud solution.<br>
+							<input type="checkbox" id="" value ="2" name="colors[]"/>Availability of supporting hardware for proposed cloud solution<br>
+							<input type="checkbox" id="" name="colors[]" value ="3">Detailed carry out feasibility analysis of an enterprise.outline of cost/benefit model  of an enterprise.<br>
+							<input type="checkbox" id="" value ="4" name="colors[]">Recommended tools like maturity, technical and business feasibility tools to </input><br>
 							
 													
 						</div><br>
@@ -33,12 +36,12 @@
 							<p>2. Assessing Enterprise readiness: Factors comprising enterprise preparedness.</p><br>
 						</div><br>
 						<div>
-							<p>2.1 Governance: How well policies and rules have been implemented to ensure smooth operation within enterprise.</p><br>
-							<input type="checkbox" id="" name="">Assessing business oriented decisions in predicting performance and taking responsibilities.</input><br>
-							<input type="checkbox" id="" name="">Availability of IT governance, which is combination of business and IT members of an enterprise.</input><br>
-							<input type="checkbox" id="" name="">Proper implementation of IT governance(maintenance, control and contribution of available assests )to accomplish business strategy and <span>goals.</span></input><br>
-							<input type="checkbox" id="" name="">For medium and some small enterprises, ensure Service Oriented Architecture (SOA) is running which manages a relationship</input><br>
-							<input type="checkbox" id="" name="">between customer and provider in various management activities.</input><br>
+							<p>2.1<input type="hidden" name="question[]" value="Q2"> Governance: How well policies and rules have been implemented to ensure smooth operation within enterprise.</p><br>
+							<input type="checkbox" id="" value="1" name="colors[]">Assessing business oriented decisions in predicting performance and taking responsibilities.</input><br>
+							<input type="checkbox" id="" value="2" name="colors[]">Availability of IT governance, which is combination of business and IT members of an enterprise.</input><br>
+							<input type="checkbox" id="" value="3" name="colors[]">Proper implementation of IT governance(maintenance, control and contribution of available assests )to accomplish business strategy and <span>goals.</span></input><br>
+							<input type="checkbox" id="" value="4" name="colors[]">For medium and some small enterprises, ensure Service Oriented Architecture (SOA) is running which manages a relationship</input><br>
+							<input type="checkbox" id="" value="1" name="colors[]">between customer and provider in various management activities.</input><br>
 						</div><br>
 						<div>
 							<p>2.2 Top Cloud Risks and its assessment: Technical and organizational risks associated with cloud computing.</p><br>
