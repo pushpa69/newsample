@@ -1,11 +1,4 @@
-<?php 
-		mysql_connect('localhost','root','');
-		mysql_select_db('admin');				
-		$retval=mysql_query('SELECT * FROM users');	
-		$row=mysql_fetch_assoc($retval);
-		
-		//print_r($row);die;
-?>
+
 <html>
 	<head>
 	<link rel="stylesheet" type="text/css" href="user style.css"></link>
