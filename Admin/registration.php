@@ -1,3 +1,33 @@
+<?php 
+	error_reporting(E_ALL ^ E_DEPRECATED);
+	mysql_connect('localhost','root','');
+	mysql_select_db('admin');
+	$fname='';$lname='';$email='';$pwd='';$cpwd='';$mobile='';$dob='';$address='';$gender='';
+	if(isset($_POST['submit']))
+	{
+		// echo 'pre';print_r($_POST);exit;
+		$fname=$_POST['Firstname'];
+		$lname=$_POST['Lastname'];
+		$email=$_POST['Email'];
+		$pwd=$_POST['Password'];
+		$cpwd=$_POST['Lastname'];
+		$mobile=$_POST['Mobile'];
+		$dob=$_POST['DOB'];
+		$address=$_POST['Add'];
+		/* $gender=$_POST['Gender'];
+		echo $gender;die */;
+		
+	
+	$sql = "INSERT INTO users (id ,firstname ,lastname 
+	,email ,password ,mobile ,dob ,address ,gender ,date_of_reg)
+		VALUES ('' , '".$fname."', '".$lname."', '".$email."', '".$pwd."', 
+	'".$mobile."', '".$dob."', '".$address."', '".$gender."')";
+	/* print_r($sql);die; */
+		mysql_query( $sql);
+	}
+	
+?>
+
 <html>
 		<head>
 			<title> registration form</title>
@@ -12,7 +42,7 @@
 
 		?>
 	<div id="form">
-		<form action="user.php">
+		<form action="" method="POST">
 			<h1 id="head"> Registration Form</h1>
 				<label>First name:</label>
 					<input type="text"name="Firstname" placeholder="enter your firstname"/><br>
@@ -29,13 +59,13 @@
 				<label>DOB</label>
 					<input type="text"name="DOB" placeholder="enter your mobile DOB"/><br>
 				<label>Address</label>
-					<textarea rows="3"cols="20" maxlength="20" required></textarea><br>
+					<textarea rows="3"cols="20" name="Add" maxlength="20" required></textarea><br>
 				<label>Gender</label>
-					Male<input type="radio" name="Gender" id="Gender"/>
+					Male<input type="radio" name="Gender" id="Gender" value="male"/>
 				
-					Female<input type="radio" name="gender" id="Gender"/><br>
+					Female<input type="radio" name="Gender" id="Gender" value="female"/><br>
 			
-					<button type="submit" value="register" >register</button>
+					<button type="submit" value="register" name="submit">register</button>
 		</form>
 		
 	</div>
