@@ -34,7 +34,7 @@
 					<td> <?php echo $row['firstname'];?></td>
 					<td> <?php echo $row['lastname'];?> </td>		
 					<td> <?php echo $row['email'];?></td>
-					<td><input type="button"value="Edit"/>&nbsp &nbsp <input type="button"value="Delete"/></td>				  
+					<td><a href="registration.php"><input type="button"value="Edit"/></a>&nbsp &nbsp <input type="button"value="Delete"/></td>				  
 				 </tr>
 				   <?php }?>
 				   <tr>
