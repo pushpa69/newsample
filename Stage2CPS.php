@@ -8,7 +8,7 @@
 		$h_id=$_POST['hid'];
 		echo $h_id;exit;
 		$checkBox = implode(',', $_POST['Days']); 
-		$query="INSERT INTO q_answers ( con_u_id, stage, question_id, q_answers, q_unansewred, created_at, status) VALUES ( '$id', '$stage', 'werwr', 'rewre', 'ewrew', '2016-03-09 00:00:00', '1')";
+		/* $query="INSERT INTO q_answers ( con_u_id, stage, question_id, q_answers, q_unansewred, created_at, status) VALUES ( '$id', '$stage', 'werwr', 'rewre', 'ewrew', '2016-03-09 00:00:00', '1')"; */
 	}
 ?>
 	<div class="wrapper">
