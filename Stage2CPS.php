@@ -1,3 +1,16 @@
+<?php
+	session_start();
+		include('db.php');
+		$id=$_SESSION['uid'];
+		$stage='2';
+	if(isset($_POST['submit']))
+	{
+		$h_id=$_POST['hid'];
+		echo $h_id;exit;
+		$checkBox = implode(',', $_POST['Days']); 
+		$query="INSERT INTO q_answers ( con_u_id, stage, question_id, q_answers, q_unansewred, created_at, status) VALUES ( '$id', '$stage', 'werwr', 'rewre', 'ewrew', '2016-03-09 00:00:00', '1')";
+	}
+?>
 	<div class="wrapper">
 			<?php include("menu.php");?>
 		<div class="container">
@@ -12,7 +25,9 @@
 							<input type="checkbox" id="" name="colors[]">Study of an existing data and applications to get desired output by embracing cloud solution.</input><br>
 							<input type="checkbox" id="" name="colors[]">Availability of supporting hardware for proposed cloud solution</input><br>
 							<input type="checkbox" id="" name="colors[]">Detailed carry out feasibility analysis of an enterprise.outline of cost/benefit model  of an enterprise.</input><br>
-							<input type="checkbox" id="" name="colors[]">Recommended tools like maturity, technical and business feasibility tools to </input><br>						
+							<input type="checkbox" id="" name="colors[]">Recommended tools like maturity, technical and business feasibility tools to </input><br>
+							
+													
 						</div><br>
 						<div>
 							<p>2. Assessing Enterprise readiness: Factors comprising enterprise preparedness.</p><br>
@@ -124,7 +139,7 @@
 							<input type="checkbox" id="" name="">Ensure CSP use two layered data ware houses for data storage and are at least in European economic Zone.</input><br>
 						</div><br>
 						<div>
-							<input type="submit" value="submit" onclick="" style="margin-left:587px;">
+							<input type="submit" value="submit" name="submit" onclick="" style="margin-left:587px;">
 						</div>
 					</form>
 				</div>				
