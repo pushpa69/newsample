@@ -13,7 +13,7 @@
 		date_default_timezone_set("Asia/Calcutta");
 		$date=date("Y-m-d h:i:s");
 		//echo $size_enter;exit;
-		$sql="update general_information set size_enterprise='$size_enter' ,type_enterprise='$type_enter',services_enterprise='$type_ser',turover_enterprise='$turnover' where gi_id=$id";
+		$sql="update general_information set size_enterprise='$size_enter' ,type_enterprise='$type_enter',services_enterprise='$type_ser',turover_enterprise='$turnover',updated_at='$date',updated_by='$id' where gi_id=$id";
 		
 		mysql_query($sql);
 		
