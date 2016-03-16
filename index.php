@@ -19,15 +19,11 @@
 					if(mysql_num_rows($sql)==1)
 					{
 						$row=mysql_fetch_assoc($sql);
-						if($row['status']==0)
-						{
-							echo "please activate your account";
-						}
-						else
-						{
-							$_SESSION['uid']=$row['id'];
+						
+						
+							$_SESSION['uid']=$row['u_id'];
 							header("location:ParticpantInfo.php");
-						}
+						
 						
 					}
 					else
