@@ -9,7 +9,7 @@
 					<h2>School of computer science and engineering</h2>
 				</div>
 				<?php
-			session_start();
+			//session_start();
 				include('db.php');
 				if(isset($_POST['submit']))
 				{
@@ -21,7 +21,7 @@
 						$row=mysql_fetch_assoc($sql);
 						
 						
-							$_SESSION['uid']=$row['u_id'];
+							//$_SESSION['uid']=$row['u_id'];
 							header("location:ParticpantInfo.php");
 						
 						
