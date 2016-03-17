@@ -21,7 +21,7 @@
 						$row=mysql_fetch_assoc($sql);
 						
 						
-							//$_SESSION['uid']=$row['u_id'];
+							$_SESSION['uid']=$row['u_id'];
 							header("location:ParticpantInfo.php");
 						
 						
