@@ -1,7 +1,26 @@
-
-	
-
-
+<?php 
+	ini_set('display_errors', 'off');
+	$conn=mysql_connect('localhost','root','');
+	if(! $conn )
+	{
+		die('Could not connect: ' . mysql_error());
+	}
+	mysql_select_db('salford');	
+	if(isset($_POST['submit'])){
+		$fname=$_POST['FirstName'];
+		$lname=$_POST['LastName'];
+		$email=$_POST['Email'];
+		$pwd=$_POST['Password'];
+		$mobile=$_POST['Mobile'];
+		$dob=$_POST['DOB'];
+		$address=$_POST['Add'];
+		$gender=$_POST['Gender'];
+		date_default_timezone_set("Asia/Calcutta");
+		$date=date("Y-m-d h:i:s");		
+			$sql = "INSERT INTO users (created_by ,updated_by ,firstname ,lastname ,email ,u_password ,mobile ,date_of_birth ,address ,gender ,created_at ,updated_at ,status)VALUES ('1', '1', '".$fname."', '".$lname."', '".$email."', '".$pwd."', '".$mobile."', '".$dob."', '".$address."', '".$gender."', NOW(), NOW(), '1')";
+		mysql_query( $sql); 
+	}		
+?>
 <html>
 		<head>
 			<title> registration form</title>
@@ -34,13 +53,13 @@
 				<label>DOB</label>
 					<input type="text" name="DOB" id="DOB" placeholder="enter your mobile DOB"/><br><br>
 				<label>Address</label>
-					<textarea rows="3"cols="20" name="Add" maxlength="20" id="Address"></textarea><br>
+					<textarea rows="3"cols="20" name="Add" maxlength="20" id="Add"></textarea><br>
 				<label>Gender</label>
 					Male<input type="radio" name="Gender" id="Gender" value="male"/>
 				
 					Female<input type="radio" name="Gender" id="Gender" value="female"/><br>
 			
-					<button type="submit" value="register" name="submit" >register</button>
+					<input type="submit" value="register" name="submit" />
 		</form>
 		
 	</div>

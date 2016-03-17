@@ -1,16 +1,11 @@
 <?php 
-
+	ini_set('display_errors', 'off');
 	mysql_connect('localhost','root','');
 	mysql_select_db('salford');
-	$sql=mysql_query("select * from users where u_id=1");
-	
-	$row=mysql_fetch_array($sql);
-	/* echo $row['u_id'];
-	exit; */
-	
-
+	$sql=mysql_query("select * from users where u_id='".$_GET['id']."'");	
+	$row=mysql_fetch_array($sql);	
+	/* echo $row['u_id'];	exit; */
 ?>
-
 <html>
 		<head>
 			<title>EditProfile</title>
@@ -30,25 +25,21 @@
 				<label>First name:</label>
 					<input type="text" name="Firstname" id="Firstname" placeholder="enter your firstname" value="<?php echo $row['firstname'];?>"><br>
 				<label>Last name:</label>
-					<input type="text" name="Lastname" id="Lastname" placeholder="enter your lastname"/><br>
+					<input type="text" name="Lastname" id="Lastname" placeholder="enter your lastname" value="<?php echo $row['lastname'];?>" /><br>
 				<label>Email:</label>
-					<input type="Email" name="Email" id="Email" placeholder="enter your email id "/><br>
-				<label>Password:</label>
-					<input type="Password"name="Password" id="Password" placeholder="enter your password"/><br>
-				<label>Confirm Password:</label>
-					<input type="Password"name="ConfirmPassword" id="ConfirmPassword" placeholder="enter your confirm password"/><br>
+					<input type="Email" name="Email" id="Email" placeholder="enter your email id " value="<?php echo $row['email'];?>" /><br>				
 				<label>Mobile:</label>
-					<input type="text"name="Mobile"  id="Mobile" placeholder="enter your mobile number"/><br>
+					<input type="text" name="Mobile"  id="Mobile" placeholder="enter your mobile number" value="<?php echo $row['mobile'];?>"/><br>
 				<label>DOB</label>
-					<input type="text"name="DOB" id="DOB" placeholder="enter your mobile DOB"/><br>
+					<input type="text"name="DOB" id="DOB" placeholder="enter your mobile DOB" value="<?php echo $row['date_of_birth'];?>"/><br>
 				<label>Address</label>
-					<textarea rows="3"cols="20" maxlength="20" id="Address"></textarea><br>
+					<textarea rows="3"cols="20" maxlength="20" id="Address"> <?php echo $row['firstname'];?></textarea><br>
 				<label>Gender</label>
 					Male<input type="radio" name="Gender" id="Gender"/>
 				
 					Female<input type="radio" name="Gender" id="Gender"/><br>
 			
-					<button type="submit" value="Register" name="Register" >Register</button>
+					<button type="submit" value="update" name="update" >update</button>
 		</form>
 		
 	</div>
