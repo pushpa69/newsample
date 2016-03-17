@@ -9,21 +9,19 @@
 					<h2>School of computer science and engineering</h2>
 				</div>
 				<?php
-			//session_start();
+			session_start();
 				include('db.php');
 				if(isset($_POST['submit']))
 				{
 					$email=$_POST['user_id'];
 					$pswd=$_POST['pwd'];
-					$sql=mysql_query("select * from users where email='".$email."' and password='".$pswd."'");
+					$sql=mysql_query("select * from users where email='".$email."' and u_password='".$pswd."'");
 					if(mysql_num_rows($sql)==1)
 					{
-						$row=mysql_fetch_assoc($sql);
-						
-						
+						$row=mysql_fetch_assoc($sql);						
 							$_SESSION['uid']=$row['u_id'];
-							header("location:ParticpantInfo.php");
-						
+							//print_r($_SESSION['uid']);exit;
+							header("location:ParticpantInfo.php?id=".$row['u_id']);				
 						
 					}
 					else
