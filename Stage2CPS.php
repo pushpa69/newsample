@@ -1,7 +1,7 @@
 <?php
 	session_start();
 		include('db.php');
-		//$id=$_SESSION['uid'];
+		$id=$_SESSION['uid'];
 		$stage='2';
 	if(isset($_POST['submit']))
 	{
