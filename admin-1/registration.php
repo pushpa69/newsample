@@ -1,3 +1,7 @@
+
+	
+
+
 <html>
 		<head>
 			<title> registration form</title>
@@ -12,61 +16,62 @@
 
 		?>
 	<div id="form">
-				<form action="" method="POST" onsubmit="return regValidate();" name="registrationform" >
+		
+		<form action="" method="POST" onclick="return regValidate();">
 			<h1 id="head"> Registration Form</h1>
 				<label>First name:</label>
-					<input type="text" name="Firstname" id="Firstname" placeholder="enter your firstname"><br>
+					<input type="text" name="FirstName" id="FirstName" placeholder="enter your firstname"/><br>
 				<label>Last name:</label>
-					<input type="text" name="Lastname" id="Lastname" placeholder="enter your lastname"/><br>
+					<input type="text" name="LastName" id="LastName" placeholder="enter your lastname"/><br>
 				<label>Email:</label>
-					<input type="Email" name="Email" id="Email" placeholder="enter your email id "/><br>
+					<input type="Email" name="Email" id="Email"placeholder="enter your email id "/><br>
 				<label>Password:</label>
-					<input type="Password"name="Password" id="Password" placeholder="enter your password"/><br>
+					<input type="Password" name="Password" id="Password"placeholder="enter your password"/><br>
 				<label>Confirm Password:</label>
-					<input type="Password"name="ConfirmPassword" id="ConfirmPassword" placeholder="enter your confirm password"/><br>
+					<input type="password" name="ConfirmPassword" id="ConfirmPassword" placeholder="enter your confirm password"/><br>
 				<label>Mobile:</label>
-					<input type="text"name="Mobile"  id="Mobile" placeholder="enter your mobile number"/><br>
+					<input type="text" name="Mobile" id="Mobile" placeholder="enter your mobile number"/><br>
 				<label>DOB</label>
-					<input type="text"name="DOB" id="DOB" placeholder="enter your mobile DOB"/><br>
+					<input type="text" name="DOB" id="DOB" placeholder="enter your mobile DOB"/><br><br>
 				<label>Address</label>
-					<textarea rows="3"cols="20" maxlength="20" id="Address"></textarea><br>
+					<textarea rows="3"cols="20" name="Add" maxlength="20" id="Address"></textarea><br>
 				<label>Gender</label>
-					Male<input type="radio" name="Gender" id="Gender"/>
+					Male<input type="radio" name="Gender" id="Gender" value="male"/>
 				
-					Female<input type="radio" name="Gender" id="Gender"/><br>
+					Female<input type="radio" name="Gender" id="Gender" value="female"/><br>
 			
-					<button type="submit" value="Register" name="Register" >Register</button>
+					<button type="submit" value="register" name="submit" >register</button>
 		</form>
 		
 	</div>
 	<footer>
   
-  <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
+  <p style="text-align:center;">Copyright @2016	<a href="http://aapthitech.com">Aapthi Technologies,</a>an SBU of Yalavarthi Software Solutions pvt Ltd.</p>
 </footer>
 &nbsp
 	</body>
-</html>
+
 <script>
 			function regValidate()
 			
 				{
-					// alert("ok");
+					 // alert("ok");
 					var flag='true';
-						var Firstname = document.getElementById("Firstname").value;
+						var FirstName = document.getElementById("FirstName").value;
 						// alert(Firstname);
-						if(Firstname==""){
-						document.getElementById("Firstname").style.border="2px solid red";
+						if(FirstName==""){
+						document.getElementById("FirstName").style.border="2px solid red";
 						flag='false';
 						}
 						else{
-						document.getElementById("Firstname").style.border="";
+						document.getElementById("FirstName").style.border="";
 						}
-							var Lastname = document.getElementById("Lastname").value;
-							if(Lastname ==""){
-							document.getElementById("Lastname").style.border="2px solid red";
+							var LastName = document.getElementById("LastName").value;
+							if(LastName ==""){
+							document.getElementById("LastName").style.border="2px solid red";
 							flag='false';
 							}else{
-							document.getElementById("Lastname").style.border="";
+							document.getElementById("LastName").style.border="";
 							}
 						var Email = document.getElementById("Email").value;
 						if(Email ==""){
@@ -110,25 +115,24 @@
 							}else{
 							document.getElementById("Address").style.border="";
 							}	
+							var Gender = document.getElementById("Gender").checked = false;
+							if(Gender ==""){
+							// document.getElementById("Gender").style.border="2px solid red";
 							
+							 alert( "Please choose your Gender: Male or Female" ); 
+							}else{
+							document.getElementById("Gender").style.border="";
+							}
 							
 							if(flag=='false'){
 					return false;
 					}
-					var Gender = document.getElementById("Gender").value;
-							if(Gender ==""){
-							// document.getElementById("Gender").style.border="2px solid red";
-							// flag='false';
-							 alert ( "Please choose your Gender: Male or Female" ); 
-							}else{
-							document.getElementById("Gender").style.border="";
-							}	
-					else{
-					alert("su");
-					}
+					
+	
+					
 					
 					
 				}
 		
 		</script>
-		
+		</html>
