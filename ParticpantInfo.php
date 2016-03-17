@@ -2,10 +2,6 @@
 	session_start();
 	include('db.php');
 	  $id=$_SESSION['uid'];
-	//print_r($_SESSION['uid']);exit;
-	//echo $id;exit;  
-	//$id=$_GET['id'];
-	//echo $id;exit;
 	if(isset($_POST['submit']))
 	{
 		$hid=$_POST['hid'];
@@ -14,8 +10,6 @@
 		$desig=$_POST['desg'];
 		$experience=$_POST['experience'];
 		$other_info=$_POST['other_info'];
-		//print_r($_POST);exit;
-		//echo $other_info;exit;
 		date_default_timezone_set("Asia/Calcutta");
 		$date=date("Y-m-d h:i:s");
 		// echo $name_org;exit;
@@ -27,7 +21,6 @@
 		 } 
 		 else
 		{
-			/* $sql="UPDATE general_information set name_oraganization='".$name_org."' ,designation='".$desig."',expereince='".$experience."',other_info='".$other_info."'updated_at='".$date."',updated_by='".$id."' WHERE gi_id=$hid"; */
 			$sql="UPDATE general_information SET gi_u_id='".$id."',name_oraganization='".$name_org."',designation='".$desig."',expereince='".$experience."',other_info='".$other_info."',updated_at='".$date."',updated_by='".$id."' WHERE gi_id=$hid";
 			
 		} 
@@ -39,11 +32,8 @@
 	 $res=mysql_query("select * from general_information where gi_id='".$id."'");
 		//print_r($res);exit;
 		
-		$row=mysql_fetch_assoc($res);
-		
-		//print_r($row);exit;
-		//$row['gi_id'];
-		
+		$row=mysql_fetch_assoc($res);	
+				
 		
 ?>
 <body style="background-color:FloralWhite">
