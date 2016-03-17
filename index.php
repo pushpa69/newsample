@@ -9,7 +9,7 @@
 					<h2>School of computer science and engineering</h2>
 				</div>
 				<?php
-			session_start();
+				session_start();
 				include('db.php');
 				if(isset($_POST['submit']))
 				{
