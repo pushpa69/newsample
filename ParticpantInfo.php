@@ -19,15 +19,16 @@
 		date_default_timezone_set("Asia/Calcutta");
 		$date=date("Y-m-d h:i:s");
 		// echo $name_org;exit;
-		 if($_POST['hid']=="")
+		 if($_POST['hid'] == "")
 		{ 
-		 $sql="INSERT INTO general_information (gi_u_id, name_oraganization,designation, expereince, other_info, size_enterprise,
-		type_enterprise, services_enterprise, 	turover_enterprise, updated_at, updated_by,created_at)	VALUES ('".$id."', '".$name_org."','".$desig."', '".$experience."', '".$other_info."', '', '', '', '', 	'', '', '','".$date."')"; 
+		 $sql="INSERT INTO general_information (gi_id,gi_u_id, name_oraganization,designation, expereince, other_info, size_enterprise,
+		type_enterprise, services_enterprise, 	turover_enterprise, updated_at, updated_by,created_at)	VALUES ('','".$id."', '".$name_org."','".$desig."', '".$experience."', '".$other_info."', '', '', '', '', 	'', '', '','".$date."')"; 
 			
 		 } 
 		 else
 		{
-			$sql="update general_information set name_oraganization='$name_org' ,designation='$desig',expereince='$experience',other_info='$other_info'updated_at='$date',updated_by='$id', where gi_id=$hid";
+			/* $sql="UPDATE general_information set name_oraganization='".$name_org."' ,designation='".$desig."',expereince='".$experience."',other_info='".$other_info."'updated_at='".$date."',updated_by='".$id."' WHERE gi_id=$hid"; */
+			$sql="UPDATE general_information SET gi_u_id='".$id."',name_oraganization='".$name_org."',designation='".$desig."',expereince='".$experience."',other_info='".$other_info."',updated_at='".$date."',updated_by='".$id."' WHERE gi_id=$hid";
 			
 		} 
 		
