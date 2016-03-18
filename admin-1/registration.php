@@ -12,7 +12,7 @@
 		$email=$_POST['Email'];
 		$result=mysql_query("SELECT * FROM users WHERE email='".$email."'");		
 		$row=mysql_num_rows($result);
-		// echo '<pre>'; print_r($row);exit;
+		 // echo '<pre>'; print_r($row);exit;
 		if($row==1){
 			echo "<script>";
 			echo " alert('you have account with this email.');</script>";
@@ -24,8 +24,9 @@
 		$dob=$_POST['DOB'];
 		$address=$_POST['Add'];
 		$gender=$_POST['Gender'];			
-		$sql = "INSERT INTO users (created_by ,updated_by ,firstname ,lastname ,email ,u_password ,mobile ,date_of_birth ,address ,gender ,created_at ,updated_at ,status)VALUES ('', '', '".$fname."', '".$lname."', '".$email."', '".$pwd."', '".$mobile."', '".$dob."', '".$address."', '".$gender."', NOW(), NOW(), '1')";
-		mysql_query( $sql);
+		$sql = "INSERT INTO users (created_by ,updated_by ,firstname ,lastname ,email ,u_password ,mobile ,date_of_birth ,address ,gender ,created_at ,updated_at ,status)VALUES ('', '', '".$fname."', '".$lname."', '".$email."', '".$pwd."', '".$mobile."', '".$dob."', '".$address."', '".$gender."', NOW(), NOW(), '1')";	
+		
+		mysql_query($sql);
 			header('location:user.php');
 		}
 	}		
