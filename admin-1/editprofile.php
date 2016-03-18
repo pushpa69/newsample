@@ -5,7 +5,10 @@
 	$sql=mysql_query("select * from users where u_id='".$_GET['id']."'");	
 	$row=mysql_fetch_array($sql);	
 	/* echo $row['u_id'];	exit; */
+	
+
 ?>
+
 <html>
 		<head>
 			<title>EditProfile</title>
