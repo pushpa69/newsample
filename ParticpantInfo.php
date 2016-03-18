@@ -82,7 +82,7 @@
 			</div><br>
 			<div>
 							
-				<a href="Stage3CMS.php" style="float:right;margin-left:20px;"><button onclick="return validate();">Next</button></a>
+				<a href="ProposedFramework.php" style="float:right;margin-left:20px;"><button onclick="return validate();">Next</button></a>
 			</div>
 		</div><br><br>
 					
