@@ -10,15 +10,15 @@
 		$fname=$_POST['FirstName'];
 		$lname=$_POST['LastName'];
 		$email=$_POST['Email'];
+		// $result=mysql_query("SELECT * FROM users WHERE email='".$email."'");			
 		$pwd=$_POST['Password'];
 		$mobile=$_POST['Mobile'];
 		$dob=$_POST['DOB'];
 		$address=$_POST['Add'];
-		$gender=$_POST['Gender'];
-		date_default_timezone_set("Asia/Calcutta");
-		$date=date("Y-m-d h:i:s");		
-			$sql = "INSERT INTO users (created_by ,updated_by ,firstname ,lastname ,email ,u_password ,mobile ,date_of_birth ,address ,gender ,created_at ,updated_at ,status)VALUES ('1', '1', '".$fname."', '".$lname."', '".$email."', '".$pwd."', '".$mobile."', '".$dob."', '".$address."', '".$gender."', NOW(), NOW(), '1')";
-		mysql_query( $sql); 
+		$gender=$_POST['Gender'];			
+		$sql = "INSERT INTO users (created_by ,updated_by ,firstname ,lastname ,email ,u_password ,mobile ,date_of_birth ,address ,gender ,created_at ,updated_at ,status)VALUES ('1', '1', '".$fname."', '".$lname."', '".$email."', '".$pwd."', '".$mobile."', '".$dob."', '".$address."', '".$gender."', NOW(), NOW(), '1')";
+		mysql_query( $sql);
+		
 	}		
 ?>
 <html>
