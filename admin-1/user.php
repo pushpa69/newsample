@@ -18,8 +18,7 @@
 				<a href="registration.php"><input type="button"value="Add" ></a>
 				</div>
 			<div id="table">
-				<table   cellspacing="0">
-				
+				<table   cellspacing="0">				
 				  <tr>
 					<th> Serial.no</td>
 					<th id="width">First name</td>
@@ -39,7 +38,7 @@
 				 </tr>
 				   <?php }?>				   				  
 				</table>
-				</div>
+			</div>
 		</body>
 		<footer>  
 		<p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>

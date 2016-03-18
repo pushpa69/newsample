@@ -11,12 +11,7 @@
 				<ul>
 				  <li><a href="user.php">User Management</a></li>
 				  <li><a href="report.php">Report</a></li>
-				  <li><a href=""> Login</a></li>
-				  
-</ul>
-				
-				</div>
-				
-		
-	
+				  <li><a href=""> Login</a></li>				  
+				</ul>				
+			</div>
 </html>
