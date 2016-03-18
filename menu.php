@@ -1,5 +1,9 @@
 <?php 
 ini_set('display_errors', 'off');
+session_start();
+	include('db.php');
+	  $id=$_SESSION['uid'];
+	 /*  echo $id;exit; */
 	$pageactive = $_SERVER['REQUEST_URI'];
 	if($pageactive == '/salford/trunk/index.php'){
 		$home = active;
@@ -16,7 +20,41 @@ ini_set('display_errors', 'off');
 	}elseif($pageactive == '/salford/trunk/ConfirmationFinish.php'){
 		$ConfirmationFinish = active;
 	}
+	if($id == ""){
 ?>
+<html>
+
+	<head>	
+		<link rel="stylesheet" type="text/css" href="css/mystyle.css"></link>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"></link>
+		<link rel="stylesheet" href="css/hover.css" media="all"></link>
+	</head>
+	<title>Cloud Framework Tool</title>
+		<body>
+			<div id="header">
+				<div id="logo">
+				<div class="container">
+					<img src="images/logo.png"  style="width:209px;height:94px;">
+					<h1 id="title">Cloud Framework Tool</h1>
+				</div>
+				</div>
+			</div>
+					<div id="navbar">
+					<div class="container">
+							<ul>
+								<li><a href="index.php" class="<?php echo $home ?>">Login</a></li>
+								
+								
+							</ul>
+					</div>					
+					</div>					
+		<br><br><br>
+</html>
+<?php 
+	}
+	else
+	{
+?>		
 <html>
 
 	<head>	
@@ -48,4 +86,9 @@ ini_set('display_errors', 'off');
 							</ul>
 					</div>					
 					</div>					
-		<br><br><br>		
+		<br><br><br>
+</html>	
+<?php
+
+	}
+?>	
