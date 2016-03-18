@@ -35,7 +35,7 @@
 					<td> <?php echo $row['firstname'];?></td>
 					<td> <?php echo $row['lastname'];?> </td>		
 					<td> <?php echo $row['email'];?></td>
-					<td><a href="editprofile.php?id=<?php echo $row['u_id'];?>"><input type="button"value="Edit"/></a>&nbsp &nbsp <a href="editprofile.php?id=<?php echo $row['u_id'];?>"><input type="button"value="Delete"/></a></td>				  
+					<td><a href="editprofile.php?id=<?php echo $row['u_id'];?>"><input type="button"value="Edit"/></a>&nbsp &nbsp <a href="delete.php?id=<?php echo $row['u_id'];?>"><input type="button"value="Delete"/></a></td>				  
 				 </tr>
 				   <?php }?>				   				  
 				</table>
