@@ -44,7 +44,7 @@
 					<label>DOB</label>
 						<input type="text"name="DOB" id="DOB" placeholder="enter your mobile DOB" value="<?php echo $row['date_of_birth'];?>"/><br>
 					<label>Address</label>
-						<textarea rows="3"cols="20" maxlength="20" name="Add"id="Add"> <?php echo $row['firstname'];?></textarea><br>
+						<textarea rows="3"cols="20" maxlength="20" name="Add"id="Add"> <?php echo $row['address'];?></textarea><br>
 					<label>Gender</label>
 						Male<input type="radio" name="Gender" value="<?php echo $row['gender'];?>" id="Gender"/>
 					
