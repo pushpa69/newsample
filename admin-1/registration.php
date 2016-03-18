@@ -26,6 +26,7 @@
 		$gender=$_POST['Gender'];			
 		$sql = "INSERT INTO users (created_by ,updated_by ,firstname ,lastname ,email ,u_password ,mobile ,date_of_birth ,address ,gender ,created_at ,updated_at ,status)VALUES ('', '', '".$fname."', '".$lname."', '".$email."', '".$pwd."', '".$mobile."', '".$dob."', '".$address."', '".$gender."', NOW(), NOW(), '1')";
 		mysql_query( $sql);
+			header('location:user.php');
 		}
 	}		
 ?>
