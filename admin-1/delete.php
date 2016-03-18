@@ -43,15 +43,25 @@
 						<label>Address</label>
 							<textarea style="margin-left:0px;" rows="3"cols="20" maxlength="20" name="Add"id="Add"> <?php echo $row['address'];?></textarea><br>
 						<label>Gender</label>
-							Male<input type="radio" name="Gender" value="<?php echo $row['gender'];?>" id="Gender"/>
+							<?php								
+								$mchecked="";
+								$fchecked="";
+								if($row['gender']=='male'){
+										$mchecked=="checked";
+								}else if($row['gender']=='female'){
+										$fchecked=="checked";
+								}
+							?>
 						
-							Female<input type="radio" name="Gender" value="<?php echo $row['gender'];?>" id="Gender"/><br>
+							Male<input type="radio" name="Gender" value="male" id="Gender" <?php echo $mchecked; ?>/>
+						
+							Female<input type="radio" name="Gender" value="female" id="Gender" <?php echo $fchecked; ?>/><br>
 											
 							<input type="submit" value="delete" name="submit" />
 					</form>		
 				</div>
 				<footer>  
-					<p style="text-align:center;">Copyright @2016	<a href="http://aapthitech.com">Aapthi Technologies,</a>an SBU of Yalavarthi Software Solutions pvt Ltd.</p>
+					<p style="text-align:center;">Copyright @2016<a href="http://aapthitech.com">Aapthi Technologies,</a>an SBU of Yalavarthi Software Solutions pvt Ltd.</p>
 				</footer>
 				&nbsp
 		</body>

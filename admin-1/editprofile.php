@@ -13,9 +13,11 @@
 		$dob=$_POST['DOB'];
 		$address=$_POST['Add'];
 		$gender=$_POST['Gender'];
+		
 		//print_r($_POST);exit;
 		$result="UPDATE users SET firstname='$fname',lastname='$lname',email='$email',mobile='$mobile',date_of_birth='$dob',address='$address',gender='$gender' WHERE u_id='".$_GET['id']."'";
 		//echo $result; exit;
+		header('location:user.php');
 		$sql = mysql_query($result);
 		$sql=mysql_query("select * from users where u_id='".$_GET['id']."'");	
 		$row=mysql_fetch_array($sql);
@@ -46,9 +48,18 @@
 					<label>Address</label>
 						<textarea style="margin-left:0px;" rows="3"cols="20" maxlength="20" name="Add"id="Add"> <?php echo $row['address'];?></textarea><br>
 					<label>Gender</label>
-						Male<input type="radio" name="Gender" value="<?php echo $row['gender'];?>" id="Gender"/>
+					<?php
+						$mchecked = "";
+						$fchecked = "";
+						if($row['gender'] == 'male'){
+							$mchecked = "checked";
+						}else if($row['gender'] == 'female'){
+							$fchecked = "checked";
+						}
+					?>
+						Male<input type="radio" name="Gender" id="Gender" value="male" <?php echo $mchecked; ?> />
 					
-						Female<input type="radio" name="Gender" value="<?php echo $row['gender'];?>" id="Gender"/><br>
+						Female<input type="radio" name="Gender"  id="Gender" value="female" <?php echo $fchecked; ?>/><br>
 										
 						<input type="submit" value="update" name="submit" />
 				</form>		

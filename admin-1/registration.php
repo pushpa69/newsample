@@ -64,9 +64,9 @@
 				<label>Address</label>
 					<textarea style="margin-left:0px;" rows="3"cols="20" name="Add" maxlength="20" id="Add"></textarea><br>
 				<label>Gender</label>
-					Male<input type="radio" name="Gender" id="Gender" value=""/>
+					Male<input type="radio" name="Gender" id="Gender" value="male"/>
 				
-					Female<input type="radio" name="Gender" id="Gender" value=""/><br>
+					Female<input type="radio" name="Gender" id="Gender" value="female"/><br>
 			
 					<input type="submit" value="register" name="submit" />
 		</form>		
