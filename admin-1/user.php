@@ -31,7 +31,7 @@
 				   <?php  while($row=mysql_fetch_array($retval)){ ?>
 				  
 				  <tr>
-					<td><?php echo $row['u_id'];?></td>
+					<td> <?php echo $row['u_id'];?></td>
 					<td> <?php echo $row['firstname'];?></td>
 					<td> <?php echo $row['lastname'];?> </td>		
 					<td> <?php echo $row['email'];?></td>
