@@ -10,7 +10,13 @@
 		$fname=$_POST['FirstName'];
 		$lname=$_POST['LastName'];
 		$email=$_POST['Email'];
-		// $result=mysql_query("SELECT * FROM users WHERE email='".$email."'");			
+		$result=mysql_query("SELECT * FROM users WHERE email='".$email."'");		
+		$row=mysql_num_rows($result);
+		// echo '<pre>'; print_r($row);exit;
+		if($row==1){
+			echo "you have account with this email";
+			// header ('location: login.php');
+		}else{
 		$pwd=$_POST['Password'];
 		$mobile=$_POST['Mobile'];
 		$dob=$_POST['DOB'];
@@ -18,7 +24,7 @@
 		$gender=$_POST['Gender'];			
 		$sql = "INSERT INTO users (created_by ,updated_by ,firstname ,lastname ,email ,u_password ,mobile ,date_of_birth ,address ,gender ,created_at ,updated_at ,status)VALUES ('1', '1', '".$fname."', '".$lname."', '".$email."', '".$pwd."', '".$mobile."', '".$dob."', '".$address."', '".$gender."', NOW(), NOW(), '1')";
 		mysql_query( $sql);
-		
+		}
 	}		
 ?>
 <html>
