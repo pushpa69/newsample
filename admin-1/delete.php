@@ -41,7 +41,7 @@
 						<label>DOB</label>
 							<input type="text"name="DOB" id="DOB" placeholder="enter your mobile DOB" value="<?php echo $row['date_of_birth'];?>"/><br>
 						<label>Address</label>
-							<textarea rows="3"cols="20" maxlength="20" name="Add"id="Add"> <?php echo $row['address'];?></textarea><br>
+							<textarea style="margin-left:0px;" rows="3"cols="20" maxlength="20" name="Add"id="Add"> <?php echo $row['address'];?></textarea><br>
 						<label>Gender</label>
 							Male<input type="radio" name="Gender" value="<?php echo $row['gender'];?>" id="Gender"/>
 						
@@ -51,7 +51,7 @@
 					</form>		
 				</div>
 				<footer>  
-					<p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
+					<p style="text-align:center;">Copyright @2016	<a href="http://aapthitech.com">Aapthi Technologies,</a>an SBU of Yalavarthi Software Solutions pvt Ltd.</p>
 				</footer>
 				&nbsp
 		</body>
