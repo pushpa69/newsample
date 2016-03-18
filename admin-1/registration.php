@@ -62,15 +62,14 @@
 				<label>DOB</label>
 					<input type="text" name="DOB" id="DOB" placeholder="enter your mobile DOB"/><br><br>
 				<label>Address</label>
-					<textarea rows="3"cols="20" name="Add" maxlength="20" id="Add"></textarea><br>
+					<textarea style="margin-left:0px;" rows="3"cols="20" name="Add" maxlength="20" id="Add"></textarea><br>
 				<label>Gender</label>
 					Male<input type="radio" name="Gender" id="Gender" value=""/>
 				
 					Female<input type="radio" name="Gender" id="Gender" value=""/><br>
 			
 					<input type="submit" value="register" name="submit" />
-		</form>
-		
+		</form>		
 	</div>
 	<footer>
   

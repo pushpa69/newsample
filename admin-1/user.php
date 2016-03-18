@@ -41,7 +41,7 @@
 			</div>
 		</body>
 		<footer>  
-		<p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
+		<p style="text-align:center;">Copyright @2016	<a href="http://aapthitech.com">Aapthi Technologies,</a>an SBU of Yalavarthi Software Solutions pvt Ltd.</p>
 		</footer>
 		&nbsp
 	</html>
