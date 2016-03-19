@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<body>
-			<div id="logo1"><img src="logo.png" alt="logo" style="width:150px;height:90px;">
+			<div id="logo1">
+				<img src="logo.png" alt="logo" style="width:150px;height:90px;">
 			</div>
 			<div id ="menu1" >
 				<h1 style="text-align:center;">Cloud Framework Tool</h1>
@@ -14,4 +15,5 @@
 				  <li><a href=""> Login</a></li>				  
 				</ul>				
 			</div>
+	</body>		
 </html>

@@ -23,10 +23,12 @@
 		$mobile=$_POST['Mobile'];
 		$dob=$_POST['DOB'];
 		$address=$_POST['Add'];
-		$gender=$_POST['Gender'];			
-		$sql = "INSERT INTO users (created_by ,updated_by ,firstname ,lastname ,email ,u_password ,mobile ,date_of_birth ,address ,gender ,created_at ,updated_at ,status)VALUES ('', '', '".$fname."', '".$lname."', '".$email."', '".$pwd."', '".$mobile."', '".$dob."', '".$address."', '".$gender."', NOW(), NOW(), '1')";	
+		$gender=$_POST['Gender'];
 		
+		$sql = "INSERT INTO users (created_by ,updated_by ,firstname ,lastname ,email ,u_password ,mobile ,date_of_birth ,address ,gender ,created_at ,updated_at ,status)VALUES ('1', '1', '".$fname."', '".$lname."', '".$email."', '".$pwd."', '".$mobile."', '".$dob."', '".$address."', '".$gender."', NOW(), NOW(), '1')";	
+		// print_r($sql);exit;
 		mysql_query($sql);
+		// print_r($var);exit;
 			header('location:user.php');
 		}
 	}		
