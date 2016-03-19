@@ -27,8 +27,9 @@
   background: DarkSlateGray;
 }
 .button{
-	  color: Black   ;	 
-	  font-weight: bold;	  
+	  color: #FFF;	 
+	  font-weight: bold;
+	  background: #900;	  
 }
 .button:hover{
 	background: #900;
