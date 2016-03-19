@@ -1,7 +1,9 @@
 <?php 
 	ini_set('display_errors', 'off');
+	session_start();
 	mysql_connect('localhost','root','');
-	mysql_select_db('salford');				
+	mysql_select_db('salford');
+	$id=$_SESSION['uid'];
 	$retval=mysql_query('SELECT * FROM users');	
 	// $row=mysql_fetch_assoc($retval);		
 	//print_r($row);die;

@@ -1,11 +1,13 @@
 <?php 
 	ini_set('display_errors', 'off');
+	session_start();
 	$conn=mysql_connect('localhost','root','');
 	if(! $conn )
 	{
 		die('Could not connect: ' . mysql_error());
 	}
 	mysql_select_db('salford');	
+	$id=$_SESSION['uid'];
 	if(isset($_POST['submit'])){
 		$fname=$_POST['FirstName'];
 		$lname=$_POST['LastName'];

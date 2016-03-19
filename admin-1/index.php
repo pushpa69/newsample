@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	mysql_connect('localhost','root','');
 	mysql_select_db('salford');		
 		if(isset($_POST['submit'])){	
@@ -6,8 +7,8 @@
 		$rows = mysql_num_rows($sql);
 		$result=mysql_fetch_array($sql);
 		if ($rows == 1){
-			echo "login successful";
-			
+			$_SESSION['uid']=$row['u_id'];
+			echo "login successful";			
 			header ('location: user.php');
 		}else{
 			echo "<script>";

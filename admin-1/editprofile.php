@@ -1,7 +1,9 @@
 <?php 
 	ini_set('display_errors', 'off');
+	session_start();
 	mysql_connect('localhost','root','');
 	mysql_select_db('salford');
+	$id=$_SESSION['uid'];
 	$sql=mysql_query("select * from users where u_id='".$_GET['id']."'");	
 	$row=mysql_fetch_array($sql);	
 	/* echo $row['u_id'];	exit; */
