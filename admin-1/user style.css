@@ -9,6 +9,20 @@
 	color:purple;
 	font-size:25px;
 }
+#logout{
+	float:right;
+	margin-right:20px;
+	border:1px solid DarkSlateGray;
+	border-radius:10px;
+	background-color:#6fb6a7;
+}
+#logout a:hover{
+	background-color:#66CDAA!important;
+	border-radius:10px;
+}
+#logout a{
+	color:purple;
+}
 #login form{
 	background-color:pink;
 	padding:24px 0px;
