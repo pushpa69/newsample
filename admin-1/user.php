@@ -5,11 +5,11 @@
 	$retval=mysql_query('SELECT * FROM users');	
 	// $row=mysql_fetch_assoc($retval);		
 	//print_r($row);die;
-	$result=mysql_query('DELETE FROM users WHERE u_id="'.$_GET['id'].'"');
+	// $result=mysql_query('DELETE FROM users WHERE u_id="'.$_GET['id'].'"');
 	 
-	if(!isset($result)){
-		location.reload();
-	}
+	// if(!isset($result)){
+		// location.reload();
+	// }
 ?>
 
 <html>
@@ -39,7 +39,7 @@
 					<td> <?php echo $row['firstname'];?></td>
 					<td> <?php echo $row['lastname'];?> </td>		
 					<td> <?php echo $row['email'];?></td>
-					<td><a href="editprofile.php?id=<?php echo $row['u_id'];?>"><input type="button"value="Edit"/></a>&nbsp &nbsp <a href="user.php?id=<?php echo $row['u_id'];?>"><input type="button" name="delete" value="Delete"/></a></td>				  
+					<td><a href="editprofile.php?id=<?php echo $row['u_id'];?>"><input type="button"value="Edit"/></a>&nbsp &nbsp <a href="delete.php?id=<?php echo $row['u_id'];?>"><input type="button" name="delete" value="Delete"/></a></td>				  
 				 </tr>
 				   <?php }?>				   				  
 				</table>
