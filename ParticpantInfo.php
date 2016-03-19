@@ -72,25 +72,14 @@
 					</div>
 					<div>
 						<input type="submit" id="button" onclick="" name="submit" value="submit"/>
-					</div>
-					
+					</div>					
 						<input type="hidden" name="hid" id="hid"   value="<?php if(isset($row['gi_id'])){
 							echo $row['gi_id'];
-						}?>"/>
-									
+						}?>"/>									
 				</form>				
 			</div><br>
-			<div>
-<<<<<<< .mine
-						
+			<div>	
 				<a href="ProposedFramework.php" style="float:right;margin-left:20px;"><button onclick="return validate();">Next</button></a>
-||||||| .r126
-				<a href="Stage1CRS.php"  style="float:left;margin-left:20px;"><button>Back</button></a>			
-				<a href="Stage3CMS.php" style="float:right;margin-left:20px;"><button onclick="return validate();">Next</button></a>
-=======
-							
-				<a href="ProposedFramework.php" style="float:right;margin-left:20px;"><button onclick="return validate();">Next</button></a>
->>>>>>> .r160
 			</div>
 		</div><br><br>
 					
