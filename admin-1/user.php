@@ -7,7 +7,6 @@
 		$retval=mysql_query('SELECT * FROM users');
 	}	
 ?>
-
 <html>
 	<head>
 	<link rel="stylesheet" type="text/css" href="user style.css"></link>
@@ -21,21 +20,20 @@
 			<div id="table">
 				<table   cellspacing="0">				
 				  <tr>
-					<th> Serial.no</td>
-					<th id="width">First name</td>
-					<th id="width">Last name</td>		
+					<th> Serial.No</td>
+					<th id="width">First Name</td>
+					<th id="width">Last Name</td>		
 					<th id="width">Email</td>
 					<th id="width">Edit/Delete</td>
-				  </tr>
-				  
-				   <?php  while($row=mysql_fetch_array($retval)){ ?>
-				  
+				  </tr>				  
+				   <?php  while($row=mysql_fetch_array($retval)){ ?>				  
 				  <tr>
 					<td> <?php echo $row['u_id'];?></td>
 					<td> <?php echo $row['firstname'];?></td>
 					<td> <?php echo $row['lastname'];?> </td>		
 					<td> <?php echo $row['email'];?></td>
-					<td><a href="editprofile.php?id=<?php echo $row['u_id'];?>"><input type="button" value="Edit"/></a>&nbsp &nbsp <input type="button" onclick="deleteUser(<?php echo $row['u_id'];?>)" name="delete" value="Delete"/></td>				  
+					<td><a style="text-decoration:none;" href="editprofile.php?id=<?php echo $row['u_id'];?>"><input type="button" value="Edit"/></a>&nbsp &nbsp
+					<input type="button" onclick="deleteUser(<?php echo $row['u_id'];?>)" name="delete" value="Delete"/></td>				  
 				 </tr>
 				   <?php }?>				   				  
 				</table>
