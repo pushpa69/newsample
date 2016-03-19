@@ -1,3 +1,14 @@
+#AdminName{
+	text-align:center;
+	 margin-left: 271px;
+}
+#admin{
+	float:right;
+	margin-top:-74px;
+	margin-right:1px;
+	color:purple;
+	font-size:25px;
+}
 #login form{
 	background-color:pink;
 	padding:24px 0px;
@@ -35,11 +46,11 @@
 	background: #900;
 	color: #FFF;
 }
-h1 {
-    color: red;
+h1 {   
     font-size: 44px;
-    margin-left: 370px;
-    margin-top: 27px;
+    margin-left: 68px;
+    margin-top: 7px;
+	padding:0px 15px 0px 0px; 
 }
 /* #width {
     color: brown;
@@ -100,10 +111,8 @@ h2 {
 ul {
     background: cadetblue none repeat scroll 0 0;
     font-size: 20px;
-    list-style-type: none;
-    margin: 0;
-    overflow: hidden;
-   
+    list-style-type: none;   
+    overflow: hidden;   
 }
 footer {
     background: cadetblue none repeat scroll 0 0;
@@ -146,7 +155,7 @@ margin-top:-18px;
 	background-color:pink;
 	padding:1px 2px 3px 4px;
 	margin-left:244px;
-	margin-right:297px;
+	margin-right:362px;
 	margin-top:50px;
 }
 #form label {
@@ -159,7 +168,7 @@ margin-top:-18px;
 #form input {
     margin-top: 20px;
 	font-size:19px;
-	padding: 0px 65px 3px;
+	
 }
 	}
 
@@ -184,4 +193,6 @@ margin-top:5px;}
 #report{
 text-align:center;
 color:blue;
-margin-right:565px;}
+margin-right:565px;
+font-size:27px;
+}
