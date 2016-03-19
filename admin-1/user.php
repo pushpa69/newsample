@@ -1,6 +1,11 @@
 <?php 
 	include('db.php');
-	$retval=mysql_query('SELECT * FROM users');		
+	if(isset($_GET['id'])){
+		$result=mysql_query('DELETE FROM users WHERE u_id="'.$_GET['id'].'"');
+		header('location:user.php');
+	}else{
+		$retval=mysql_query('SELECT * FROM users');
+	}	
 ?>
 
 <html>
@@ -30,7 +35,7 @@
 					<td> <?php echo $row['firstname'];?></td>
 					<td> <?php echo $row['lastname'];?> </td>		
 					<td> <?php echo $row['email'];?></td>
-					<td><a href="editprofile.php?id=<?php echo $row['u_id'];?>"><input type="button" value="Edit"/></a>&nbsp &nbsp <a href="delete.php?id=<?php echo $row['u_id'];?>"><input type="button" onclick="myFunction()" name="delete" value="Delete"/></a></td>				  
+					<td><a href="editprofile.php?id=<?php echo $row['u_id'];?>"><input type="button" value="Edit"/></a>&nbsp &nbsp <input type="button" onclick="deleteUser(<?php echo $row['u_id'];?>)" name="delete" value="Delete"/></td>				  
 				 </tr>
 				   <?php }?>				   				  
 				</table>
@@ -41,4 +46,12 @@
 		</footer>
 		&nbsp
 	</html>
+	
+<script>
+	function deleteUser(userID){
+		if (confirm("Are you sure want to delete the user!") == true) {
+			window.location = "user.php?id="+userID;
+		}
+	}
+</script>
 	
