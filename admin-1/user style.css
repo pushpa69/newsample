@@ -11,17 +11,13 @@
 }
 #logout{
 	float:right;
-	margin-right:20px;
-	border:1px solid DarkSlateGray;
-	border-radius:10px;
-	background-color:#6fb6a7;
+	margin-right:20px;	
 }
 #logout a:hover{
-	background-color:#66CDAA!important;
-	border-radius:10px;
+	background-color:cadetblue!important;	
 }
 #logout a{
-	color:purple;
+	/* color:purple; */
 }
 #login form{
 	background-color:pink;
@@ -41,24 +37,24 @@
 	margin-top:20px;
 }
 #button {
-  color: #FFF; 
+ /*  color: #FFF; 
   font-weight: bold;
   /* border: 1px solid  IndianRed ; */
-  background: DarkSlateGray;
+  /* background: DarkSlateGray; */ 
 }
  
 #button:hover {
-  color: #FFF;
-  background: DarkSlateGray;
+ /*  color: #FFF;
+  background: DarkSlateGray; */
 }
 .button{
-	  color: #FFF;	 
+	  /* color: #FFF;	 
 	  font-weight: bold;
-	  background: #900;	  
+	  background: #900;	 */  
 }
 .button:hover{
-	background: #900;
-	color: #FFF;
+	/* background: #900;
+	color: #FFF; */
 }
 h1 {   
     font-size: 44px;
@@ -78,10 +74,11 @@ h1 {
     text-decoration: none;
 }
 #table table{
-    margin-left: 145px;
+    margin-left:55px;
 	 border-collapse: collapse;
 	 background-color:pink;
 	 padding:1px 2px 3px 4px;
+	 margin-right:55px;
 }
 #table table td{
 	border:1px solid #ddd;
