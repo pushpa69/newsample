@@ -1,9 +1,5 @@
 <?php
-	 session_start();
-	error_reporting(E_ERROR | E_WARNING | E_PARSE);
-	mysql_connect('localhost','root','');
-	mysql_select_db('salford');	
-	
+	include('db.php');	
 	if(isset($_POST['submit'])){	
 		$sql=mysql_query("SELECT * FROM adminlogin WHERE email='".$_POST['email']."' AND password='".$_POST['password']."'");
 		$rows = mysql_num_rows($sql);
