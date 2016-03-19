@@ -1,13 +1,16 @@
 <?php
 	session_start();
 	mysql_connect('localhost','root','');
-	mysql_select_db('salford');		
-		if(isset($_POST['submit'])){	
+	mysql_select_db('salford');	
+	
+	if(isset($_POST['submit'])){	
 		$sql=mysql_query("SELECT * FROM adminlogin WHERE email='".$_POST['email']."' AND password='".$_POST['password']."'");
 		$rows = mysql_num_rows($sql);
 		$result=mysql_fetch_array($sql);
 		if ($rows == 1){
 			$_SESSION['uid']=$row['a_id'];
+			$_SESSION['fname']=$row['firstname'];
+			$_SESSION['lname']=$row['lastname'];
 			echo "login successful";			
 			header ('location: user.php');
 		}else{
