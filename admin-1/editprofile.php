@@ -1,12 +1,8 @@
 <?php 
-	ini_set('display_errors', 'off');
-	session_start();
-	mysql_connect('localhost','root','');
-	mysql_select_db('salford');
+	include('db.php');
 	$id=$_SESSION['uid'];
 	$sql=mysql_query("select * from users where u_id='".$_GET['id']."'");	
-	$row=mysql_fetch_array($sql);	
-	/* echo $row['u_id'];	exit; */
+	$row=mysql_fetch_array($sql);		
 	if(isset($_POST['submit'])){
 		$fname=$_POST['Firstname'];
 		$lname=$_POST['Lastname'];
@@ -15,10 +11,8 @@
 		$mobile=$_POST['Mobile'];
 		$dob=$_POST['DOB'];
 		$address=$_POST['Add'];
-		$gender=$_POST['Gender'];		
-		//print_r($_POST);exit;
+		$gender=$_POST['Gender'];			
 		$result="UPDATE users SET firstname='$fname',lastname='$lname',email='$email',u_password='$pass',mobile='$mobile',date_of_birth='$dob',address='$address',gender='$gender' WHERE u_id='".$_GET['id']."'";
-		//echo $result; exit;
 		header('location:user.php');
 		$sql = mysql_query($result);
 		$sql=mysql_query("select * from users where u_id='".$_GET['id']."'");	

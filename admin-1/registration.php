@@ -1,35 +1,23 @@
-<?php 
-	ini_set('display_errors', 'off');
-	session_start();
-	$conn=mysql_connect('localhost','root','');
-	if(! $conn )
-	{
-		die('Could not connect: ' . mysql_error());
-	}
-	mysql_select_db('salford');	
+<?php 	
+	include('db.php');	
 	$id=$_SESSION['uid'];
 	if(isset($_POST['submit'])){
 		$fname=$_POST['fname'];
 		$lname=$_POST['lname'];
 		$email=$_POST['email'];
 		$result=mysql_query("SELECT * FROM users WHERE email='".$email."'");		
-		$row=mysql_num_rows($result);
-		 // echo '<pre>'; print_r($row);exit;
+		$row=mysql_num_rows($result);	
 		if($row==1){
 			echo "<script>";
-			echo " alert('you have account with this email.');</script>";
-			// echo "<script>alert("you have account with this email");</script>";
-			// // header ('location: login.php');
+			echo " alert('you have account with this email.');</script>";			
 		}else{
-		$pwd=md5($_POST['pswd']);
-		$mobile=$_POST['mobile'];
-		$dob=$_POST['dob'];
-		$address=$_POST['Add'];
-		$gender=$_POST['Gender'];		
-		$sql = "INSERT INTO users (created_by ,updated_by ,firstname ,lastname ,email ,u_password ,mobile ,date_of_birth ,address ,gender ,created_at ,updated_at ,status)VALUES ('1', '1', '".$fname."', '".$lname."', '".$email."', '".$pwd."', '".$mobile."', '".$dob."', '".$address."', '".$gender."', NOW(), NOW(), '1')";	
-		// print_r($sql);exit;
-		mysql_query($sql);
-		// print_r($var);exit;
+			$pwd=md5($_POST['pswd']);
+			$mobile=$_POST['mobile'];
+			$dob=$_POST['dob'];
+			$address=$_POST['Add'];
+			$gender=$_POST['Gender'];		
+			$sql = "INSERT INTO users (created_by ,updated_by ,firstname ,lastname ,email ,u_password ,mobile ,date_of_birth ,address ,gender ,created_at ,updated_at ,status)VALUES ('1', '1', '".$fname."', '".$lname."', '".$email."', '".$pwd."', '".$mobile."', '".$dob."', '".$address."', '".$gender."', NOW(), NOW(), '1')";	
+			mysql_query($sql);	
 			header('location:user.php');
 		}
 	}		
