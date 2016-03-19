@@ -1,11 +1,3 @@
-<?php 
-	// session_start();	
-	mysql_connect('localhost','root','');
-	mysql_select_db('salford');
-	// $id=$_session['uid'];
-	$sql=mysql_query('SELECT * FROM users');
-	
-?>
 <html>
 	<head>
 	<link rel="stylesheet" type="text/css" href="user style.css"></link>
@@ -13,6 +5,7 @@
 	<body id="body">
 		<?php 
 		include("salford1.php");
+		$sql=mysql_query('SELECT * FROM users');	
 		?>
 		<h1 id ="report">Report</h1>				
 			<div id="table">
