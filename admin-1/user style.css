@@ -35,6 +35,8 @@ h1 {
 #table table{
     margin-left: 145px;
 	 border-collapse: collapse;
+	 background-color:pink;
+	 padding:1px 2px 3px 4px;
 }
 #table table td{
 	border:1px solid #ddd;
