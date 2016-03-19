@@ -37,8 +37,8 @@ session_start();
 						$an .= $a.',';
 					}
 					$fAns = rtrim($an,',');
-					  $query="delete from q_answers where con_u_id='$id'";
-					$query="INSERT INTO q_answers ( con_u_id, stage, question_id, q_answers, q_unansewred, created_at, status) VALUES ( '".$id."', '".$stage."', '".$qno."', '".$fAns."', '', 'NOW()', '1')"; 
+					  $query="delete from q_answers where con_u_id=$id";
+					$query="INSERT INTO q_answers ( con_u_id, stage, question_id, q_answers, q_unansewred, created_at, status) VALUES ( '".$id."', '".$stage."', '".$qno."', '".$fAns."', '', NOW(), '1')"; 
 					  
 					mysql_query($query);
 					$an = "";
