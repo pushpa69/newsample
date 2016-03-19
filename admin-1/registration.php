@@ -10,7 +10,7 @@
 		$fname=$_POST['FirstName'];
 		$lname=$_POST['LastName'];
 		$email=$_POST['Email'];
-		$pwd=$_POST['Password'];
+		$pwd=md5($_POST['Password']);
 		$mobile=$_POST['Mobile'];
 		$dob=$_POST['DOB'];
 		$address=$_POST['Add'];
