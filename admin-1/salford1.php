@@ -12,7 +12,7 @@
 				<ul>
 				  <li><a href="user.php">User Management</a></li>
 				  <li><a href="report.php">Report</a></li>
-				  <li><a href=""> Login</a></li>				  
+				  <li style="float:right;margin-right:20px;" ><a href="logout.php">logout</a></li>	
 				</ul>				
 			</div>
 	</body>		
