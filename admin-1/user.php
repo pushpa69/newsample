@@ -1,18 +1,17 @@
-<?php 
-	include('db.php');
-	if(isset($_GET['id'])){
-		$result=mysql_query('DELETE FROM users WHERE u_id="'.$_GET['id'].'"');
-		header('location:user.php');
-	}else{
-		$retval=mysql_query('SELECT * FROM users');
-	}	
-?>
 <html>
 	<head>
 	<link rel="stylesheet" type="text/css" href="user style.css"></link>
 	</head>
 		<body id="body">
 			<?php include("salford1.php");	?>
+			<?php 	
+			if(isset($_GET['id'])){
+			$result=mysql_query('DELETE FROM users WHERE u_id="'.$_GET['id'].'"');	
+			header('location:user.php');
+			}else{
+			$retval=mysql_query('SELECT * FROM users');
+			}	
+			?>
 			<h2>USER MANAGEMENT</h2>
 				<div id="Add">
 				<a href="registration.php"><input id="button" type="button"value="Add User" ></a><br>

@@ -1,24 +1,3 @@
-<?php 
-	include('db.php');
-	$id=$_SESSION['uid'];
-	$sql=mysql_query("select * from users where u_id='".$_GET['id']."'");	
-	$row=mysql_fetch_array($sql);		
-	if(isset($_POST['submit'])){
-		$fname=$_POST['Firstname'];
-		$lname=$_POST['Lastname'];
-		$email=$_POST['Email'];	
-		$pass=md5($_POST['password']);
-		$mobile=$_POST['Mobile'];
-		$dob=$_POST['DOB'];
-		$address=$_POST['Add'];
-		$gender=$_POST['Gender'];			
-		$result="UPDATE users SET firstname='$fname',lastname='$lname',email='$email',u_password='$pass',mobile='$mobile',date_of_birth='$dob',address='$address',gender='$gender' WHERE u_id='".$_GET['id']."'";
-		header('location:user.php');
-		$sql = mysql_query($result);
-		$sql=mysql_query("select * from users where u_id='".$_GET['id']."'");	
-		$row=mysql_fetch_array($sql);
-	}
-?>
 <html>
 		<head>
 			<title>EditProfile</title>
@@ -28,6 +7,26 @@
 		<div>		
 	<body id="back">
 		<?php include("salford1.php");?>
+		<?php 	
+			$id=$_SESSION['uid'];
+			$sql=mysql_query("select * from users where u_id='".$_GET['id']."'");	
+			$row=mysql_fetch_array($sql);		
+			if(isset($_POST['submit'])){
+				$fname=$_POST['Firstname'];
+				$lname=$_POST['Lastname'];
+				$email=$_POST['Email'];	
+				$pass=md5($_POST['password']);
+				$mobile=$_POST['Mobile'];
+				$dob=$_POST['DOB'];
+				$address=$_POST['Add'];
+				$gender=$_POST['Gender'];			
+				$result="UPDATE users SET firstname='$fname',lastname='$lname',email='$email',u_password='$pass',mobile='$mobile',date_of_birth='$dob',address='$address',gender='$gender' WHERE u_id='".$_GET['id']."'";
+				header('location:user.php');
+				$sql = mysql_query($result);
+				$sql=mysql_query("select * from users where u_id='".$_GET['id']."'");	
+				$row=mysql_fetch_array($sql);
+			}
+		?>
 			<div id="form">
 				<form action="" method="POST" onsubmit="return regValidate();" name="registrationform" >
 					<h1 id="head" style="font-size:20px;">Edit Profile</h1>

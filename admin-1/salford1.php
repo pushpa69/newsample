@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php 
+	include('db.php');
+	$sql=mysql_query('SELECT * FROM adminlogin ');
+	$row=mysql_fetch_array($sql);	
+?>
 <html>
 	<body>
 			<div id="logo1">
@@ -12,6 +16,7 @@
 				<ul>
 				  <li><a href="user.php">User Management</a></li>
 				  <li><a href="report.php">Report</a></li>
+				  <li><?php echo 'Welcome '.$_SESSION['fname'].' '.$_SESSION['lname'];?></li>
 				  <li style="float:right;margin-right:20px;border:1px solid DarkSlateGray;border-radius:10px;  " ><a href="logout.php">logout</a></li>	
 				</ul>				
 			</div>

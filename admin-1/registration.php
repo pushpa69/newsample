@@ -1,27 +1,3 @@
-<?php 	
-	include('db.php');	
-	$id=$_SESSION['uid'];
-	if(isset($_POST['submit'])){
-		$fname=$_POST['fname'];
-		$lname=$_POST['lname'];
-		$email=$_POST['email'];
-		$result=mysql_query("SELECT * FROM users WHERE email='".$email."'");		
-		$row=mysql_num_rows($result);	
-		if($row==1){
-			echo "<script>";
-			echo " alert('you have account with this email.');</script>";			
-		}else{
-			$pwd=md5($_POST['pswd']);
-			$mobile=$_POST['mobile'];
-			$dob=$_POST['dob'];
-			$address=$_POST['Add'];
-			$gender=$_POST['Gender'];		
-			$sql = "INSERT INTO users (created_by ,updated_by ,firstname ,lastname ,email ,u_password ,mobile ,date_of_birth ,address ,gender ,created_at ,updated_at ,status)VALUES ('1', '1', '".$fname."', '".$lname."', '".$email."', '".$pwd."', '".$mobile."', '".$dob."', '".$address."', '".$gender."', NOW(), NOW(), '1')";	
-			mysql_query($sql);	
-			header('location:user.php');
-		}
-	}		
-?>
 <html>
 		<head>
 			<title> registration form</title>
@@ -31,9 +7,29 @@
 		<div>
 		
 	<body id="back">
-		<?php 
-		include("salford1.php");
-
+		<?php include("salford1.php");	?>
+		<?php 					
+			$id=$_SESSION['uid'];
+			if(isset($_POST['submit'])){
+				$fname=$_POST['fname'];
+				$lname=$_POST['lname'];
+				$email=$_POST['email'];
+				$result=mysql_query("SELECT * FROM users WHERE email='".$email."'");		
+				$row=mysql_num_rows($result);	
+				if($row==1){
+					echo "<script>";
+					echo " alert('you have account with this email.');</script>";			
+				}else{
+					$pwd=md5($_POST['pswd']);
+					$mobile=$_POST['mobile'];
+					$dob=$_POST['dob'];
+					$address=$_POST['Add'];
+					$gender=$_POST['Gender'];		
+					$sql = "INSERT INTO users (created_by ,updated_by ,firstname ,lastname ,email ,u_password ,mobile ,date_of_birth ,address ,gender ,created_at ,updated_at ,status)VALUES ('1', '1', '".$fname."', '".$lname."', '".$email."', '".$pwd."', '".$mobile."', '".$dob."', '".$address."', '".$gender."', NOW(), NOW(), '1')";	
+					mysql_query($sql);	
+					header('location:user.php');
+				}
+			}		
 		?>
 	<div id="form">
 		

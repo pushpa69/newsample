@@ -1,4 +1,3 @@
-
 <html>	
 	<head>
 		<link rel="stylesheet" type="text/css" href="user style.css"></link>
@@ -16,27 +15,24 @@
 							</ul>				
 						</div>
 					<div id="login">
-							<?php
-					include('db.php');	
-					if(isset($_POST['submit'])){	
-						$sql=mysql_query("SELECT * FROM adminlogin WHERE email='".$_POST['email']."' AND password='".$_POST['password']."'");
-						$rows = mysql_num_rows($sql);
-						$result=mysql_fetch_array($sql);
-						if ($rows == 1){
-						
-							$_SESSION['uid']=$row['a_id'];
-							$_SESSION['fname']=$row['firstname'];
-							$_SESSION['lname']=$row['lastname'];
-							// echo "login successful";			
-							header ('location: user.php');
-						}else
-									{?>
+		<?php	
+			include('db.php');
+			if(isset($_POST['submit'])){	
+				$sql=mysql_query("SELECT * FROM adminlogin WHERE email='".$_POST['email']."' AND password='".$_POST['password']."'");
+				$rows=mysql_num_rows($sql);
+				$result=mysql_fetch_array($sql);
+				if ($rows == 1){						
+					$_SESSION['uid']=$row['a_id'];
+					$_SESSION['fname']=$row['firstname'];
+					$_SESSION['lname']=$row['lastname'];					
+					header ('location: user.php');
+				}else{?>
 						<p style="text-align:center;color:red;font-size:22px; margin-top:120px;">
-										<?php echo "worng creditionals";?></p>
-									<?php
-									}
-					} 
-				?>
+						<?php echo "worng creditionals";?></p>
+						<?php
+				}
+			} 
+		?>
 						<form action="" method="POST" onsubmit="return validate();" name="myform">
 							<div>
 								<label>Email</label>
