@@ -10,14 +10,14 @@
 	if(isset($_POST['submit'])){
 		$fname=$_POST['Firstname'];
 		$lname=$_POST['Lastname'];
-		$email=$_POST['Email'];		
+		$email=$_POST['Email'];	
+		$pass=md5($_POST['password']);
 		$mobile=$_POST['Mobile'];
 		$dob=$_POST['DOB'];
 		$address=$_POST['Add'];
-		$gender=$_POST['Gender'];
-		
+		$gender=$_POST['Gender'];		
 		//print_r($_POST);exit;
-		$result="UPDATE users SET firstname='$fname',lastname='$lname',email='$email',mobile='$mobile',date_of_birth='$dob',address='$address',gender='$gender' WHERE u_id='".$_GET['id']."'";
+		$result="UPDATE users SET firstname='$fname',lastname='$lname',email='$email',u_password='$pass',mobile='$mobile',date_of_birth='$dob',address='$address',gender='$gender' WHERE u_id='".$_GET['id']."'";
 		//echo $result; exit;
 		header('location:user.php');
 		$sql = mysql_query($result);
@@ -43,10 +43,12 @@
 						<input type="text" name="Lastname" id="Lastname" placeholder="enter your lastname" value="<?php echo $row['lastname'];?>" /><br>
 					<label>Email:</label>
 						<input type="Email" name="Email" id="Email" placeholder="enter your email id " value="<?php echo $row['email'];?>" /><br>				
+					<label>Password:</label>
+						<input type="Password" name="Password" id="Password"placeholder="enter your password"/><br>
 					<label>Mobile:</label>
 						<input type="text" name="Mobile"  id="Mobile" placeholder="enter your mobile number" value="<?php echo $row['mobile'];?>"/><br>
 					<label>DOB</label>
-						<input type="text"name="DOB" id="DOB" placeholder="enter your mobile DOB" value="<?php echo $row['date_of_birth'];?>"/><br>
+						<input type="text"name="DOB" id="DOB" placeholder="enter your mobile DOB" value="<?php echo $row['date_of_birth'];?>"/><br><br>
 					<label>Address</label>
 						<textarea style="margin-left:0px;" rows="3"cols="20" maxlength="20" name="Add"id="Add"> <?php echo $row['address'];?></textarea><br>
 					<label>Gender</label>
