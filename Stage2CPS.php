@@ -102,7 +102,7 @@ $questionArray[15][8]='Ensure CSP use two layered data ware houses for data stor
 						$an .= $a.',';
 					}
 					$fAns = rtrim($an,',');
-					  
+					 $query="delete from q_answers where con_u_id=$id"; 
 					$query="INSERT INTO q_answers ( con_u_id, stage, question_id, q_answers, q_unansewred, created_at, status) VALUES ( '".$id."', '".$stage."', '".$qNo."', '".$fAns."', 'ewrew', '2016-03-09 00:00:00', '1')"; 
 					
 					/* else
