@@ -23,16 +23,17 @@
 					<th id="width">First Name</td>
 					<th id="width">Last Name</td>		
 					<th id="width">Email</td>
-					<th id="width">Edit/Delete</td>
+					<th id="width">Edit</td>
+					<th id="width">Delete</td>
 				  </tr>				  
 				   <?php  while($row=mysql_fetch_array($retval)){ ?>				  
 				  <tr>
-					<td> <?php echo $row['u_id'];?></td>
-					<td> <?php echo $row['firstname'];?></td>
-					<td> <?php echo $row['lastname'];?> </td>		
-					<td> <?php echo $row['email'];?></td>
-					<td><a style="text-decoration:none;" href="editprofile.php?id=<?php echo $row['u_id'];?>"><input type="button" id="button" value="Edit"/></a>&nbsp &nbsp
-					<input type="button" class="button" onclick="deleteUser(<?php echo $row['u_id'];?>)" name="delete" value="Delete"/></td>				  
+					<td align="center"> <?php echo $row['u_id'];?></td>
+					<td align="center"> <?php echo $row['firstname'];?></td>
+					<td align="center"> <?php echo $row['lastname'];?> </td>		
+					<td align="center"> <?php echo $row['email'];?></td>
+					<td><a style="text-decoration:none;" href="editprofile.php?id=<?php echo $row['u_id'];?>"><img style="margin-left:68px;"src="edit.png" alt="edit"></img></a></td>&nbsp &nbsp
+					<td><img style="margin-left:68px;" src="delete.png" alt="delete" onclick="deleteUser(<?php echo $row['u_id'];?>)"> </img> </td>				  
 				 </tr>
 				   <?php }?>				   				  
 				</table>
