@@ -76,11 +76,10 @@
 					<input type="submit" value="register" name="submit" />
 		</form>		
 	</div>
-	<footer>
-  
-  <p style="text-align:center;">Copyright @2016	<a href="http://aapthitech.com">Aapthi Technologies,</a>an SBU of Yalavarthi Software Solutions pvt Ltd.</p>
-</footer>
-&nbsp
+	<footer>  
+		<p style="text-align:center;">Copyright @2016	<a href="http://aapthitech.com">Aapthi Technologies,</a>an SBU of Yalavarthi Software Solutions pvt Ltd.</p>
+	</footer>
+		&nbsp
 	</body>
 
 <script>

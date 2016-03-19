@@ -7,7 +7,7 @@
 		$rows = mysql_num_rows($sql);
 		$result=mysql_fetch_array($sql);
 		if ($rows == 1){
-			$_SESSION['uid']=$row['u_id'];
+			$_SESSION['uid']=$row['a_id'];
 			echo "login successful";			
 			header ('location: user.php');
 		}else{
