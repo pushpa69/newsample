@@ -1,9 +1,9 @@
 #login form{
 	background-color:pink;
 	padding:24px 0px;
-	margin-left:399px;
-	margin-right:511px;
-	margin-top:70px;
+	margin-left:445px;
+	margin-right:397px;
+	margin-top:22px;
 	border-radius:8px;
 }
 #login label{
@@ -93,6 +93,7 @@ footer {
     overflow: hidden;
     padding: 0;
 	height:50px;
+	margin-top:295px;
 }
 p{margin-left:20px;
 }
@@ -144,6 +145,7 @@ margin-top:-18px;
 
 #form textarea {
     margin-top: 20px;
+	
 }
 form button {
     background-color: #BFD8D8;
