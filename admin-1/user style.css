@@ -115,15 +115,23 @@ li a:hover {
     width: 100%;
 }
 #form h1{
-color:black;
-    
+	color:rosybrown;
+    margin-left:205px;
 }
 #back{
-margin-top:-18px;}
+margin-top:-18px;
+}
+#form{
+	background-color:pink;
+	padding:1px 2px 3px 4px;
+	margin-left:244px;
+	margin-right:297px;
+	margin-top:50px;
+}
 #form label {
     float: left;
     margin-top: 20px;
-    margin-left: 385px;
+    margin-left:129px;
     width: 200px;
 	font-size:19px;
 }
