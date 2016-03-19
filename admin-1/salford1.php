@@ -21,7 +21,7 @@
 				  <li><a href="user.php">User Management</a></li>
 				  <li><a href="report.php">Report</a></li>
 				  <li id="AdminName"><?php echo 'Welcome '.' '.$_SESSION['fname'].' '.$_SESSION['lname'];?></li>
-				  <li style="float:right;margin-right:20px;border:1px solid DarkSlateGray;border-radius:10px;  " ><a href="logout.php">logout</a></li>	
+				 <li id="logout"><a href="logout.php"> <img src='log.png' alt="logout"/></a></li>	
 				</ul>				
 			</div>
 	</body>		
