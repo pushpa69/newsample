@@ -1,4 +1,20 @@
-
+#login form{
+	background-color:pink;
+	padding:24px 0px;
+	margin-left:399px;
+	margin-right:511px;
+	margin-top:70px;
+	border-radius:8px;
+}
+#login label{
+	float:left;
+	width:121px;
+	margin-top:20px;
+	padding-left:81px;
+}
+#login input{
+	margin-top:20px;
+}
 h1 {
     color: red;
     font-size: 44px;
@@ -71,7 +87,7 @@ footer {
     background: cadetblue none repeat scroll 0 0;
     font-size: 20px;
     list-style-type: none;
-    margin: 160px 0 0 -8px;
+    margin: 204px 0 0 -8px;
     overflow: hidden;
     padding: 0;
 	height:50px;
