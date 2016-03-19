@@ -8,13 +8,14 @@
 			$_SESSION['uid']=$row['a_id'];
 			$_SESSION['fname']=$row['firstname'];
 			$_SESSION['lname']=$row['lastname'];
-			echo "login successful";			
+			// echo "login successful";			
 			header ('location: user.php');
-		}else{
-			echo "<script>";
-			echo " alert('you don't have account with this email.');</script>";
-			header ('location: index.php');
-		}
+		}else
+					{?>
+						<p style="text-align:center;color:red;font-size:16px;">
+						<?php echo "worng creditionals";?></p>
+					<?php
+					}
 	} 
 ?>
 <html>	
