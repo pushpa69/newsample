@@ -1,5 +1,6 @@
 <?php
-	session_start();
+	 session_start();
+	error_reporting(E_ERROR | E_WARNING | E_PARSE);
 	mysql_connect('localhost','root','');
 	mysql_select_db('salford');	
 	
@@ -18,7 +19,7 @@
 			echo " alert('you don't have account with this email.');</script>";
 			header ('location: index.php');
 		}
-	}
+	} 
 ?>
 <html>	
 	<head>
@@ -37,14 +38,14 @@
 				</ul>				
 			</div>
 			<div id="login">
-				<form action="" method="POST">
+				<form action="" method="POST" onsubmit="return validate();" name="myform">
 					<div>
 						<label>Email</label>
-						<input type="email" name="email" id="email" value="">
+						<input type="email" name="email" id="email" onblur="myfunction()">
 					</div>
 					<div>
 						<label>Password</label>
-						<input type="password" name="password" id="password" value="">
+						<input type="password" name="password" id="password" onblur="myfunction()">
 					</div>
 					<div>
 						<input style="margin-left:300px;"type="submit" name="submit" value="login"/>
@@ -55,4 +56,32 @@
 		<footer>  
 			<p style="text-align:center;">Copyright @2016	<a href="http://aapthitech.com">Aapthi Technologies,</a>an SBU of Yalavarthi Software Solutions pvt Ltd.</p>
 		</footer>
+
+		<script>
+		function validate()
+		{
+			//alert("ok");
+			var fname=document.myform.email.value;
+			var pass=document.myform.password.value;
+			var fexp=/^[a-z0-9._]+@+[a-z0-9]+.+[a-z]{2,4}/;
+			var epsd=/^[0-9a-zA-Z]+$/;
+			if(!fname.match(fexp))
+			{                             
+				document.getElementById("email").style.border="1px solid red";
+				document.myform.email.focus();
+				return false;
+			}
+			if(!pass.match(epsd))
+			{                             
+				document.getElementById("password").style.border="1px solid red";
+				document.myform.password.focus();
+				return false;
+			}
+		}
+		function myfunction()
+			{
+				document.getElementById("email").style.border="";
+				document.getElementById("password").style.border="";
+			}
+	</script>
 </html>
