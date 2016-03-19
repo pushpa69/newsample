@@ -15,8 +15,8 @@
 			<?php include("salford1.php");	?>
 			<h2>USER MANAGEMENT</h2>
 				<div id="Add">
-				<a href="registration.php"><input type="button"value="Add" ></a>
-				</div>
+				<a href="registration.php"><input id="button" type="button"value="Add User" ></a><br>
+				</div><br>
 			<div id="table">
 				<table   cellspacing="0">				
 				  <tr>
@@ -32,8 +32,8 @@
 					<td> <?php echo $row['firstname'];?></td>
 					<td> <?php echo $row['lastname'];?> </td>		
 					<td> <?php echo $row['email'];?></td>
-					<td><a style="text-decoration:none;" href="editprofile.php?id=<?php echo $row['u_id'];?>"><input type="button" value="Edit"/></a>&nbsp &nbsp
-					<input type="button" onclick="deleteUser(<?php echo $row['u_id'];?>)" name="delete" value="Delete"/></td>				  
+					<td><a style="text-decoration:none;" href="editprofile.php?id=<?php echo $row['u_id'];?>"><input type="button" id="button" value="Edit"/></a>&nbsp &nbsp
+					<input type="button" class="button" onclick="deleteUser(<?php echo $row['u_id'];?>)" name="delete" value="Delete"/></td>				  
 				 </tr>
 				   <?php }?>				   				  
 				</table>
