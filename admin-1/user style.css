@@ -74,21 +74,23 @@ h1 {
     text-decoration: none;
 }
 #table table{
-    margin-left:55px;
+    margin-left:85px;
 	 border-collapse: collapse;
-	 background-color:pink;
+	 background-color:darkslategray;
 	 padding:1px 2px 3px 4px;
-	 margin-right:55px;
+	 margin-right:75px;
 }
 #table table td{
 	border:1px solid #ddd;
 	padding:10px;
+	color:wheat;
 }
 #table table th{
 	border:1px solid #ddd;
-	padding:10px;color: brown;
+	padding:10px;
     font-size: 23px;
     width: 210px;
+	color:#DCDEFF;
 }
 
 
