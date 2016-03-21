@@ -4,8 +4,7 @@
 		    <link rel="stylesheet" type="text/css" href="user style.css"></link>
 		</head>
 		<div id="hed">
-		<div>
-		
+		<div>		
 	<body id="back">
 		<?php include("salford1.php");	?>
 		<?php 					
