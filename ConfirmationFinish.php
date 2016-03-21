@@ -101,22 +101,32 @@
 <?php
 	include('db.php');
 	$id=$_SESSION['uid'];
+	$userid=$_GET['userid'];
 	$stage='2';
 	$an='';	
-	$sql=mysql_query("select * from q_answers where con_u_id='$id'");	
+	$sql=mysql_query("select * from q_answers where con_u_id='$id' and stage=2");
+	
 	$focus=array();
 	$qes_ids=array();
 	while($row=mysql_fetch_assoc($sql))
 	{
-		  $focus[$row['question_id']]=explode(",",$row['q_answers']);		 
+		 $focus[$row['question_id']]=explode(",",$row['q_answers']);
+		 
 		 $qes_ids[]=$row['question_id'];
 		 $stage_id=$row['stage'];
 	}
 	
-	 foreach($focus as $f)
+	$sql1=mysql_query("select * from q_answers where con_u_id='$id' and stage=3");
+	
+	$focus1=array();
+	$qes_ids1=array();
+	while($row1=mysql_fetch_assoc($sql1))
 	{
-		
-	}  
+		 $focus1[$row1['question_id']]=explode(",",$row1['q_answers']);
+		 
+		 $qes_ids1[]=$row1['question_id'];
+		 $stage_id1=$row1['stage'];
+	}
 	
 	
 ?>
@@ -135,14 +145,38 @@
 					<p>2.Cloud Preparation Stage:</p><br>
 					<p style="color:purple;font-size:20px;font-weight:bold;">>Your Preparedness</p><br>
 					<div>
-					<form action="" method="POST" name="myform" onsubmit="return validate();">
+					<?php foreach($questionArray as $key=>$val)
+						{ ?>  
+						<?php //if(in_array('Q'.($key),$qes_ids)){ ?>
+							<?php foreach($val as $key1=>$val1)
+							{ 
+								
+								if($key1== 0)
+								{
+								?>
+								<p><?php echo $val1?></p>
+									
+								<?php 
+								}
+								else
+								{
+									$u ='_';
+									$optn_name='Q'.($key).$u.($key1);
+									if(in_array($optn_name,$focus['Q'.$key])) {  
+									?>
+									
+									<p> <?php echo $val1;/*}*/ ?> </p> 
+							<?php 
+									}
+								//}
+							}?> 
+						<?php }}?>							
+						<br>
+					<p style="font-size:19px;color:Maroon ;">What you need to prepare</p><br>
+					 
 						<?php foreach($questionArray as $key=>$val)
-						{ ?> 
-						<div class="in">
-						
-						<?php 
-						$u='_';
-						if(in_array('Q'.($key),$qes_ids)){ ?>
+						{ ?>  
+						<?php //if(in_array('Q'.($key),$qes_ids)){ ?>
 							<?php foreach($val as $key1=>$val1)
 							{ 
 								
@@ -157,37 +191,23 @@
 								{
 									$u ='_';
 									$optn_name='Q'.($key).$u.($key1);
+									if(!in_array($optn_name,$focus['Q'.$key])) {  
 									?>
 									
-									<span>
-									<input type="checkbox" id="" name="Q<?php echo $key;?>[]" value ="Q<?php echo $key; ?>_<?php echo $key1?>"  <?php  if(in_array($optn_name,$focus['Q'.$key])) { ?>  checked="checked"  <?php  }else{?>style="display:none;"    <?php } ?> />
-								</span>
-								<span>
-							<?php if(in_array($optn_name,$focus['Q'.$key])) { ?> <?php echo $val1;}?>
-										
-								</p>	
-							</span>
+										<p><?php echo $val1;/*}*/ ?></p> 
 							<?php 
-								}
-							}?>
-													
-						</div><br>
-						<?php }}?>
-						
-							
-					</form>
-				</div>	
-					
-					<p style="color:red;font-size:20px;font-weight:bold;">>What You Need To Prepare</p><br>
-					<div>
-					<form action=""  name="myform" onsubmit="return validate();">
-						
-						<?php
-						
-						foreach($questionArray as $key=>$val)
-						{ ?>
-						<div>
-						<?php if(!in_array('Q'.($key),$qes_ids)){ ?>
+									}
+								//}
+							}?> 
+						<?php }}?>							
+					 
+						 <br>
+					<p style="font-size:23px;color:DarkGreen ;" >3.Cloud Migration Stage:</p>
+					<p style="font-size:19px;color:Maroon ;">Your Preparedness</p><br>
+					 
+						<?php foreach($questionArray1 as $key=>$val)
+						{ ?>  
+						<?php //if(in_array('Q'.($key),$qes_ids)){ ?>
 							<?php foreach($val as $key1=>$val1)
 							{ 
 								
@@ -202,37 +222,21 @@
 								{
 									$u ='_';
 									$optn_name='Q'.($key).$u.($key1);
-									
+									if(in_array($optn_name,$focus1['Q'.$key])) {  
 									?>
 									
-									<div >
-									<span>
-									<input type="checkbox" id="" name="Q<?php echo $key;?>[]" value ="Q<?php echo $key; ?>_<?php echo $key1?>"  <?php  if(in_array($optn_name,$focus['Q'.$key])) { ?>  checked="checked"  <?php  }else{?>   <?php } ?> />
-								</span>
-								<span>
-							<?php if(!in_array($optn_name,$focus['Q'.$key])) {?> <?php echo $val1;} ?>
-							</span>
-							</div>
-							
+									<p><?php echo $val1;/*}*/ ?></p> 
 							<?php 
-								}
-							}?>
-													
-						</div><br>
-						<?php }}?>
-						
-							
-					</form>
-				</div>	
-				</div>
-				<div>
-					<p>3.Cloud Migration Stage:</p><br>
-					<p style="color:purple;font-size:20px;font-weight:bold;"> >Your Preparedness</p><br>
-					
-							<?php foreach($questionArray1 as $key=>$val)
-						{ ?> 
-						<div>
-						<?php if(in_array('Q'.($key),$qes_ids)){ ?>
+									}
+								//}
+							}?>								
+						<?php }}?>							
+							<br>
+					<p style="font-size:19px;color:Maroon ;">What you need to prepare</p> <br>
+					 
+						<?php foreach($questionArray1 as $key=>$val)
+						{ ?>  
+						<?php //if(in_array('Q'.($key),$qes_ids)){ ?>
 							<?php foreach($val as $key1=>$val1)
 							{ 
 								
@@ -247,69 +251,15 @@
 								{
 									$u ='_';
 									$optn_name='Q'.($key).$u.($key1);
-									//echo $optn_name;
-									?>
-							<div >
-									<span>
-									<input type="checkbox" id="" name="Q<?php echo $key;?>[]" value ="Q<?php echo $key; ?>_<?php echo $key1?>"  <?php  if(in_array($optn_name,$focus['Q'.$key])) { ?>  checked="checked"  <?php  }else{?>style="display:none;"    <?php } ?> />
-								</span>	
-							<span>								
-							<?php if(in_array($optn_name,$focus['Q'.$key])) {?> <?php echo $val1;} ?>
-							</span>
-							</div>
-							<?php 
-								}
-							}?>
-													
-						</div><br>
-						<?php }}?>
-						
-					<p style="color:red;font-size:20px;font-weight:bold;">>What You Need To Be Aware Of</p><br>
-							<?php
-						
-						foreach($questionArray1 as $key=>$val)
-						{ ?> 
-						<div>
-						<?php if(!in_array('Q'.($key),$qes_ids)){ ?>
-							<?php foreach($val as $key1=>$val1)
-							{ //echo $key1;
-								
-								if($key1== 0)
-								{
-								?>
-								<p><?php echo $val1?></p>
-									
-								<?php 
-								}
-								else
-								{
-									$u ='_';
-									$optn_name='Q'.($key).$u.($key1);
+									if(!in_array($optn_name,$focus1['Q'.$key])) {  
 									?>
 									
-									<div >
-									<span>
-									<input type="checkbox" id="" name="Q<?php echo $key;?>[]" value ="Q<?php echo $key; ?>_<?php echo $key1?>"  <?php  if(in_array($optn_name,$focus['Q'.$key])) { ?>  checked="checked"  <?php  }else{?>   <?php } ?> />
-								</span>
-								<span>
-							<?php if(!in_array($optn_name,$focus['Q'.$key])) {?> <?php echo $val1;
-															
-							} 
-							else
-							{
-									
-							}
-							?>
-							</span>
-							</div>
+										<p><?php echo $val1;/*}*/ ?></p> 
 							<?php 
-								}
-							}?>
-													
-						</div><br>
-						<?php }
-						
-						}?>
+									}
+								//}
+							}?>								
+						<?php }}?>	
 						
 				</div>				
 			</div>
