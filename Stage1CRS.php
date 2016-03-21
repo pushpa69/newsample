@@ -16,7 +16,7 @@
 		$sql="update general_information set size_enterprise='$size_enter' ,type_enterprise='$type_enter',services_enterprise='$type_ser',turover_enterprise='$turnover',updated_at='$date',updated_by='$id' where gi_id=$id";
 		
 		mysql_query($sql);
-		header("location:Stage2CPS.php");
+		header("location:Stage2CPS.php?userid=$id");
 		
 	}
 	$sql1=mysql_query("select * from general_information where gi_id=$id");
