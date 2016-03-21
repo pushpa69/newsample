@@ -23,7 +23,7 @@
 					<td><?php echo $row['firstname'];?></td>
 					<td><?php echo $row['lastname'];?></td>		
 					<td><?php echo $row['email'];?></td>
-					<td><a href="viewreport.php" ><button>View Report</button></a></td>
+					<td><a href="viewreport.php?userid=<?=$row['u_id']?>" ><button>View Report</button></a></td>
 				  </tr>	
 					<?php } ?>
 				</table>
