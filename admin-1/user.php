@@ -1,6 +1,6 @@
-<!--<?php 		
-	// if(isset($_SESSION) && $_SESSION['uid']!=''){
-?>-->
+<?php 		
+	 // if(isset($_SESSION) && $_SESSION['uid']!=''){
+?>
 <html>
 	<head>
 	<link rel="stylesheet" type="text/css" href="user style.css"></link>
@@ -56,5 +56,5 @@
 	}
 </script>
 	
-	
+	 
 	
