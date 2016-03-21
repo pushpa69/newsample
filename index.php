@@ -1,3 +1,12 @@
+
+<head>
+	<style>
+		
+	</style>
+</head>
+
+
+
 <body style="background-color:FloralWhite">
 	<div class="wrapper">
 		<?php include("menu.php");?>
