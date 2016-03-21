@@ -23,14 +23,14 @@
 					<td><?php echo $row['firstname'];?></td>
 					<td><?php echo $row['lastname'];?></td>		
 					<td><?php echo $row['email'];?></td>
-					<td><input type="button"value="View Report"/></td>
+					<td><a href="viewreport.php" ><button>View Report</button></a></td>
 				  </tr>	
 					<?php } ?>
 				</table>
 			</div>
 	</body>
 		<footer>  
-		<p style="text-align:center;">Copyright @2016	<a href="http://aapthitech.com">Aapthi Technologies,</a>an SBU of Yalavarthi Software Solutions pvt Ltd.</p>
+		<p style="text-align:center;">Copyright @2016<a></a>University of Salford</p>
 	</footer>
 
 		&nbsp
