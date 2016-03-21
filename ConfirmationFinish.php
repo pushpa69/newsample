@@ -175,7 +175,7 @@ $questionArray1[16][0]='1.Cloud service provider and contract: Attributes to loo
 					<form action="" method="POST" name="myform" onsubmit="return validate();">
 						<?php foreach($questionArray as $key=>$val)
 						{ ?> 
-						<div>
+						<div class="in">
 						<?php if(in_array('Q'.($key),$qes_ids)){ ?>
 							<?php foreach($val as $key1=>$val1)
 							{ 
@@ -318,9 +318,9 @@ $questionArray1[16][0]='1.Cloud service provider and contract: Attributes to loo
 						
 				</div>				
 			</div>
-			<div style="text-align:left;margin-left:20px;">
-				<a href="Stage3CMS.php"><button onclick="myfunction();">Back</button></a>
-			</div>
+			<!--<div style="text-align:left;margin-left:20px;">
+				<a href="Stage3CMS.php"><input type="submit" value="Back" onclick="myfunction();"></a>
+			</div>-->
 			<div class="push"></div>
 		</div>
 		<?php include("footer.php");?>
