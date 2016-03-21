@@ -10,6 +10,12 @@
 	color:purple;
 	font-size:25px;
 }
+.active {
+	background:palegreen !important;
+	color:green !important;
+	padding: 6px 9px 5px;
+	border-radius:33px;
+}
 #logout{
 	float:right;
 	margin-right:20px;	
@@ -165,7 +171,7 @@ li a {
 	margin-right:40px;
 }
 li a:hover {
-    background-color: #c7b097;
+   /*  background-color: #c7b097; */
 }
 #menu2 {
     height: 50%;
