@@ -111,7 +111,7 @@
 				}
 			}
 		}
-		
+		header('location:Stage3CMS.php');
 		
 	}
 	
@@ -174,7 +174,7 @@
 				</div>				
 			</div><br><br>
 			<div>
-				<a href="Stage1CRS.php"  style="float:left;margin-left:20px;"><button>Back</button></a>			
+				<a href="Stage1CRS.php"  style="float:left;margin-left:20px;"><input type="button" value="Back"></a>			
 				<a href="Stage3CMS.php" style="float:right;margin-left:20px;"><input type="submit" name="submit" value="Next" onclick="return validate();"/></a>
 			</div>
 			</form>
@@ -202,6 +202,11 @@
 				return false;
 				}
 			return true;
+			}
+			function myfunction()
+			{
+			//alert("ok");
+				window.location.href="http://localhost/salford/trunk/Stage1CRS.php";
 			}
 </script>
 <?php
