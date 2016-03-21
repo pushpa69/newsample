@@ -96,13 +96,21 @@ $questionArray[15][8]='Ensure CSP use two layered data ware houses for data stor
 		$hid=$_POST['hid'];
 		//echo $hid;exit;
 		if(count($_POST) != 0){
+			$query="DELETE FROM q_answers WHERE con_u_id=$id AND stage=2";
+			//echo $query;
+					if(mysql_query($query)){
+						echo "deleted";
+					}
+					else {
+    echo "Error deleting record: " ;
+}
 			foreach($_POST as $qNo=>$q){
 				if($qNo != 'submit'){
 					foreach($q as $a){
 						$an .= $a.',';
 					}
 					$fAns = rtrim($an,',');
-					 $query="delete from q_answers where con_u_id=$id"; 
+										
 					$query="INSERT INTO q_answers ( con_u_id, stage, question_id, q_answers, q_unansewred, created_at, status) VALUES ( '".$id."', '".$stage."', '".$qNo."', '".$fAns."', 'ewrew', '2016-03-09 00:00:00', '1')"; 
 					
 					/* else
@@ -111,7 +119,7 @@ $questionArray[15][8]='Ensure CSP use two layered data ware houses for data stor
 					} */
 					mysql_query($query);
 					$an = "";
-					//header("location:Stage3CMS.php");
+					
 				}
 			}
 		}
@@ -136,6 +144,7 @@ $questionArray[15][8]='Ensure CSP use two layered data ware houses for data stor
 	}  
 	// print_r($focus);
 	// exit;
+	
 ?>
 	<div class="wrapper">
 			<?php include("menu.php");?>
@@ -151,6 +160,7 @@ $questionArray[15][8]='Ensure CSP use two layered data ware houses for data stor
 						<div>
 							<?php foreach($val as $key1=>$val1)
 							{
+								//echo $key1;
 								if($key1==0)
 								{
 								?>
@@ -165,7 +175,7 @@ $questionArray[15][8]='Ensure CSP use two layered data ware houses for data stor
 									//echo $optn_name;
 									?>
 									<br>
-							<input type="checkbox" id="" name="Q<?php echo $key;?>[]" value ="Q<?php echo $key; ?>_<?php echo $key1?>" <?php  if(in_array($optn_name,$focus[$key])) { ?> checked="checked" <?php  }?> /><?php echo $val1; ?>
+							<input type="checkbox" id="" name="Q<?php echo $key;?>[]" value ="Q<?php echo $key; ?>_<?php echo $key1?>" <?php  if(in_array($optn_name,$focus[$key])) { ?> checked="checked"  <?php  }else{?>  <?php } ?> /><?php /*if(!in_array($optn_name,$focus[$key])) {*/?><?php echo $val1;/*}*/ ?>
 							
 							<?php 
 								}
