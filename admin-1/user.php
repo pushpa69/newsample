@@ -14,7 +14,7 @@
 			?>
 			<h2>USER MANAGEMENT</h2>
 				<div id="Add">
-				<a href="registration.php"><img style="float:right;margin-right:140px;width:44px;height:47px;"src="add.png" alt="adduser"></img></a><br>
+				<a href="registration.php"><img style="float:right;margin-right:140px;width:36px;height:33px;"src="adduser.png" alt="adduser"></img></a><br>
 				</div><br><br>
 			<div id="table">
 				<table   cellspacing="0">				

@@ -14,8 +14,7 @@
 			<div id ="menu1" >
 				<h1 style="text-align:center;">Cloud Framework Tool</h1>
 				<img id="adlogo" src="admin1.png" alt="admin" width="150" height="50"/>
-			</div>
-			
+			</div>			
 			<div id="menu">
 				<ul>
 				  <li><a href="user.php">User Management</a></li>
