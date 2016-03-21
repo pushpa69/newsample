@@ -189,7 +189,7 @@ $questionArray1[16][0]='1.Cloud service provider and contract: Attributes to loo
 									if(in_array($optn_name,$focus['Q'.$key])) {  
 									?>
 									
-									<p> <?php echo $val1;/*}*/ ?> </p> 
+									<p> <span style="font-size:50px">.</span><?php echo $val1;/*}*/ ?> </p> 
 							<?php 
 									}
 								//}
@@ -218,7 +218,9 @@ $questionArray1[16][0]='1.Cloud service provider and contract: Attributes to loo
 									if(!in_array($optn_name,$focus['Q'.$key])) {  
 									?>
 									
-										<p><?php echo $val1;/*}*/ ?></p> 
+										
+										<p><span style="font-size:50px">.</span><?php echo $val1;/*}*/ ?></p>
+									
 							<?php 
 									}
 								//}
@@ -249,7 +251,7 @@ $questionArray1[16][0]='1.Cloud service provider and contract: Attributes to loo
 									if(in_array($optn_name,$focus1['Q'.$key])) {  
 									?>
 									
-									<p><?php echo $val1;/*}*/ ?></p> 
+									<p><span style="font-size:50px">.</span><?php echo $val1;/*}*/ ?></p> 
 							<?php 
 									}
 								//}
@@ -278,7 +280,7 @@ $questionArray1[16][0]='1.Cloud service provider and contract: Attributes to loo
 									if(!in_array($optn_name,$focus1['Q'.$key])) {  
 									?>
 									
-										<p><?php echo $val1;/*}*/ ?></p> 
+										<p><span style="font-size:50px; margin-top:1px;">.</span><?php echo $val1;/*}*/ ?></p> 
 							<?php 
 									}
 								//}
