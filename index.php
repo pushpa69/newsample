@@ -1,13 +1,4 @@
-
-<head>
-	<style>
-		
-	</style>
-</head>
-
-
-
-<body style="background-color:FloralWhite">
+ <body style="background-color:FloralWhite">
 	<div class="wrapper">
 		<?php include("menu.php");?>
 		<div class="container">
@@ -28,7 +19,6 @@
 					{
 						$row=mysql_fetch_assoc($sql);						
 							$_SESSION['uid']=$row['u_id'];
-							//print_r($_SESSION['uid']);exit;
 							header("location:ParticpantInfo.php?id=".$row['u_id']);				
 						
 					}
@@ -57,11 +47,7 @@
 					</form>
 				</div><br>
 				
-				  <!--<div>
-					 <a href="ParticpantInfo.php" 
-					 style="float:right;margin-right:20px;"><button>Next</button></a>
-				 </div> -->
-			</div>			
+				 </div>			
 		</div>	
 		<div class="push"></div>			
 	</div>	<br>
@@ -100,3 +86,7 @@
 				document.getElementById("pwd").style.border="";
 			}
 	</script>
+	<?php /*}else{
+		//header('location:index.php');
+	}*/
+	?>
