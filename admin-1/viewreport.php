@@ -102,7 +102,7 @@ $questionArray1[16][0]='1.Cloud service provider and contract: Attributes to loo
 <?php
 	session_start();
 	include('header.php');
-	$id=3;
+	$id=$_GET['userid'];
 	$stage='2';
 	$an='';
 	 
