@@ -20,7 +20,7 @@
 	/* color:purple; */
 }
 #login form{
-	background-color:pink;
+	background-color:#F7D9BB;
 	padding:24px 0px;
 	margin-left:445px;
 	margin-right:397px;
@@ -57,7 +57,7 @@
 	color: #FFF; */
 }
 h1 {   
-    font-size: 44px;
+    font-size: 34px;
     margin-left: 68px;
     margin-top: 7px;
 	padding:0px 15px 0px 0px; 
@@ -73,24 +73,27 @@ h1 {
 #Add a {
     text-decoration: none;
 }
+#body{
+	background-color:FloralWhite; 
+}
 #table table{
     margin-left:85px;
 	 border-collapse: collapse;
-	 background-color:darkslategray;
+	 background-color:#F7D9BB;
 	 padding:1px 2px 3px 4px;
 	 margin-right:75px;
 }
 #table table td{
-	border:1px solid #ddd;
+	border:1px solid FloralWhite;
 	padding:10px;
-	color:wheat;
+	
 }
 #table table th{
-	border:1px solid #ddd;
+	border:1px solid FloralWhite;
 	padding:10px;
     font-size: 23px;
     width: 210px;
-	color:#DCDEFF;
+	
 }
 
 
@@ -112,6 +115,11 @@ h2 {
     margin-left: 33px;
     margin-right: 20px;
     margin-top: -80px;
+}
+#adlogo{
+	float:right;
+	margin-top:-78px;
+	margin-right:2px;	
 }
 #menu {
     background: #f5deb3 none repeat scroll 0 0;
@@ -165,7 +173,7 @@ li a:hover {
 margin-top:-18px;
 }
 #form{
-	background-color:pink;
+	background-color:#F7D9BB;
 	padding:1px 2px 3px 4px;
 	margin-left:244px;
 	margin-right:362px;
