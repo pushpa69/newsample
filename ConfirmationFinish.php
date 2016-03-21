@@ -165,7 +165,12 @@
 									if(in_array($optn_name,$focus['Q'.$key])) {  
 									?>
 									
-									<p> <?php echo $val1;/*}*/ ?> </p> 
+									<p> 
+									<ul>
+										<li><span style="font-size:60px;margin-left:140px;" >.</span>
+									<?php echo $val1;/*}*/ ?> 
+										</li>
+									</ul></p> 
 							<?php 
 									}
 								//}
@@ -194,7 +199,14 @@
 									if(!in_array($optn_name,$focus['Q'.$key])) {  
 									?>
 									
-										<p><?php echo $val1;/*}*/ ?></p> 
+										
+										<ul>
+										<li>
+										<p>
+										<span style="font-size:60px;">.</span><?php echo $val1;/*}*/ ?>
+										</p>
+										</li>
+										</ul>
 							<?php 
 									}
 								//}
@@ -225,7 +237,8 @@
 									if(in_array($optn_name,$focus1['Q'.$key])) {  
 									?>
 									
-									<p><?php echo $val1;/*}*/ ?></p> 
+									<p>
+									<span style="font-size:60px;">.</span><?php echo $val1;/*}*/ ?></p> 
 							<?php 
 									}
 								//}
@@ -254,7 +267,8 @@
 									if(!in_array($optn_name,$focus1['Q'.$key])) {  
 									?>
 									
-										<p><?php echo $val1;/*}*/ ?></p> 
+										<p>
+										<span style="font-size:60px;">.</span><?php echo $val1;/*}*/ ?></p> 
 							<?php 
 									}
 								//}
