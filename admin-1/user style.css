@@ -197,7 +197,6 @@ margin-top:-18px;
 	font-size:19px;
 	margin-left:0px;
 }
-	}
 
 #form textarea {
     margin-top: 20px;
@@ -215,11 +214,12 @@ body form {
 	
 }
 #hed{
-color:#f5deb3 none repeat ;
-margin-top:5px;}
+	color:#f5deb3 none repeat ;
+	margin-top:5px;
+}
 #report{
-text-align:center;
-color:blue;
-margin-right:565px;
-font-size:27px;
+	text-align:center;
+	color:blue;
+	margin-right:565px;
+	font-size:27px;
 }
