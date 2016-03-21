@@ -87,6 +87,17 @@ CREATE TABLE `users` (
 
 insert  into `users`(`u_id`,`created_by`,`updated_by`,`firstname`,`lastname`,`email`,`password`,`mobile`,`date_of_birth`,`address`,`gender`,`created_at`,`updated_at`,`status`) values (1,1,0,'pushpa','d','pushpa@gmail.com','123','900000000','12-3-15','','','2016-03-14 00:21:33','0000-00-00 00:00:00',1),(3,1,1,'hyth','hshgh','p@gmail.com','123','wettr','rtert','tertt','reyte','2016-03-16 00:00:00','2016-03-23 00:00:00',1);
 
+
+
+CREATE TABLE `adminlogin` (
+  `a_id` int(10) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(50) DEFAULT NULL,
+  `lastname` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL,
+  KEY `a_id` (`a_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1
+
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
