@@ -98,7 +98,7 @@ h1 {
 
 
 h2 {
-    color: #0000ff;
+    color: #65233d;
     text-align: center;
 }
 #heading {
@@ -169,8 +169,9 @@ li a:hover {
     width: 100%;
 }
 #form h1{
-	color:brown;
+	color:#65233d;
     margin-left:205px;
+	font-size:27px;
 }
 #back{
 margin-top:-18px;
