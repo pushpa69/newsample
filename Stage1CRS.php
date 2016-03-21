@@ -4,6 +4,7 @@
 	{
 	include('db.php');
 	$id=$_SESSION['uid'];
+ 
 	if(isset($_POST['submit']))
 	{
 		$size_enter=$_POST['size_of_enter'];
@@ -176,8 +177,8 @@
 				</div>
 			</div><br><br>
 			<div>
-				<a href="ProposedFramework.php"  style="float:left;margin-left:20px;"><button>Back</button></a>			
-				<a href="Stage2CPS.php" style="float:right;margin-left:20px;"><input type="submit" name="submit" value="Next" onclick="return validate();"/></a>
+				<a href="ProposedFramework.php"  style="float:left;margin-left:20px;"><input type="button" value="Back" /></a>			
+				<input type="submit" name="submit" value="Next" onclick="return validate();"/>
 			</div>
 			</form>
 		</div>	
