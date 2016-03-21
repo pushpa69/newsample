@@ -117,9 +117,10 @@ h2 {
     margin-top: -80px;
 }
 #adlogo{
-	float:right;
-	margin-top:-78px;
-	margin-right:2px;	
+	float:right;	
+	margin-right:2px;
+	color:purple;
+	margin-top:-70px;
 }
 #menu {
     background: #f5deb3 none repeat scroll 0 0;
@@ -134,6 +135,7 @@ ul {
     font-size: 20px;
     list-style-type: none;   
     overflow: hidden;   
+	margin-top:33px;
 }
 footer {
     background: cadetblue none repeat scroll 0 0;
@@ -155,8 +157,9 @@ li {
 li a {
     color: brown;
     display: inline-block;
-    padding: 14px 16px;
+    /* padding: 14px 16px; */
 	text-decoration:none;
+	margin-right:40px;
 }
 li a:hover {
     background-color: #c7b097;

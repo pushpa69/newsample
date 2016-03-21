@@ -13,14 +13,14 @@
 			</div>
 			<div id ="menu1" >
 				<h1 style="text-align:center;">Cloud Framework Tool</h1>
-				<img id="adlogo" src="admin1.png" alt="admin" width="150" height="50"/>
+				<h2 id="adlogo">ADMIN</h2>
 			</div>			
 			<div id="menu">
 				<ul>
 				  <li><a href="user.php">User Management</a></li>
 				  <li><a href="report.php">Report</a></li>
 				  <li id="AdminName"><?php echo 'Welcome '.' '.$_SESSION['fname'].' '.$_SESSION['lname'];?></li>
-				 <li id="logout"><a href="logout.php"> <img style="width:40px;height:40px;"src='logout1.png' alt="logout"/></a></li>	
+				 <li id="logout"><a title="logout" href="logout.php"> <img style="width:40px;height:40px;"src='logout.png' alt="logout"/></a></li>	
 				</ul>				
 			</div>
 	</body>		

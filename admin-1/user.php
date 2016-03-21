@@ -14,7 +14,7 @@
 			?>
 			<h2>USER MANAGEMENT</h2>
 				<div id="Add">
-				<a href="registration.php"><img style="float:right;margin-right:140px;width:36px;height:33px;"src="adduser.png" alt="adduser"></img></a><br>
+				<a title="AddUser" href="registration.php"><img style="float:right;margin-right:140px;width:26px;height:26px;"src="adduser.png" alt="adduser"></img></a><br>
 				</div><br><br>
 			<div id="table">
 				<table   cellspacing="0">				
@@ -32,8 +32,8 @@
 					<td > <?php echo $row['firstname'];?></td>
 					<td > <?php echo $row['lastname'];?> </td>		
 					<td > <?php echo $row['email'];?></td>
-					<td><a style="text-decoration:none;" href="editprofile.php?id=<?php echo $row['u_id'];?>"><img style="margin-left:47px;width:33px;height:34px;"src="edit.png" alt="edit"></img></a>
-					<img style="margin-left:25px;width:34px;height:33px; cursor: pointer;" src="delete.png" alt="delete" onclick="deleteUser(<?php echo $row['u_id'];?>)"> </img> </td>				  
+					<td><a style="text-decoration:none;" title="Edit" href="editprofile.php?id=<?php echo $row['u_id'];?>"><img style="margin-left:47px;width:22px;height:22px;"src="edit.png" alt="edit"></img></a>
+					<img title="Delete" style="margin-left:25px;width:21px;height:21px; cursor: pointer;" src="delete.png" alt="delete" onclick="deleteUser(<?php echo $row['u_id'];?>)"> </img> </td>				  
 				 </tr>
 				   <?php }?>				   				  
 				</table>
