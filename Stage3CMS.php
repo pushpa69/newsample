@@ -1,5 +1,6 @@
 <?php
 session_start();
+if(isset($_SESSION) && $_SESSION['uid']!=''){
 	include('db.php');
 	$questionArray[16][0]='1.Cloud service provider and contract: Attributes to look for CSP selection and negotiating cloud contracts';
 	$questionArray[16][1]='Assure that CSP is transparent in pricing when it comes to subscriptions, pay as you go models,upgrades, maintenance, exit cost and any other <span>liabilities.</span>';
@@ -20,19 +21,17 @@ session_start();
 	$an="";
 	
 	if(isset($_POST['submit']))
-	{
-		//print_r($_POST);
-		$hid=$_POST['hid'];
-		//echo $hid;
-		//die;
-		/* if($hid == ""){ */
+	{	//tprint_r($_POST());exi;	
 		if(count($_POST != 0))
 		{
+			//echo '<pre>'; print_r($_POST());
 			$query="DELETE FROM q_answers WHERE con_u_id=$id AND stage=3";
 					  mysql_query($query);
 			foreach($_POST as $qno=>$q)
 			{
-				if($q != 'submit')
+				//print_r($qNo);
+				//print_r($q);
+				if($qno != 'submit')
 				{
 					foreach($q as $a)
 					{
@@ -40,29 +39,30 @@ session_start();
 					}
 					$fAns = rtrim($an,',');
 					  
-					$query="INSERT INTO q_answers ( con_u_id, stage, question_id, q_answers, q_unansewred, created_at, status) VALUES ( '".$id."', '".$stage."', '".$qno."', '".$fAns."', '', NOW(), '1')"; 
+					$query="INSERT INTO q_answers (con_u_id, stage, question_id, q_answers,  created_at, status) VALUES ( '".$id."', '".$stage."', '".$qno."', '".$fAns."',  NOW(), '1')"; 
 					  
 					mysql_query($query);
 					$an = "";
-					//header("location:ConfirmationFinish.php");
+					header("location:ConfirmationFinish.php");
 				}
 			}
 		}
 		
 	}
-	$sql=mysql_query("select * from q_answers where con_u_id='$id'");
+	$sql=mysql_query("select * from q_answers where con_u_id='$id' and stage=3");
 	//print_r($sql);exit;
 	$focus=array();
 	while($row=mysql_fetch_assoc($sql))
 	{
 		//echo $row['con_u_id'];exit;
-		 $focus[]=explode(",",$row['q_answers']);
+		 $focus[$row['question_id']]=explode(",",$row['q_answers']);
 	}
 	 foreach($focus as $f)
 	{
 		// print_r($f);echo "<br>";
 	}  
-	
+	//echo "<pre>";
+	//print_r($focus);
 	?>
 	<div class="wrapper">
 			<?php include("menu.php");?>
@@ -91,7 +91,7 @@ session_start();
 									//echo $optn_name;
 									
 									?>
-							<input type="checkbox" id="" name="Q<?php echo $key?>[]" value="Q<?php echo $key;?>_<?php echo $key1?>" <?php  if(in_array($optn_name,$focus[$key])) { ?> checked="checked"  <?php  } else { ?><?php }?>/><?php /*if(in_array($optn_name,$focus[$key])) { */ echo $val1; /*}*/?>
+							<input type="checkbox" id="" name="Q<?php echo $key?>[]" value="Q<?php echo $key;?>_<?php echo $key1?>" <?php  if(in_array($optn_name,$focus['Q'.$key])) { ?> checked="checked"  <?php  } else { ?><?php }?>/><?php /*if(in_array($optn_name,$focus[$key])) { */ echo $val1; /*}*/?>
 							<br>
 							<?php 		}
 								}?>
@@ -99,16 +99,17 @@ session_start();
 				<?php	} ?>	
 						<div>
 							
-							<input type="submit" value="submit" name="submit" onclick="" style="margin-left:587px;">
+							
 							
 						</div>
-					</form>
+					
 				</div><br>
 			</div><br><br>
 			<div>
-				<a href="Stage2CPS.php" style="float:left;margin-left:20px;"><button>Back</button></a>			
-				<a href="ConfirmationFinish.php" style="float:right;margin-right:20px;"><button onclick="return validate()">Next</button></a>
-			</div>		
+				<a href="Stage2CPS.php" style="float:left;margin-left:20px;"><input type="button" value="Back"></a>			
+				<a href="ConfirmationFinish.php" style="float:right;margin-right:20px;"><button type="submit" name="submit" style="margin-left:587px;">Next</button></a>
+			</div>
+		</form>			
 		</div>
 		<div class="push"></div>	
 	</div>	<br><br>	
@@ -138,5 +139,11 @@ session_start();
 			}
 			</script>
 		
-		
+	<?php
+}
+else{
+	header('location:index.php');
+}
+
+?>	
 
