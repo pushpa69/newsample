@@ -29,7 +29,7 @@
 		?>
 			<div id="form">
 				<form action="" method="POST" onsubmit="return regValidate();" name="registrationform" >
-					<h1 id="head" style="font-size:20px;">Edit Profile</h1>
+					<h1 id="head" style="font-size:27px;">Edit Profile</h1>
 					<label>First name:</label>
 						<input type="text" name="Firstname" id="Firstname" placeholder="enter your firstname" value="<?php echo $row['firstname'];?>"><br>
 					<label>Last name:</label>
