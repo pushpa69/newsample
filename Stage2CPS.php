@@ -89,6 +89,7 @@
 <?php
 	include('db.php');
 	$id=$_SESSION['uid'];
+	$uid=$_GET['userid'];
 	$stage='2';
 	$an='';
 	if(isset($_POST['submit']))
