@@ -1,6 +1,7 @@
-#AdminName{
-	text-align:center;
-	 margin-left: 271px;
+#AdminName {
+    margin-left: 260px;
+    margin-top: 14px;
+    text-align: center;
 }
 #admin{
 	float:right;
@@ -138,9 +139,9 @@ h2 {
 ul {
     background: cadetblue none repeat scroll 0 0;
     font-size: 20px;
-    list-style-type: none;   
-    overflow: hidden;   
-	margin-top:33px;
+    list-style-type: none;
+    margin-top: 33px;
+    overflow: hidden;
 }
 footer {
     background: cadetblue none repeat scroll 0 0;
@@ -158,9 +159,10 @@ p{margin-left:20px;
 
 li {
     float: left;
+	margin-top:5px;
 }
 li a {
-    color: brown;
+    color: #65233d;;
     display: inline-block;
     /* padding: 14px 16px; */
 	text-decoration:none;
