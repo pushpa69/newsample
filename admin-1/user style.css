@@ -20,27 +20,22 @@
 #logout a{
 	/* color:purple; */
 }
-.active {
-	background:palegreen !important;
-	color:green !important;
-}
 #login form{
 	background-color:#F7D9BB;
 	padding:24px 0px;
-	margin-left:419px;
-	margin-right:479px;
-	margin-top:90px;
+	margin-left:445px;
+	margin-right:397px;
+	margin-top:22px;
 	border-radius:8px;
 }
 #login label{
 	float:left;
 	width:121px;
 	margin-top:20px;
-	padding-left:105px;
+	padding-left:81px;
 }
 #login input{
 	margin-top:20px;
-	margin-left:-22px;
 }
 #button {
  /*  color: #FFF; 
@@ -162,7 +157,7 @@ li {
 	margin-top:5px;
 }
 li a {
-    color: #65233d;;
+    color: #65233d;
     display: inline-block;
     /* padding: 14px 16px; */
 	text-decoration:none;
@@ -220,24 +215,11 @@ body form {
 	
 }
 #hed{
-	color:#f5deb3 none repeat ;
-	margin-top:5px;
-}
-#report{	
-	text-align:center;
-	color:blue;
-	margin-right:565px;
-	font-size:27px;
-}
-#result{
-	background-color:skyblue;
-	border-radius:5px;
-}
-#result h1{
-	font-size:20px;
-	text-align:center;
-	padding-top:27px;
-}
-#result p,input{
-	margin-left:140px;
+color:#f5deb3 none repeat ;
+margin-top:5px;}
+#report{
+text-align:center;
+color:blue;
+margin-right:565px;
+font-size:27px;
 }
