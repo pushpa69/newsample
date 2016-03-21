@@ -288,9 +288,8 @@ $questionArray1[16][0]='1.Cloud service provider and contract: Attributes to loo
 			
 			<div class="push"></div>
 		</div>
-		<?php include("footer.php");?>
 	</div>
-	</body>
+	</body><br>
 	<footer>  
 		<p style="text-align:center;"><a></a> University Of Salford</p>
 	</footer>
