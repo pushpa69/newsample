@@ -291,7 +291,7 @@ $questionArray1[16][0]='1.Cloud service provider and contract: Attributes to loo
 	</div>
 	</body><br>
 	<footer>  
-		<p style="text-align:center;"><a></a> University Of Salford</p>
+		<p style="text-align:center;"> University Of Salford</p>
 	</footer>
 </html>
 <script>

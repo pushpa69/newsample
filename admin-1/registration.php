@@ -58,7 +58,7 @@
 			</form>	
 	</div>
 	<footer>  
-		<p style="text-align:center;">Copyright @2016<a></a> University Of Saford</p>
+		<p style="text-align:center;">University Of Saford</p>
 	</footer>
 &nbsp
 <script>

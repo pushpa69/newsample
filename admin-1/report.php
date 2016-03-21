@@ -30,7 +30,7 @@
 			</div>
 	</body>
 		<footer>  
-		<p style="text-align:center;">Copyright @2016<a></a>University of Salford</p>
+		<p style="text-align:center;">University of Salford</p>
 	</footer>
 
 		&nbsp
