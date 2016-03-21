@@ -219,7 +219,19 @@ body form {
 }
 #report{
 	text-align:center;
-	color:blue;
-	margin-right:565px;
+	color:#65233d;
+	margin-right:0px;
 	font-size:27px;
+}
+#result{
+	background-color:#F7D9BB;
+	border-radius:5px;
+}
+#result h1{
+	font-size:20px;
+	text-align:center;
+	padding-top:27px;
+}
+#result p{
+	margin-left:10px;
 }
