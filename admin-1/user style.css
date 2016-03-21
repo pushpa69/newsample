@@ -226,6 +226,7 @@ body form {
 #result{
 	background-color:#F7D9BB;
 	border-radius:5px;
+	padding:15px;
 }
 #result h1{
 	font-size:20px;
