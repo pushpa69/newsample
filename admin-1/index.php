@@ -19,14 +19,16 @@
 			include('db.php');
 			if(isset($_POST['submit'])){	
 				$sql=mysql_query("SELECT * FROM adminlogin WHERE email='".$_POST['email']."' AND password='".$_POST['password']."'");
-				
-				$rows=mysql_num_rows($sql);				
-				$result=mysql_fetch_array($sql);
-				
-				if ($rows == 1){						
-					$_SESSION['uid']=$row['a_id'];
-					$_SESSION['fname']=$row['firstname'];
-					$_SESSION['lname']=$row['lastname'];					
+				// echo'<pre>';print_r($sql);exit;
+				$row=mysql_num_rows($sql);	
+				// echo'<pre>';print_r($rows);exit;
+				$res=mysql_fetch_array($sql);
+				 // echo'<pre>';print_r($res);exit;
+				if ($row == 1){						
+					 $_SESSION['uid']=$res['a_id'];
+					 $_SESSION['fname']=$res['firstname'];
+					 $_SESSION['lname']=$res['lastname'];					
+					// echo'<pre>';print_r($_SESSION);exit;
 					header ('location:user.php');
 				}else{?>
 						<p style="text-align:center;color:red;font-size:22px; margin-top:1px;">

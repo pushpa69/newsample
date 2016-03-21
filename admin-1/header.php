@@ -1,10 +1,13 @@
 <?php 
 	include('db.php');
-	$sql=mysql_query('SELECT * FROM adminlogin ');
-	$row=mysql_fetch_array($sql);
-	$_SESSION['uid']=$row['a_id'];
-	$_SESSION['fname']=$row['firstname'];
-	$_SESSION['lname']=$row['lastname'];
+	// $sql=mysql_query('SELECT * FROM adminlogin ');
+	// $row=mysql_fetch_array($sql);
+	// $_SESSION['uid']=$row['a_id'];
+	// $_SESSION['fname']=$row['firstname'];
+	// $_SESSION['lname']=$row['lastname'];
+	if(!isset($_SESSION['uid'])){
+		 header('location:index.php');
+	 }
 	$pageactive = $_SERVER['REQUEST_URI'];
 	if($pageactive == '/salford/trunk/admin-1/user.php'){
 		$user= active;

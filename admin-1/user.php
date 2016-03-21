@@ -1,12 +1,12 @@
-<?php 		
-	 // if(isset($_SESSION) && $_SESSION['uid']!=''){
+<?php 	
+	 include("header.php");	 
 ?>
 <html>
 	<head>
 	<link rel="stylesheet" type="text/css" href="user style.css"></link>
 	</head>
 		<body id="body">
-			<?php include("header.php");	?>
+			
 			<?php 	
 			if(isset($_GET['id'])){
 			$result=mysql_query('DELETE FROM users WHERE u_id="'.$_GET['id'].'"');	
