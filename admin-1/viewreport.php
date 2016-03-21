@@ -1,7 +1,6 @@
 <?php
 $qustion[]="{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18}";
-$questionArray[0][0]='1. Feasibility Study: Financial and technical suitability 	for	an enterprise to migrate on cloud computing.';
-
+$questionArray[0][0]='1. Feasibility Study: Financial and technical suitability for	an enterprise to migrate on cloud computing.';
 $questionArray[0][1]='Study of an existing data and applications to get desired output by embracing cloud solution.';
 $questionArray[0][2]='Availability of supporting hardware for proposed cloud solution';
 $questionArray[0][3]='Detailed carry out feasibility analysis of an enterprise.outline of cost/benefit model  of an enterprise.';
@@ -14,7 +13,7 @@ $questionArray[1][3]='Proper implementation of IT governance(maintenance, contro
 $questionArray[1][4]='For medium and some small enterprises, ensure Service Oriented Architecture (SOA) is running which manages a relationship';
 $questionArray[1][5]='between customer and provider in various management activities.';
 $questionArray[2][0]='2.2 Top Cloud Risks and its assessment: Technical and organizational risks associated with cloud computing.';
-$questionArray[2][0]='2.2.1Loss of Governance: Probability is very often, impact is severe and overall calculated risk is high.';
+$questionArray[2][0]='2.2.1 Loss of Governance: Probability is very often, impact is severe and overall calculated risk is high.';
 $questionArray[2][1]='Clear roles and responsibilities';
 $questionArray[2][2]='Appropriate SLA clauses.';
 $questionArray[2][3]='Adequate use of technology and solutions provided.';
@@ -103,58 +102,34 @@ $questionArray1[16][0]='1.Cloud service provider and contract: Attributes to loo
 <?php
 	session_start();
 	include('salford1.php');
-	$id=$_SESSION['uid'];
+	$id=3;
 	$stage='2';
 	$an='';
-	/* if(isset($_POST['submit']))
-	{
-		$hid=$_POST['hid'];
-		//echo $hid;exit;
-		if(count($_POST) != 0){
-			foreach($_POST as $qNo=>$q){
-				if($qNo != 'submit'){
-					foreach($q as $a){
-						$an .= $a.',';
-					}
-					$fAns = rtrim($an,',');
-					 $query="delete from q_answers where con_u_id=$id"; 
-					$query="INSERT INTO q_answers ( con_u_id, stage, question_id, q_answers, q_unansewred, created_at, status) VALUES ( '".$id."', '".$stage."', '".$qNo."', '".$fAns."', 'ewrew', '2016-03-09 00:00:00', '1')"; 
-					
-					/* else
-					{
-						$query="update q_answers set q_answers='".$fAns."' where id='$id'";
-					} */
-					/* mysql_query($query);
-					$an = "";
-			/* 		 */
-				/* }
-			}
-		}
-		
-		
-	} */  
-	$sql=mysql_query("select * from q_answers where con_u_id='$id'");
-	//print_r($sql);exit;
-	//$row=mysql_fetch_assoc($sql)
+	 
+	$sql=mysql_query("select * from q_answers where con_u_id='$id' and stage=2");
 	
 	$focus=array();
 	$qes_ids=array();
 	while($row=mysql_fetch_assoc($sql))
 	{
-		 $focus[]=explode(",",$row['q_answers']);
+		 $focus[$row['question_id']]=explode(",",$row['q_answers']);
 		 
 		 $qes_ids[]=$row['question_id'];
 		 $stage_id=$row['stage'];
-		 //echo $stage_id;
-		 //print_r($qes_id);
 	}
 	
-	 foreach($focus as $f)
+	$sql1=mysql_query("select * from q_answers where con_u_id='$id' and stage=3");
+	
+	$focus1=array();
+	$qes_ids1=array();
+	while($row1=mysql_fetch_assoc($sql1))
 	{
-		//print_r($f);echo "<br>";
-	}  
-	// print_r($focus);
-	// exit;
+		 $focus1[$row1['question_id']]=explode(",",$row1['q_answers']);
+		 
+		 $qes_ids1[]=$row1['question_id'];
+		 $stage_id1=$row1['stage'];
+	}
+
 	
 ?>
 	<head>
@@ -182,25 +157,21 @@ $questionArray1[16][0]='1.Cloud service provider and contract: Attributes to loo
 		}
 	</style>
 	</head>
-	<div class="wrapper">
-			<?php include("menu.php");?>
+	<div class="wrapper">			
 		<div class="container">
 			<div id="result">
 				<div>
-					<h1>RESULTS AND RECOMMENDATIONS.</h1><br>
+					<h1 style="font-size:28px;">RESULTS AND RECOMMENDATIONS</h1><br>
 				</div>
 				<div>
-					<p>1.Cloud Requirement Stage:</p><br>					
-				</div>
-				<div>
-					<p>2.Cloud Preparation Stage:</p><br>
-					<p>>Your Preparedness</p><br><br><br>
-					<div>
-					<form action="" method="POST" name="myform" onsubmit="return validate();">
+					<p style="font-size:23px;color:DarkGreen ;">1.Cloud Requirement Stage:</p><br>					
+				</div> 
+					<p style="font-size:23px;color:DarkGreen ;">2.Cloud Preparation Stage:</p>
+					<p style="font-size:19px;color:Maroon ;">Your Preparedness</p><br>
+					 
 						<?php foreach($questionArray as $key=>$val)
-						{ ?> 
-						<div>
-						<?php if(in_array('Q'.($key),$qes_ids)){ ?>
+						{ ?>  
+						<?php //if(in_array('Q'.($key),$qes_ids)){ ?>
 							<?php foreach($val as $key1=>$val1)
 							{ 
 								
@@ -215,71 +186,21 @@ $questionArray1[16][0]='1.Cloud service provider and contract: Attributes to loo
 								{
 									$u ='_';
 									$optn_name='Q'.($key).$u.($key1);
-									//echo $optn_name;
+									if(in_array($optn_name,$focus['Q'.$key])) {  
 									?>
-									<br>
-							<input type="checkbox" id="" name="Q<?php echo $key;?>[]" value ="Q<?php echo $key; ?>_<?php echo $key1?>"  <?php  if(in_array($optn_name,$focus[$key])) { ?>   <?php  }else{?> checked="checked"  <?php } ?> /><?php /*if(in_array($optn_name,$focus[$key])) {*/?> <?php echo $val1;/*}*/ ?>
-							
-							<?php 
-								}
-							}?>
-													
-						</div><br>
-						<?php }}?>
-						
-							
-					</form>
-				</div>	
-					
-					<p>>What You Need To Prepare</p><br><br><br>
-					<div>
-					<form action="" method="POST" name="myform" onsubmit="return validate();">
-						
-						<?php
-						
-						foreach($questionArray as $key=>$val)
-						{ //echo $key;
-						//print_r($val);?> 
-						<div>
-						<?php if(!in_array('Q'.($key),$qes_ids)){ ?>
-							<?php foreach($val as $key1=>$val1)
-							{ //echo $key1;
-								
-								if($key1== 0)
-								{
-								?>
-								<p><?php echo $val1?></p>
 									
-								<?php 
-								}
-								else
-								{
-									$u ='_';
-									$optn_name='Q'.($key).$u.($key1);
-									//echo $optn_name;
-									?>
-									<br>
-							<input type="checkbox" id="" name="Q<?php echo $key;?>[]" value ="Q<?php echo $key; ?>_<?php echo $key1?>"  <?php  if(in_array($optn_name,$focus[$key])) { ?> checked="checked"    <?php  }else{?>  <?php } ?> /><?php /*if(in_array($optn_name,$focus[$key])) {*/?> <?php echo $val1;/*} */?>
-							
+									<p> <?php echo $val1;/*}*/ ?> </p> 
 							<?php 
-								}
-							}?>
-													
-						</div><br>
-						<?php }}?>
-						
-							
-					</form>
-				</div>	
-				</div>
-				<div>
-					<p>3.Cloud Migration Stage:</p><br>
-					<p> >Your Preparedness</p><br><br><br>
-					
-							<?php foreach($questionArray1 as $key=>$val)
-						{ ?> 
-						<div>
-						<?php if(in_array('Q'.($key),$qes_ids)){ ?>
+									}
+								//}
+							}?> 
+						<?php }}?>							
+						<br>
+					<p style="font-size:19px;color:Maroon ;">What you need to prepare</p><br>
+					 
+						<?php foreach($questionArray as $key=>$val)
+						{ ?>  
+						<?php //if(in_array('Q'.($key),$qes_ids)){ ?>
 							<?php foreach($val as $key1=>$val1)
 							{ 
 								
@@ -294,28 +215,25 @@ $questionArray1[16][0]='1.Cloud service provider and contract: Attributes to loo
 								{
 									$u ='_';
 									$optn_name='Q'.($key).$u.($key1);
-									//echo $optn_name;
+									if(!in_array($optn_name,$focus['Q'.$key])) {  
 									?>
-									<br>
-							<input type="checkbox" id="" name="Q<?php echo $key;?>[]" value ="Q<?php echo $key; ?>_<?php echo $key1?>"  <?php  if(in_array($optn_name,$focus[$key])) { ?>   <?php  }else{?> checked="checked"  <?php } ?> /><?php /*if(in_array($optn_name,$focus[$key])) {*/?> <?php echo $val1;/*}*/ ?>
-							
+									
+										<p><?php echo $val1;/*}*/ ?></p> 
 							<?php 
-								}
-							}?>
-													
-						</div><br>
-						<?php }}?>
-						
-					<p>>What You Need To Be Aware Of</p><br><br><br>
-							<?php
-						
-						foreach($questionArray1 as $key=>$val)
-						{ //echo $key;
-						//print_r($val);?> 
-						<div>
-						<?php if(!in_array('Q'.($key),$qes_ids)){ ?>
+									}
+								//}
+							}?> 
+						<?php }}?>							
+					 
+						 <br>
+					<p style="font-size:23px;color:DarkGreen ;" >3.Cloud Migration Stage:</p>
+					<p style="font-size:19px;color:Maroon ;">Your Preparedness</p><br>
+					 
+						<?php foreach($questionArray1 as $key=>$val)
+						{ ?>  
+						<?php //if(in_array('Q'.($key),$qes_ids)){ ?>
 							<?php foreach($val as $key1=>$val1)
-							{ //echo $key1;
+							{ 
 								
 								if($key1== 0)
 								{
@@ -328,20 +246,46 @@ $questionArray1[16][0]='1.Cloud service provider and contract: Attributes to loo
 								{
 									$u ='_';
 									$optn_name='Q'.($key).$u.($key1);
-									//echo $optn_name;
+									if(in_array($optn_name,$focus1['Q'.$key])) {  
 									?>
-									<br>
-							<input type="checkbox" id="" name="Q<?php echo $key;?>[]" value ="Q<?php echo $key; ?>_<?php echo $key1?>"  <?php  if(in_array($optn_name,$focus[$key])) { ?> checked="checked"    <?php  }else{?>  <?php } ?> /><?php /*if(in_array($optn_name,$focus[$key])) {*/?> <?php echo $val1;/*} */?>
-							
+									
+									<p><?php echo $val1;/*}*/ ?></p> 
 							<?php 
+									}
+								//}
+							}?>								
+						<?php }}?>							
+							<br>
+					<p style="font-size:19px;color:Maroon ;">What you need to prepare</p> <br>
+					 
+						<?php foreach($questionArray1 as $key=>$val)
+						{ ?>  
+						<?php //if(in_array('Q'.($key),$qes_ids)){ ?>
+							<?php foreach($val as $key1=>$val1)
+							{ 
+								
+								if($key1== 0)
+								{
+								?>
+								<p><?php echo $val1?></p>
+									
+								<?php 
 								}
-							}?>
-													
-						</div><br>
-						<?php }}?>
-						
-				</div>				
-			</div>			
+								else
+								{
+									$u ='_';
+									$optn_name='Q'.($key).$u.($key1);
+									if(!in_array($optn_name,$focus1['Q'.$key])) {  
+									?>
+									
+										<p><?php echo $val1;/*}*/ ?></p> 
+							<?php 
+									}
+								//}
+							}?>								
+						<?php }}?>			 
+			</div>	
+			
 			<div class="push"></div>
 		</div>
 		<?php include("footer.php");?>
