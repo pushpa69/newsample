@@ -62,7 +62,7 @@
 				</form>		
 			</div>
 			<footer>  
-				<p style="text-align:center;">Copyright @2016	<a href="http://aapthitech.com">Aapthi Technologies,</a>an SBU of Yalavarthi Software Solutions pvt Ltd.</p>
+				<p style="text-align:center;"><a></a> University Of Salford</p>
 			</footer>
 			&nbsp
 	</body>

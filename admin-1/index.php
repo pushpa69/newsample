@@ -4,14 +4,14 @@
 	</head>	
 			<body>
 					<div id="logo1">
-						<img src="img/logo.png" alt="logo" style="width:150px;height:90px;">
+						<img src="images/logo.png" alt="logo" style="width:150px;height:90px;">
 					</div>
 						<div id ="menu1">
 							<h1 style="text-align:center;">Cloud Framework Tool</h1>
 						</div>			
 						<div id="menu">
 							<ul>				  
-				   <li><a href="" style="margin-left:50px; font-size:20px;color:white;"> Login</a></li>				  
+								<li><a href="" class="active" style="margin-left:50px; font-size:20px;color:white;"> Login</a></li>				  
 							</ul>				
 						</div>
 					<div id="login">
@@ -19,16 +19,18 @@
 			include('db.php');
 			if(isset($_POST['submit'])){	
 				$sql=mysql_query("SELECT * FROM adminlogin WHERE email='".$_POST['email']."' AND password='".$_POST['password']."'");
-				$rows=mysql_num_rows($sql);
+				
+				$rows=mysql_num_rows($sql);				
 				$result=mysql_fetch_array($sql);
+				
 				if ($rows == 1){						
 					$_SESSION['uid']=$row['a_id'];
 					$_SESSION['fname']=$row['firstname'];
 					$_SESSION['lname']=$row['lastname'];					
-					header ('location: user.php');
+					header ('location:user.php');
 				}else{?>
-						<p style="text-align:center;color:red;font-size:22px; margin-top:120px;">
-						<?php echo "worng creditionals";?></p>
+						<p style="text-align:center;color:red;font-size:22px; margin-top:1px;">
+						<?php echo "Worng Credentials";?></p>
 						<?php
 				}
 			} 
@@ -49,7 +51,7 @@
 					</div>
 			</body>	
 		<footer>  
-			<p style="text-align:center;">Copyright @2016	<a href="http://aapthitech.com">Aapthi Technologies,</a>an SBU of Yalavarthi Software Solutions pvt Ltd.</p>
+			<p style="text-align:center;"><a></a> University Of Salford</p>
 		</footer>
 
 		<script>

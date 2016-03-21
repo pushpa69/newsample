@@ -159,11 +159,33 @@ $questionArray1[16][0]='1.Cloud service provider and contract: Attributes to loo
 ?>
 	<head>
 		<link rel="stylesheet" type="text/css" href="user style.css"></link>
+	<style>
+		body{
+			overflow-x:hidden;
+		}
+		html, body {
+			height: 100%;
+		}
+		.wrapper {
+			min-height: 100%;
+			height: auto !important;
+			height: 100%;
+			margin: 0 auto -2em;
+		}
+		.container{
+			width:1024px;
+			margin:0 auto;
+		}
+		.active {
+			background:palegreen !important;
+			color:green !important;
+		}
+	</style>
 	</head>
 	<div class="wrapper">
 			<?php include("menu.php");?>
 		<div class="container">
-			<div id="page7">
+			<div id="result">
 				<div>
 					<h1>RESULTS AND RECOMMENDATIONS.</h1><br>
 				</div>

@@ -9,7 +9,7 @@
 	if($pageactive == '/salford/trunk/admin-1/user.php'){
 		$user= active;
 	}elseif ($pageactive == '/salford/trunk/admin-1/report.php'){
-		$repot = active;
+		$report = active;
 	}
 ?>
 <html>
