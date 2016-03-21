@@ -102,7 +102,7 @@ $questionArray1[16][0]='1.Cloud service provider and contract: Attributes to loo
 
 <?php
 	session_start();
-	include('db.php');
+	include('salford1.php');
 	$id=$_SESSION['uid'];
 	$stage='2';
 	$an='';
@@ -157,7 +157,9 @@ $questionArray1[16][0]='1.Cloud service provider and contract: Attributes to loo
 	// exit;
 	
 ?>
-
+	<head>
+		<link rel="stylesheet" type="text/css" href="user style.css"></link>
+	</head>
 	<div class="wrapper">
 			<?php include("menu.php");?>
 		<div class="container">
@@ -317,10 +319,7 @@ $questionArray1[16][0]='1.Cloud service provider and contract: Attributes to loo
 						<?php }}?>
 						
 				</div>				
-			</div>
-			<div style="text-align:left;margin-left:20px;">
-				<a href="Stage3CMS.php"><button onclick="myfunction();">Back</button></a>
-			</div>
+			</div>			
 			<div class="push"></div>
 		</div>
 		<?php include("footer.php");?>
