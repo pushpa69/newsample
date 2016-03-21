@@ -72,7 +72,7 @@ CREATE TABLE `users` (
   `firstname` varchar(50) NOT NULL,
   `lastname` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `password` varchar(100) NOT NULL,
+  `u_password` varchar(100) NOT NULL,
   `mobile` varchar(50) NOT NULL,
   `date_of_birth` varchar(50) NOT NULL,
   `address` text NOT NULL,
@@ -85,7 +85,7 @@ CREATE TABLE `users` (
 
 /*Data for the table `users` */
 
-insert  into `users`(`u_id`,`created_by`,`updated_by`,`firstname`,`lastname`,`email`,`password`,`mobile`,`date_of_birth`,`address`,`gender`,`created_at`,`updated_at`,`status`) values (1,1,0,'pushpa','d','pushpa@gmail.com','123','900000000','12-3-15','','','2016-03-14 00:21:33','0000-00-00 00:00:00',1),(3,1,1,'hyth','hshgh','p@gmail.com','123','wettr','rtert','tertt','reyte','2016-03-16 00:00:00','2016-03-23 00:00:00',1);
+insert  into `users`(`u_id`,`created_by`,`updated_by`,`firstname`,`lastname`,`email`,`u_password`,`mobile`,`date_of_birth`,`address`,`gender`,`created_at`,`updated_at`,`status`) values (1,1,0,'pushpa','d','pushpa@gmail.com','123','900000000','12-3-15','','','2016-03-14 00:21:33','0000-00-00 00:00:00',1),(3,1,1,'hyth','hshgh','p@gmail.com','123','wettr','rtert','tertt','reyte','2016-03-16 00:00:00','2016-03-23 00:00:00',1);
 
 
 
