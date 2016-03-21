@@ -1,3 +1,8 @@
+<?php 
+	session_start();
+	if(isset($_SESSION) && $_SESSION['uid']!=''){
+
+?>
 <html>
 	<head>	
 		<link rel="stylesheet" type="text/css" href="css/mystyle.css"></link>
@@ -22,3 +27,10 @@
 		</body>
 		<?php include("footer.php");?>
 </html>
+<?php
+	}
+	else
+	{
+		header('location:index.php');
+	}
+?>
