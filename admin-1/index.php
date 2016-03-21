@@ -4,7 +4,7 @@
 	</head>	
 			<body>
 					<div id="logo1">
-						<img src="logo.png" alt="logo" style="width:150px;height:90px;">
+						<img src="img/logo.png" alt="logo" style="width:150px;height:90px;">
 					</div>
 						<div id ="menu1">
 							<h1 style="text-align:center;">Cloud Framework Tool</h1>
