@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="user style.css"></link>
 	</head>
 		<body id="body">
-			<?php include("salford1.php");	?>
+			<?php include("header.php");	?>
 			<?php 	
 			if(isset($_GET['id'])){
 			$result=mysql_query('DELETE FROM users WHERE u_id="'.$_GET['id'].'"');	

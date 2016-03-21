@@ -101,7 +101,7 @@ $questionArray1[16][0]='1.Cloud service provider and contract: Attributes to loo
 
 <?php
 	session_start();
-	include('salford1.php');
+	include('header.php');
 	$id=3;
 	$stage='2';
 	$an='';

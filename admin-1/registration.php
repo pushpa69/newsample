@@ -6,7 +6,7 @@
 		<div id="hed">
 		<div>		
 	<body id="back">
-		<?php include("salford1.php");	?>
+		<?php include("header.php");	?>
 		<?php 					
 			$id=$_SESSION['uid'];
 			if(isset($_POST['submit'])){

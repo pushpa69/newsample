@@ -4,7 +4,7 @@
 	</head>
 	<body id="body">
 		<?php 
-		include("salford1.php");
+		include("header.php");
 		$sql=mysql_query('SELECT * FROM users');	
 		?>
 		<h1 id ="report">Report</h1>				
