@@ -1,20 +1,20 @@
 <?php
 session_start();
 	include('db.php');
-	$questionArray[0][0]='1.Cloud service provider and contract: Attributes to look for CSP selection and negotiating cloud contracts';
-	$questionArray[0][1]='Assure that CSP is transparent in pricing when it comes to subscriptions, pay as you go models,upgrades, maintenance, exit cost and any other <span>liabilities.</span>';
-	$questionArray[0][2]='Look for CSP who offers scalable and flexible solution, which help users to upscale and downscale services as per business needs.';
-	$questionArray[0][3]='Select CSP who has high security, interoperability, legal and privacy standards in practice to offer services.';
-	$questionArray[0][4]='Dictate cloud contract and negotiate your terms rather being on receiving side.';
-	$questionArray[1][0]='2. Migration, Testing and Deployment: Exhibits preparedness of an enterprise leading to migration, testing and deployment of data.';
-	$questionArray[1][1]='Ensure all the data is migrated slowly and tested regulalry to avoid any complications during deployment.';
-	$questionArray[1][2]='Ensure high level of testing is done prior to going live to avoid issues like compatibility and rugged performance of apps and data';
-	$questionArray[1][3]='Ensure data migration is done using parallel approach and carried out by highly skilled data professionals.';
-	$questionArray[2][0]='3. Monitoring and maintenance: Post migration stage which focuses on monitoring and maintenance of thedeployed system.';
-	$questionArray[2][1]='Ensure all terms in SLAs are being abide by CSP.';
-	$questionArray[2][2]='Monitor the performance of the over all system on a regular basis.';
-	$questionArray[2][3]='Monitor the performance of the over all system on a regular basis.';
-	$questionArray[2][4]='If performance goes down, enusreits been comprehensively maintained by the CSP as per the contract.';
+	$questionArray[16][0]='1.Cloud service provider and contract: Attributes to look for CSP selection and negotiating cloud contracts';
+	$questionArray[16][1]='Assure that CSP is transparent in pricing when it comes to subscriptions, pay as you go models,upgrades, maintenance, exit cost and any other <span>liabilities.</span>';
+	$questionArray[16][2]='Look for CSP who offers scalable and flexible solution, which help users to upscale and downscale services as per business needs.';
+	$questionArray[16][3]='Select CSP who has high security, interoperability, legal and privacy standards in practice to offer services.';
+	$questionArray[16][4]='Dictate cloud contract and negotiate your terms rather being on receiving side.';
+	$questionArray[17][0]='2. Migration, Testing and Deployment: Exhibits preparedness of an enterprise leading to migration, testing and deployment of data.';
+	$questionArray[17][1]='Ensure all the data is migrated slowly and tested regulalry to avoid any complications during deployment.';
+	$questionArray[17][2]='Ensure high level of testing is done prior to going live to avoid issues like compatibility and rugged performance of apps and data';
+	$questionArray[17][3]='Ensure data migration is done using parallel approach and carried out by highly skilled data professionals.';
+	$questionArray[18][0]='3. Monitoring and maintenance: Post migration stage which focuses on monitoring and maintenance of thedeployed system.';
+	$questionArray[18][1]='Ensure all terms in SLAs are being abide by CSP.';
+	$questionArray[18][2]='Monitor the performance of the over all system on a regular basis.';
+	$questionArray[18][3]='Monitor the performance of the over all system on a regular basis.';
+	$questionArray[18][4]='If performance goes down, enusreits been comprehensively maintained by the CSP as per the contract.';
 	$id=$_SESSION['uid'];
 	$stage='3';
 	$an="";
@@ -28,6 +28,8 @@ session_start();
 		/* if($hid == ""){ */
 		if(count($_POST != 0))
 		{
+			$query="DELETE FROM q_answers WHERE con_u_id=$id AND stage=3";
+					  mysql_query($query);
 			foreach($_POST as $qno=>$q)
 			{
 				if($q != 'submit')
@@ -37,11 +39,12 @@ session_start();
 						$an .= $a.',';
 					}
 					$fAns = rtrim($an,',');
-					  $query="delete from q_answers where con_u_id=$id";
+					  
 					$query="INSERT INTO q_answers ( con_u_id, stage, question_id, q_answers, q_unansewred, created_at, status) VALUES ( '".$id."', '".$stage."', '".$qno."', '".$fAns."', '', NOW(), '1')"; 
 					  
 					mysql_query($query);
 					$an = "";
+					//header("location:ConfirmationFinish.php");
 				}
 			}
 		}
@@ -59,6 +62,7 @@ session_start();
 	{
 		// print_r($f);echo "<br>";
 	}  
+	
 	?>
 	<div class="wrapper">
 			<?php include("menu.php");?>
@@ -71,6 +75,7 @@ session_start();
 					<form action="" method="POST" name="myform" onsubmit="return validate();">
 						<?php foreach($questionArray as $key=>$val)
 						{
+							//echo $key;
 							?>
 						<div>
 							<?php 
@@ -79,20 +84,21 @@ session_start();
 									if($key1==0){
 							?>
 							<p><?php echo $val1;?></p><br>
-									<?php }else { 
+									<?php 		}
+									else { 
 										$u ='_';
 									$optn_name='Q'.($key).$u.($key1);
+									//echo $optn_name;
 									
 									?>
-							<input type="checkbox" id="" name="Q<?php echo $key?>[]" value="Q<?php echo $key;?>_<?php echo $key1?>" <?php  if(in_array($optn_name,$focus[$key])) { ?> checked="checked" <?php  }?>/><?php echo $val1;?>
+							<input type="checkbox" id="" name="Q<?php echo $key?>[]" value="Q<?php echo $key;?>_<?php echo $key1?>" <?php  if(in_array($optn_name,$focus[$key])) { ?> checked="checked"  <?php  } else { ?><?php }?>/><?php /*if(in_array($optn_name,$focus[$key])) { */ echo $val1; /*}*/?>
 							<br>
-							<?php }}?>
+							<?php 		}
+								}?>
 						</div>
-						<?php }?>	
+				<?php	} ?>	
 						<div>
-						<input type="hidden" name="hid" id="hid"   value="<?php  if(isset($row['con_u_id'])){
-							echo $row['con_u_id']; 
-						} ?>"/>	
+							
 							<input type="submit" value="submit" name="submit" onclick="" style="margin-left:587px;">
 							
 						</div>
