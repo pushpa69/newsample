@@ -1,9 +1,9 @@
 <?php
 	session_start();
-	
+	if(isset($_SESSION) && $_SESSION['uid']!='')
+	{
 	include('db.php');
 	$id=$_SESSION['uid'];
-	//echo $id;
 	if(isset($_POST['submit']))
 	{
 		$size_enter=$_POST['size_of_enter'];
@@ -11,8 +11,7 @@
 		$type_ser=$_POST['services'];
 		$turnover=$_POST['turnover'];
 		date_default_timezone_set("Asia/Calcutta");
-		$date=date("Y-m-d h:i:s");
-		//echo $size_enter;exit;
+		$date=date("Y-m-d h:i:s");		
 		$sql="update general_information set size_enterprise='$size_enter' ,type_enterprise='$type_enter',services_enterprise='$type_ser',turover_enterprise='$turnover',updated_at='$date',updated_by='$id' where gi_id=$id";
 		
 		mysql_query($sql);
@@ -167,20 +166,20 @@
 							</select><br><br>
 						</div><br>
 						<div>
-							<input type="submit" 
-							value="submit"  style="margin-left:587px;" name="submit"/>
+							
 							<input type="hidden" name="hid" id="hid"   value="<?php if(isset($row['gi_id'])){
 							echo $row['gi_id'];
 						}?>"/>
 							
 						</div>
-					</form>
+					
 				</div>
 			</div><br><br>
 			<div>
 				<a href="ProposedFramework.php"  style="float:left;margin-left:20px;"><button>Back</button></a>			
-				<a href="Stage2CPS.php" style="float:right;margin-left:20px;"><button onclick="return validate();">Next</button></a>
+				<a href="Stage2CPS.php" style="float:right;margin-left:20px;"><input type="submit" name="submit" value="Next" onclick="return validate();"/></a>
 			</div>
+			</form>
 		</div>	
 		<div class="push"></div>			
 	</div>	<br>		
@@ -229,3 +228,11 @@
 			}
 		</script>
 		
+<?php
+	}
+	else
+	{
+		header('location:index.php');
+	}
+
+?>
