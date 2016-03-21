@@ -1,5 +1,9 @@
-<?php
+<?php 
 	session_start();
+	if(isset($_SESSION) && $_SESSION['uid']!=''){
+
+?>
+<?php
 	include('db.php');
 	  $id=$_SESSION['uid'];
 	if(isset($_POST['submit']))
@@ -26,7 +30,7 @@
 		} 
 		
 		mysql_query($sql);
-		header("location:Stage1CRS.php");
+		header("location:ProposedFramework.php");
 		
 	}
 	 $res=mysql_query("select * from general_information where gi_id='".$id."'");
@@ -71,19 +75,26 @@
 						}?>" size="30"/>
 					</div>
 					<div>
-						<input type="submit" id="button" onclick="" name="submit" value="submit"/>
+						<!--<input type="submit" id="button" onclick="" name="submit" value="submit"/>-->
 					</div>					
 						<input type="hidden" name="hid" id="hid"   value="<?php if(isset($row['gi_id'])){
 							echo $row['gi_id'];
 						}?>"/>									
-				</form>				
+							
 			</div><br>
 			<div>	
-				<a href="ProposedFramework.php" style="float:right;margin-left:20px;"><button onclick="return validate();">Next</button></a>
+				<a href="ProposedFramework.php" style="float:right;margin-left:20px;"><input type="submit" name="submit" value="Next" onclick="return validate();"/></a>
 			</div>
+			</form>	
 		</div><br><br>
 					
 		<div class="push"></div>			
 	</div>	<br>		
-	<?php include("footer.php");?>
+	<?php include("footer.php");
+	}
+	else{
+		header('location:index.php');
+	}
+	
+	?>
 	
