@@ -205,7 +205,7 @@ height: 2em;
 	text-align:center;
 	padding-top:27px;
 }
-#page7 p{
+#page7 p,input{
 	margin-left:140px;
 }
 .foot {
