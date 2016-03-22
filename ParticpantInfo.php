@@ -37,11 +37,9 @@
 	 $res=mysql_query("select * from general_information where gi_u_id=$id");
 		//print_r($res);exit;
 		
-		while($row=mysql_fetch_assoc($res))
-		{
-print_r($row);exit;		
-			echo $row['gi_id'];	
-		}
+	$row=mysql_fetch_assoc($res);
+		
+
 ?>
 <head>
 	<style>
