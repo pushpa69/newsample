@@ -8,11 +8,19 @@
 	if(!isset($_SESSION['uid'])){
 		 header('location:index.php');
 	 }
+	 
 	$pageactive = $_SERVER['REQUEST_URI'];
+	
 	if($pageactive == '/salford/trunk/admin-1/user.php'){
 		$user= active;
 	}elseif ($pageactive == '/salford/trunk/admin-1/report.php'){
 		$report = active;
+	}elseif($pageactive == '/salford/trunk/admin-1/registration.php'){
+		$user=active;
+	}elseif($pageactive == '/salford/trunk/admin-1/editprofile.php?'.$_SERVER['QUERY_STRING']){
+		$user=active;
+	}else if ($pageactive == '/salford/trunk/admin-1/viewreport.php?'.$_SERVER['QUERY_STRING']){
+		$report=active;
 	}
 ?>
 <html>
