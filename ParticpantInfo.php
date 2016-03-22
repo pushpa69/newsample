@@ -91,7 +91,7 @@
 						} else { echo "0"; }?>"/>									
 							
 			</div><br>
-			<div>	
+			<div style="float:right;margin-top:10px;">	
 				<input type="submit" name="submit" value="Next" />
 			</div>
 			</form>	
