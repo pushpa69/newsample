@@ -20,7 +20,7 @@
 		 if($_POST['hid'] == "0")
 		{ 
 	
-		 $sql="INSERT INTO general_information (gi_u_id, name_oraganization,designation, expereince, other_info,  updated_at, updated_by,created_at)	VALUES ('','".$id."', '".$name_org."','".$desig."', '".$experience."', '".$other_info."', '".$date."')"; 
+		 $sql="INSERT INTO general_information (gi_u_id, name_oraganization,designation, expereince, other_info,  updated_at, updated_by,created_at)	VALUES ('".$id."', '".$name_org."','".$desig."', '".$experience."', '".$other_info."', '".$date."')"; 
 			//echo'pre';print_r($sql);
 		 } 
 		 else
