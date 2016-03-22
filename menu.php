@@ -75,7 +75,7 @@ session_start();
 					<div id="navbar">
 					<div class="container">
 							<ul>
-								<li><a href="index.php" class="<?php echo $home ?>">Login</a></li>
+								
 								<li><a href="#" class="<?php echo $ParticpantInfo ?>">ParticpantInfo</a></li>
 								<li><a href="#" class="<?php echo $ProposedFramework ?>">ProposedFramework</a></li>
 								<li><a href="#" class="<?php echo $Stage1CRS ?>">Stage1CRS</a></li>
