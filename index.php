@@ -13,7 +13,7 @@
 				if(isset($_POST['submit']))
 				{
 					$email=$_POST['user_id'];
-					$pswd=$_POST['pwd'];
+					$pswd=md5($_POST['pwd']);
 					$sql=mysql_query("select * from users where email='".$email."' and u_password='".$pswd."'");
 					if(mysql_num_rows($sql)==1)
 					{
