@@ -40,6 +40,15 @@
 				
 		
 ?>
+<head>
+	<style>
+		label {color:purple;
+			}
+			h2 {
+				color:blue;
+			}
+	</style>
+</head>
 <body style="background-color:FloralWhite">
 	<div class="wrapper">
 		<?php include("menu.php");?>
@@ -50,26 +59,26 @@
 						<h2>General Information About Organization(optional)</h2><br><br>
 					</div>
 					<div>
-						<label>1.Name Of The Organization(optional)</label>
+						<label style="font-weight:bold;font-size:14px;">1.Name Of The Organization(optional)</label>
 						<input type="text" id="" name="name_org" 
 						value="<?php if(isset($row['name_oraganization'])){
 							echo $row['name_oraganization'];
 						}?>" size="30" />
 					</div>
 					<div>
-						<label>2.Position Or Designation(optional)</label>
+						<label style="font-weight:bold;font-size:14px;">2.Position Or Designation(optional)</label>
 						<input type="text" id="" name="desg" value="<?php if(isset($row['designation'])){
 							echo $row['designation'];
 						}?>" size="30"/>
 					</div>
 					<div>
-						<label>3.Any Experience in IT(optional)</label>
+						<label style="font-weight:bold;font-size:14px;">3.Any Experience in IT(optional)</label>
 						<input type="text" id="" name="experience" value="<?php if(isset($row['expereince'])){
 							echo $row['expereince'];
 						}?>" size="30"/>
 					</div>
 					<div>
-						<label>4.Any of Other Information(optional)</label>
+						<label style="font-weight:bold;font-size:14px;">4.Any of Other Information(optional)</label>
 						<input type="text" id="" name="other_info" value="<?php if(isset($row['other_info'])){
 							echo $row['other_info'];
 						}?>" size="30"/>
