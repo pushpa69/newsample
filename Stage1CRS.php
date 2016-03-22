@@ -25,18 +25,28 @@
 	
 
 ?>
+<head>
+	<style>
+		label,h2 {color:purple;
+			}
+		 #page4 h1{
+				color:blue;
+			}
+			
+	</style>
+</head>
 	<div class="wrapper">
 			<?php include("menu.php");?>
 		<div class="container">
 			<div id="page4">
 				<div>
-					<h1>CLOUD REQUIREMENT STAGE: WHAT'S REQUIRED FOR YOUR ENTERPRISE.</h1><br><br>
-					<h2>General Info About Enterprise.</h2><br>
+					<p class="h"><h1>CLOUD REQUIREMENT STAGE: WHAT'S REQUIRED FOR YOUR ENTERPRISE.</h1></p><br><br>
+					<h2 style="font-weight:bold;font-size:18px;text-decoration:underline;">General Info About Enterprise.</h2><br>
 				</div>
 				<div>
 					<form action="" method="POST" onsubmit="return validate();" name="myform" >
 						<div>
-							<label>1.Size of your enterprise.</label>
+							<label style="font-weight:bold;font-size:14px;width:300px;">1.Size of your enterprise.</label>
 							<select name="size_of_enter" id="size_of_enter" onblur="myfunction();">
 							<option value="default" >---select size of your enterprize---</option>
 							<?php
@@ -79,7 +89,7 @@
 							</select><br><br>
 						</div><br>
 						<div>
-							<label>2.Type of enterprise are you?</label>
+							<label style="font-weight:bold;font-size:14px;width:300px;">2.Type of enterprise are you?</label>
 							<select name="select_type" id="select_type" onblur="myfunction();">
 								<option value="default" >---select type of enterprise---</option>
 								<?php
@@ -112,7 +122,7 @@
 							</select><br><br><br>
 						</div>
 						<div>
-							<label>3. Type of service(s) is offered by your enterprise.</label>
+							<label style="font-weight:bold;font-size:14px;width:300px;">3. Type of service(s) is offered by your <span style="margin-left:10px;">enterprise.</span></label>
 							<input style="margin-left:138px; width:200px;" 
 							type="text"
 							id="services" 
@@ -121,7 +131,7 @@
 						}?>" onblur="myfunction();"/><br>
 						</div><br><br>
 						<div>
-							<label>4. Turnover of your enterprise.</label>
+							<label style="font-weight:bold;font-size:14px;width:300px;">4. Turnover of your enterprise.</label>
 							<select name="turnover" id="turnover" onblur="myfunction();">
 								<option value="default" >---select turnover of your enterprise---</option>
 								<?php
