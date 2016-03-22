@@ -17,18 +17,18 @@
 		$other_info=$_POST['other_info'];
 		date_default_timezone_set("Asia/Calcutta");
 		$date=date("Y-m-d h:i:s");
-		
+		//print_r($_POST);exit;
 		 if($_POST['hid'] == "0")
 		{ 
-	
+			
 		 $sql="INSERT INTO general_information (gi_u_id, name_oraganization,designation, expereince, other_info,  updated_at)	VALUES ('".$id."', '".$name_org."','".$desig."', '".$experience."', '".$other_info."', '".$date."')"; 
-			//echo'pre';print_r($sql);exit;
+			//print_r($sql);exit;
 		 } 
 		 else
 			 
 		{
-			$sql="UPDATE general_information SET gi_u_id='".$id."',name_oraganization='".$name_org."',designation='".$desig."',expereince='".$experience."',other_info='".$other_info."',updated_at='".$date."',updated_by='".$id."' WHERE gi_u_id=$hid";
-			
+			$sql="UPDATE general_information SET gi_u_id='".$id."',name_oraganization='".$name_org."',designation='".$desig."',expereince='".$experience."',other_info='".$other_info."',updated_at='".$date."',updated_by='".$id."' WHERE gi_u_id='$hid'";
+			//echo'pre';print_r($sql);exit;
 		} 
 		mysql_query($sql);
 		header("location:ProposedFramework.php?id=$id");
@@ -37,8 +37,9 @@
 	 $res=mysql_query("select * from general_information where gi_u_id=$id");
 		//print_r($res);exit;
 		
-	$row=mysql_fetch_assoc($res);
 		
+	$row=mysql_fetch_assoc($res);
+		//print_r($row);exit;
 
 ?>
 <head>
