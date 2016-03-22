@@ -10,6 +10,7 @@
 	if(isset($_POST['submit']))
 	{
 		$hid=$_POST['hid'];
+		//echo $hid;exit;
 		$name_org=$_POST['name_org'];
 		$desig=$_POST['desg'];
 		$experience=$_POST['experience'];
@@ -20,8 +21,8 @@
 		 if($_POST['hid'] == "0")
 		{ 
 	
-		 $sql="INSERT INTO general_information (gi_u_id, name_oraganization,designation, expereince, other_info,  updated_at, updated_by,created_at)	VALUES ('".$id."', '".$name_org."','".$desig."', '".$experience."', '".$other_info."', '".$date."')"; 
-			//echo'pre';print_r($sql);
+		 $sql="INSERT INTO general_information (gi_u_id, name_oraganization,designation, expereince, other_info,  updated_at)	VALUES ('".$id."', '".$name_org."','".$desig."', '".$experience."', '".$other_info."', '".$date."')"; 
+			//echo'pre';print_r($sql);exit;
 		 } 
 		 else
 			 
