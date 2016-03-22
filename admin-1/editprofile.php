@@ -36,7 +36,7 @@
 						<input type="text" name="Lastname" id="Lastname" placeholder="enter your lastname" value="<?php echo $row['lastname'];?>" /><br>
 					<label>Email:</label>
 						<input type="Email" name="Email" id="Email" placeholder="enter your email id " value="<?php echo $row['email'];?>" /><br>				
-					<label>Password:</label>
+					<label>Change Password:</label>
 						<input type="Password" name="Password" id="Password"placeholder="enter your password"/><br>
 					<label>Mobile:</label>
 						<input type="text" name="Mobile"  id="Mobile" placeholder="enter your mobile number" value="<?php echo $row['mobile'];?>"/><br>

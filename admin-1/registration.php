@@ -46,12 +46,12 @@
 				<label>Mobile:</label>
 					<input type="text" name="mobile" id="mobile" style="width:300px;" placeholder="enter your mobile number" onblur="myfunction()"/><br>
 				<label>DOB</label>
-					<input type="text" name="dob" id="dob" placeholder="enter your date of birth" onblur="myfunction()"/><br><br>
+					<input type="text" name="dob" id="dob" placeholder="enter your date of birth" onblur="myfunction()"/><b>dd/mm/yyyy</b><br><br>
 				<label>Address</label>
 					<textarea rows="3"cols="20" name="Add" maxlength="20" id="address" onblur="myfunction()"></textarea><br>
 				<label>Gender</label>
-					Male<input type="radio" name="Gender" id="male"/>				
-					Female<input type="radio" name="Gender" id="female"/>
+					Male<input type="radio" name="Gender" value="male" id="male"/>				
+					Female<input type="radio" name="Gender" value="female" id="female"/>
 					<span id="gen" style="color:red" ></span><br>
 			
 				<input type="submit" value="register" name="submit" />
