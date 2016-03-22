@@ -9,7 +9,7 @@ $questionArray[100][0]='2. Assessing Enterprise readiness: Factors comprising en
 $questionArray[1][0]='2.1 Governance: How well policies and rules have been implemented to ensure smooth operation within enterprise.';
 $questionArray[1][1]='Assessing business oriented decisions in predicting performance and taking responsibilities.';
 $questionArray[1][2]='Availability of IT governance, which is combination of business and IT members of an enterprise.';
-$questionArray[1][3]='Proper implementation of IT governance(maintenance, control and contribution of available assests )to accomplish business strategy  <span style="margin-left:140px;">and  goals.';
+$questionArray[1][3]='Proper implementation of IT governance(maintenance, control and contribution of available assests )to accomplish business strategy and  goals.';
 $questionArray[1][4]='For medium and some small enterprises, ensure Service Oriented Architecture (SOA) is running which manages a relationship';
 $questionArray[1][5]='between customer and provider in various management activities.';
 $questionArray[2][0]='2.2 Top Cloud Risks and its assessment: Technical and organizational risks associated with cloud computing.';
@@ -56,7 +56,7 @@ $questionArray[10][3]='Ensure complete information about number of users or inst
 $questionArray[11][0]='2.3 Standards: Set of standards to look in CSP for providing cloud services.';
 $questionArray[11][0]='2.3.1 Security standards:';
 $questionArray[11][1]='Ensure ISO/IEC27001, which enables enterprises to secure their information assets.';
-$questionArray[11][2]='Availability of Cloud Controls Matrix and Consensus assessments initiative questionnaire, which enables customers to question CSP <span style="margin-left:140px;">for data protection and risk management.';
+$questionArray[11][2]='Availability of Cloud Controls Matrix and Consensus assessments initiative questionnaire, which enables customers to question CSP for data protection and risk management.';
 $questionArray[12][0]='2.3.2 Confidentiality standards:';
 $questionArray[12][1]='Ensure transport Layer Security (TLS), which is protocol to ensure smooth and safe running of computer network.';
 $questionArray[12][2]='Ensure OASIS Key Management Interoperability Protocol (KMIP), which helps in managing passwords for message decoding.';
@@ -75,11 +75,11 @@ $questionArray[15][2]='Be equipped with virtualization concepts, cloud layers, d
 $questionArray[15][3]='Select CSP who demonstrates cloud services prior to migration and is transparent to SLAs.';
 $questionArray[15][4]='Involve cloud insurers as they are better in assessing and monitoring cloud associated risks.';
 $questionArray[15][5]='Ensure interoperability among legacy systems and cloud is addressed using mulesoft, Unified Cloud interface.';
-$questionArray[15][6]='Ensure CSP complies with open standardizations like: Open cloud computing interface, Webs service agreement specification,cloud <span style="margin-left:140px;">infrastructure Management Interface, Open virtualization format and cloud data management interface, to avoid interoperability issues.';
+$questionArray[15][6]='Ensure CSP complies with open standardizations like: Open cloud computing interface, Webs service agreement specification,cloud infrastructure Management Interface, Open virtualization format and cloud data management interface, to avoid interoperability issues.';
 $questionArray[15][7]='Ask for solutions that provides data location of the users at all time.';
 $questionArray[15][8]='Ensure CSP use two layered data ware houses for data storage and are at least in European economic Zone.';
 $questionArray1[16][0]='1.Cloud service provider and contract: Attributes to look for CSP selection and negotiating cloud contracts';
-	$questionArray1[16][1]='Assure that CSP is transparent in pricing when it comes to subscriptions, pay as you go models,upgrades, maintenance, <span style="margin-left:140px;">exit cost and any other liabilities.</span>';
+	$questionArray1[16][1]='Assure that CSP is transparent in pricing when it comes to subscriptions, pay as you go models,upgrades, maintenance, exit cost and any other liabilities.';
 	$questionArray1[16][2]='Look for CSP who offers scalable and flexible solution, which help users to upscale and downscale services as per business needs.';
 	$questionArray1[16][3]='Select CSP who has high security, interoperability, legal and privacy standards in practice to offer services.';
 	$questionArray1[16][4]='Dictate cloud contract and negotiate your terms rather being on receiving side.';

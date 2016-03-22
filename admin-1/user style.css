@@ -240,9 +240,31 @@ body form {
 	text-align:center;
 	padding-top:27px;
 }
+ #result p{
+	 margin-left:80px; 
+} 
+ #result span{
+	 /* margin-left:110px; */
+}  
+#result input{
+	margin-left:95px;
+}
+/* #result{
+	background-color:#F7D9BB;
+	
+	border-radius:5px;
+}
+#result h1{
+	font-size:20px;
+	text-align:center;
+	padding-top:27px;
+}
 #result p{
-	margin-left:43px;
+	margin-left:80px;
 }
 #result span{
 	margin-left:110px;
 }
+#result input{
+	margin-left:95px;
+} */
