@@ -44,8 +44,7 @@
 							<input type="submit" id="button" name="submit"
 							onclick="" value="sign in"/>
 						</div>
-						<p style="text-decoraton:none;text-align:center;margin-top:10px;">
-						<a href="forgot.php" >Forgot Password</a></p>
+						
 					</form>
 					
 				</div><br>
