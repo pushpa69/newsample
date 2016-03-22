@@ -21,13 +21,12 @@
 		 if($_POST['hid'] == "")
 		{ 
 	
-		 $sql="INSERT INTO general_information (gi_id,gi_u_id, name_oraganization,designation, expereince, other_info, size_enterprise,
-		type_enterprise, services_enterprise, 	turover_enterprise, updated_at, updated_by,created_at)	VALUES ('','".$id."', '".$name_org."','".$desig."', '".$experience."', '".$other_info."', '', '', '', '', 	'', '', '','".$date."')"; 
-			echo'pre';print_r($sql);
+		 $sql="INSERT INTO general_information (gi_u_id, name_oraganization,designation, expereince, other_info,  updated_at, updated_by,created_at)	VALUES ('','".$id."', '".$name_org."','".$desig."', '".$experience."', '".$other_info."', '".$date."')"; 
+			//echo'pre';print_r($sql);
 		 } 
 		 else
 		{
-			$sql="UPDATE general_information SET gi_u_id='".$id."',name_oraganization='".$name_org."',designation='".$desig."',expereince='".$experience."',other_info='".$other_info."',updated_at='".$date."',updated_by='".$id."' WHERE gi_id=$hid";
+			$sql="UPDATE general_information SET gi_u_id='".$id."',name_oraganization='".$name_org."',designation='".$desig."',expereince='".$experience."',other_info='".$other_info."',updated_at='".$date."',updated_by='".$id."' WHERE gi_u_id=$hid";
 			
 		} 
 		
@@ -35,7 +34,7 @@
 		header("location:ProposedFramework.php?id=$id");
 		
 	}
-	 $res=mysql_query("select * from general_information where gi_id=$id");
+	 $res=mysql_query("select * from general_information where gi_u_id=$id");
 		//print_r($res);exit;
 		
 		while($row=mysql_fetch_assoc($res))
