@@ -6,6 +6,7 @@
 <?php
 	include('db.php');
 	  $id=$_SESSION['uid'];
+	  //echo $id;exit;
 	if(isset($_POST['submit']))
 	{
 		$hid=$_POST['hid'];
@@ -19,9 +20,10 @@
 		// echo $name_org;exit;
 		 if($_POST['hid'] == "")
 		{ 
+	
 		 $sql="INSERT INTO general_information (gi_id,gi_u_id, name_oraganization,designation, expereince, other_info, size_enterprise,
 		type_enterprise, services_enterprise, 	turover_enterprise, updated_at, updated_by,created_at)	VALUES ('','".$id."', '".$name_org."','".$desig."', '".$experience."', '".$other_info."', '', '', '', '', 	'', '', '','".$date."')"; 
-			
+			echo'pre';print_r($sql);
 		 } 
 		 else
 		{
@@ -30,15 +32,17 @@
 		} 
 		
 		mysql_query($sql);
-		header("location:ProposedFramework.php");
+		header("location:ProposedFramework.php?id=$id");
 		
 	}
-	 $res=mysql_query("select * from general_information where gi_id='".$id."'");
+	 $res=mysql_query("select * from general_information where gi_id=$id");
 		//print_r($res);exit;
 		
-		$row=mysql_fetch_assoc($res);	
-				
-		
+		while($row=mysql_fetch_assoc($res))
+		{
+print_r($row);exit;		
+			echo $row['gi_id'];	
+		}
 ?>
 <head>
 	<style>
