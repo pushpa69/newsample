@@ -43,7 +43,7 @@ if(isset($_SESSION) && $_SESSION['uid']!=''){
 					  
 					mysql_query($query);
 					$an = "";
-					header("location:ConfirmationFinish.php?userid=$id");
+					header("location:ConfirmationFinish.php");
 				}
 			}
 		}
