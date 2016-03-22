@@ -19,7 +19,7 @@
 					{
 						$row=mysql_fetch_assoc($sql);						
 							$_SESSION['uid']=$row['u_id'];
-							header("location:ParticpantInfo.php");				
+							header("location:ParticpantInfo.php?id=".$row['u_id']);				
 						
 					}
 					else
@@ -44,7 +44,8 @@
 							<input type="submit" id="button" name="submit"
 							onclick="" value="sign in"/>
 						</div>
-						
+						<p style="text-decoraton:none;text-align:center;margin-top:10px;">
+						<a href="forgot.php" >Forgot Password</a></p>
 					</form>
 					
 				</div><br>
