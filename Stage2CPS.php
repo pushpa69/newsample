@@ -14,7 +14,7 @@
 	$questionArray[1][3]='Proper implementation of IT governance(maintenance, control and contribution of available assests )to accomplish business strategy and <span>goals.';
 	$questionArray[1][4]='For medium and some small enterprises, ensure Service Oriented Architecture (SOA) is running which manages a relationship';
 	$questionArray[1][5]='between customer and provider in various management activities.';
-	$questionArray[2][0]='2.2 Top Cloud Risks and its assessment: Technical and organizational risks associated with cloud computing.';
+	$questionArray[200][0]='2.2 Top Cloud Risks and its assessment: Technical and organizational risks associated with cloud computing.';
 	$questionArray[2][0]='2.2.1Loss of Governance: Probability is very often, impact is severe and overall calculated risk is high.';
 	$questionArray[2][1]='Clear roles and responsibilities';
 	$questionArray[2][2]='Appropriate SLA clauses.';
@@ -55,7 +55,7 @@
 	$questionArray[10][1]='Ensure adequate information regarding billing is defined.';
 	$questionArray[10][2]='Ensure appropriate SLA clauses are defined to avoid licensing issues in cloud.';
 	$questionArray[10][3]='Ensure complete information about number of users or instances is stated.';
-	$questionArray[11][0]='2.3 Standards: Set of standards to look in CSP for providing cloud services.';
+	$questionArray[110][0]='2.3 Standards: Set of standards to look in CSP for providing cloud services.';
 	$questionArray[11][0]='2.3.1 Security standards:';
 	$questionArray[11][1]='Ensure ISO/IEC27001, which enables enterprises to secure their information assets.';
 	$questionArray[11][2]='Availability of Cloud Controls Matrix and Consensus assessments initiative questionnaire, which enables customers to question CSP for data <span>protection and risk management.';
@@ -105,7 +105,7 @@
 					}
 					$fAns = rtrim($an,',');
 										
-					$query="INSERT INTO q_answers (con_u_id, stage, question_id, q_answers, created_at, status) VALUES ( '".$id."', '".$stage."', '".$qNo."', '".$fAns."', 'Now()', '1')"; 
+					$query="INSERT INTO q_answers (con_u_id, stage, question_id, q_answers, created_at, status) VALUES ( '".$id."', '".$stage."', '".$qNo."', '".$fAns."', NOW(), '1')"; 
 					mysql_query($query);
 					$an = "";
 					
