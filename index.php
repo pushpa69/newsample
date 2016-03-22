@@ -14,7 +14,9 @@
 				{
 					$email=$_POST['user_id'];
 					$pswd=md5($_POST['pwd']);
-					$sql=mysql_query("select * from users where email='".$email."' and u_password='".$pswd."'");
+					 $sql=mysql_query("select * from users where email='".$email."' and u_password='".$pswd."'");
+					
+					
 					if(mysql_num_rows($sql)==1)
 					{
 						$row=mysql_fetch_assoc($sql);						
