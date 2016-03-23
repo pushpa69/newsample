@@ -66,6 +66,7 @@
 			}
 			h2 {
 				color:blue;
+				
 			}
 	</style>
 </head>
@@ -76,7 +77,7 @@
 			<div id="page2">
 				<form action="" method="POST">
 					<div>
-						<h2>General Information About Organization(optional)</h2><br><br>
+						<h2 style="font-size:22px;">General Information About Organization(optional)</h2><br><br>
 					</div>
 					<div>
 						<label style="font-weight:bold;font-size:14px;">1.Name Of The Organization(optional)</label>

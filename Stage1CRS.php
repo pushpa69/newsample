@@ -41,7 +41,7 @@
 			<div id="page4">
 				<div>
 					<p class="h"><h1>CLOUD REQUIREMENT STAGE: WHAT'S REQUIRED FOR YOUR ENTERPRISE.</h1></p><br><br>
-					<h2 style="font-weight:bold;font-size:18px;text-decoration:underline;color:green">General Info About Enterprise.</h2><br>
+					<h2 style="font-weight:bold;font-size:18px;text-decoration:underline;color:brown">General Info About Enterprise.</h2><br>
 				</div>
 				<div>
 					<form action="" method="POST" onsubmit="return validate();" name="myform" >
@@ -204,7 +204,7 @@
 				 var select_type=document.myform.select_type.value;
 				 var services=document.myform.services.value;
 				 var turnover=document.myform.turnover.value;
-				 var fexp=/[a-z]/;
+				 // var fexp=//;
 				if(size_of_enter == "default")
 				{
 					//alert("ok");
@@ -217,7 +217,7 @@
 					document.getElementById("select_type").style.border="2px solid red";
 					return false;
 				} 
-				if(!services.match(fexp))
+				if(services == "")
 				{
 					document.getElementById("services").style.border="1px solid red";
 					document.myform.services.focus();
