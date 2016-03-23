@@ -1,7 +1,11 @@
+<?php 
+	include("menu.php");
+	
+?>
 </head>
 	<body style="background-color:FloralWhite">
 		<div class="wrapper">
-			<?php include("menu.php");?>
+			
 			<div class="container">
 				<div id="page8">
 					<form action="" method="POST">
@@ -19,16 +23,15 @@
 							<textarea rows="6"cols="40"></textarea>
 						</div>
 					</form>					
-				</div>				
-			</div>
-									
+				</div><br><br>
+					<div>
+						<a href="ConfirmationFinish.php?id=<?php echo $id;?>"  style="float:left;margin-left:90px;"><input type="button" value="Back" /></a>					
+						<input style="float:right;margin-right:20px;" type="button" name="submit" value="submit" />
+					</div>	
+			</div>									
 			<div class="push"></div>			
-		</div><br>
-				<div>
-					<a style="float:left;margin-left:20px;"><input type="button" value="Back" /></a>			
-					<span style="float:right">
-					<input type="submit" name="submit" value="Next" onclick="return validate();"/></span>
-				</div>	
+		</div>
+				
 	<?php include("footer.php");
 	
 	
