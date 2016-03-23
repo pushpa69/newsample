@@ -48,7 +48,7 @@
 				<label>DOB</label>
 					<input type="text" name="dob" id="dob" placeholder="enter your date of birth" onblur="myfunction()"/><b>dd/mm/yyyy</b><br><br>
 				<label>Address</label>
-					<textarea rows="3"cols="20" name="Add" maxlength="20" id="address" onblur="myfunction()"></textarea><br>
+					<textarea rows="5"cols="20" name="Add" maxlength="100" id="address" onblur="myfunction()"></textarea><br>
 				<label>Gender</label>
 					Male<input type="radio" name="Gender" value="male" id="male"/>				
 					Female<input type="radio" name="Gender" value="female" id="female"/>
@@ -132,6 +132,7 @@
 		document.myform.address.focus();
 		return false;
 		}
+
 				
 				if(document.getElementById("male").checked)
 				{
