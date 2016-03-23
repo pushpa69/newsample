@@ -27,7 +27,7 @@
 ?>
 <head>
 	<style>
-		label,h2 {color:purple;
+		label {color:purple;
 			}
 		 #page4 h1{
 				color:blue;
@@ -41,7 +41,7 @@
 			<div id="page4">
 				<div>
 					<p class="h"><h1>CLOUD REQUIREMENT STAGE: WHAT'S REQUIRED FOR YOUR ENTERPRISE.</h1></p><br><br>
-					<h2 style="font-weight:bold;font-size:18px;text-decoration:underline;">General Info About Enterprise.</h2><br>
+					<h2 style="font-weight:bold;font-size:18px;text-decoration:underline;color:green">General Info About Enterprise.</h2><br>
 				</div>
 				<div>
 					<form action="" method="POST" onsubmit="return validate();" name="myform" >
