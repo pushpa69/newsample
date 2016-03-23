@@ -138,7 +138,7 @@
 
 	<div class="wrapper">
 			<?php include("menu.php");?>
-		<div class="container">
+		<div class="container">		
 			<div id="page7">
 				<div>
 					<h1 style="color:blue;">RESULTS AND RECOMMENDATIONS.</h1><br>
@@ -306,19 +306,13 @@
 						<?php }}?>	
 						
 				</div>				
-			</div>
-
-			
-
-			<div >
-				<a style="float:left;margin-left:20px;"href="Stage3CMS.php"><input type="button" value="Back"></a>
-				<a href="Feedback.php" style="float:right;margin-right:20px;"><button type="submit" name="submit" style="margin-left:587px;">Next</button></a>
-			</div>
-
+			</div>			
 			<div class="push"></div>
-		</div>
-		<div style="text-align:left;margin-left:20px;margin-top:20px;">
-				<a href="Stage3CMS.php" style="text-decoration:none;"><input type="button" value="Back"></a>
+			
+		</div><br>
+			<div >
+				<a style="float:left;margin-left:20px;"href="Stage3CMS.php"><input id="button" type="button" value="Back"></a>
+				<a href="Feedback.php" style="float:right;margin-right:20px;"><button id="button" type="submit" name="submit" style="margin-left:587px;">Next</button></a>
 			</div>
 		<?php include("footer.php");?>
 	</div>	

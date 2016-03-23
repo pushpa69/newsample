@@ -3,7 +3,7 @@ session_start();
 if(isset($_SESSION) && $_SESSION['uid']!=''){
 	include('db.php');
 	$questionArray[17][0]='<span style="text-decoration:underline;margin-left:0px;">1.Cloud service provider and contract:</span> Attributes to look for CSP selection and negotiating cloud contracts';
-	$questionArray[17][1]='Assure that CSP is transparent in pricing when it comes to subscriptions, pay as you go models,upgrades, maintenance, exit cost and <span>any other liabilities.</span>';
+	$questionArray[17][1]='Assure that CSP is transparent in pricing when it comes to subscriptions, pay as you go models,upgrades, maintenance, exit cost and any other <span>liabilities.</span>';
 	$questionArray[17][2]='Look for CSP who offers scalable and flexible solution, which help users to upscale and downscale services as per business needs.';
 	$questionArray[17][3]='Select CSP who has high security, interoperability, legal and privacy standards in practice to offer services.';
 	$questionArray[17][4]='Dictate cloud contract and negotiate your terms rather being on receiving side.';
@@ -66,7 +66,7 @@ if(isset($_SESSION) && $_SESSION['uid']!=''){
 	?>
 	<div class="wrapper">
 			<?php include("menu.php");?>
-		<div class="container">
+		<div class="container">			
 			<div id="page6">
 				<div>
 					<h1 style="color:blue;">CLOUD MIGRATION STAGE: Focuses on migration.</h1><br>
@@ -83,7 +83,7 @@ if(isset($_SESSION) && $_SESSION['uid']!=''){
 								{
 									if($key1==0){
 							?>
-							<p style="font-weight:bold;margin-left:140px;"><?php echo $val1;?></p><br>
+							<p style="font-weight:bold;"><?php echo $val1;?></p><br>
 									<?php 		}
 									else { 
 										$u ='_';
@@ -91,8 +91,8 @@ if(isset($_SESSION) && $_SESSION['uid']!=''){
 									//echo $optn_name;
 									
 									?>
-							<p style="margin-left:70px;"><input type="checkbox" id="" name="Q<?php echo $key?>[]" value="Q<?php echo $key;?>_<?php echo $key1?>" <?php  if(in_array($optn_name,$focus['Q'.$key])) { ?> checked="checked"  <?php  } else { ?><?php }?>/><?php /*if(in_array($optn_name,$focus[$key])) { */ echo $val1; /*}*/?></p>
-							
+							<input type="checkbox" id="" name="Q<?php echo $key?>[]" value="Q<?php echo $key;?>_<?php echo $key1?>" <?php  if(in_array($optn_name,$focus['Q'.$key])) { ?> checked="checked"  <?php  } else { ?><?php }?>/><?php /*if(in_array($optn_name,$focus[$key])) { */ echo $val1; /*}*/?>
+							<br>
 							<?php 		}
 								}?>
 						</div>
@@ -106,8 +106,8 @@ if(isset($_SESSION) && $_SESSION['uid']!=''){
 				</div><br>
 			</div><br><br>
 			<div>
-				<a href="Stage2CPS.php?userid=<?php echo $id;?>" style="float:left;margin-left:20px;text-decoration:none;"><input type="button" value="Back"></a>			
-				<a href="ConfirmationFinish.php" style="float:right;margin-right:20px;text-decoration:none;"><button type="submit" name="submit" style="margin-left:587px;">Next</button></a>
+				<a href="Stage2CPS.php?userid=<?php echo $id;?>" style="float:left;margin-left:20px;"><input id="button" type="button" value="Back"></a>			
+				<a href="ConfirmationFinish.php" style="float:right;margin-right:20px;"><button id="button" type="submit" name="submit" style="margin-left:587px;">Next</button></a>
 			</div>
 		</form>			
 		</div>

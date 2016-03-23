@@ -74,12 +74,12 @@ $id=$_SESSION['uid'];
 			</div>
 									
 			<div class="push"></div>			
-		</div><br>
+				<br>
 				<div>
-					<a style="float:left;margin-left:20px;"><input type="button" value="Back" /></a>			
-					<span style="float:right">
-					</span>
-				</div>	
+					<a href="Stage2CPS.php?userid=<?php echo $id;?>" style="float:left;margin-left:20px;"><input id="button" type="button" value="Back"></a>			
+					<a href="ConfirmationFinish.php" style="float:right;margin-right:20px;"><button id="button" type="submit" name="submit" style="margin-left:587px;">submit</button></a>
+				</div>
+		</div>
 	</body>	
 </html>	
 	

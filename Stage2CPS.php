@@ -128,7 +128,7 @@
 ?>
 	<div class="wrapper">
 			<?php include("menu.php");?>
-		<div class="container">
+		<div class="container">			
 			<div id="page5">
 				<div>
 					<h1 style="color:blue;">CLOUD PREPARATION STAGE: Focuses on preparation of enterprise for cloud migration.</h1><br>
@@ -176,8 +176,8 @@
 				</div>				
 			</div><br><br>
 			<div>
-				<a href="Stage1CRS.php"  style="float:left;margin-left:20px;text-decoration:none;"><input type="button" value="Back"></a>			
-				<a href="Stage3CMS.php" style="float:right;margin-left:20px;text-decoration:none;"><input type="submit" name="submit" value="Next" onclick="return validate();"/></a>
+				<a href="Stage1CRS.php"  style="float:left;margin-left:20px;"><input id="button" type="button" value="Back"></a>			
+				<a href="Stage3CMS.php" style="float:right;margin-left:20px;"><input id="button" type="submit" name="submit" value="Next" onclick="return validate();"/></a>
 			</div>
 			</form>
 		</div>	

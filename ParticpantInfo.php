@@ -73,7 +73,7 @@
 <body style="background-color:FloralWhite">
 	<div class="wrapper">
 		<?php include("menu.php");?>
-		<div class="container">
+		<div class="container">			
 			<div id="page2">
 				<form action="" method="POST">
 					<div>
@@ -114,7 +114,7 @@
 							
 				</div><br>
 			<div style="float:right;margin-top:10px;">	
-				<input type="submit" name="submit" value="Next" />
+				<input type="submit" id="button" name="submit" value="Next" />
 			</div>
 			</form>	
 		</div><br><br>
