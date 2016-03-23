@@ -1,7 +1,4 @@
-<?php 
-	include("menu.php");
-	
-?>
+
 </head>
 	<body style="background-color:FloralWhite">
 		<div class="wrapper">
@@ -20,7 +17,7 @@
 						</div><br><br>
 						<div>
 							<label style="margin-left:100px;">Further suggestions(&comments)</label><br>
-							<textarea rows="6"cols="40"></textarea>
+							<textarea name="comments"rows="6"cols="40" ><?php echo $row['comments'] ?></textarea>
 						</div>
 					</form>					
 				</div><br><br>
