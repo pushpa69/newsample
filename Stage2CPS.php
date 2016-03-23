@@ -85,10 +85,6 @@
 	$questionArray[16][6]='Ensure CSP complies with open standardizations like: Open cloud computing interface, Webs service agreement specification,cloud <span>infrastructure Management Interface, Open virtualization format and cloud data management interface, to avoid interoperability issues.';
 	$questionArray[16][7]='Ask for solutions that provides data location of the users at all time.';
 	$questionArray[16][8]='Ensure CSP use two layered data ware houses for data storage and are at least in European economic Zone.';
-
-
-
-
 ?>
 
 <?php
