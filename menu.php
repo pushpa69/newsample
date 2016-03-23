@@ -7,17 +7,17 @@ session_start();
 	$pageactive = $_SERVER['REQUEST_URI'];
 	if($pageactive == '/salford/trunk/index.php'){
 		$home = active;
-	}elseif ($pageactive == '/salford/trunk/ParticpantInfo.php'){
+	}elseif ($pageactive == '/salford/trunk/ParticpantInfo.php?id='.$id){
 		$ParticpantInfo = active;
-	}elseif ($pageactive == '/salford/trunk/ProposedFramework.php'){
+	}elseif ($pageactive == '/salford/trunk/ProposedFramework.php?id='.$id){
 		$ProposedFramework = active;
 	}elseif ($pageactive == '/salford/trunk/Stage1CRS.php'){
 		$Stage1CRS = active;
-	}elseif ($pageactive == '/salford/trunk/Stage2CPS.php'){
+	}elseif ($pageactive == '/salford/trunk/Stage2CPS.php?userid='.$id){
 		$Stage2CPS = active;
 	}elseif ($pageactive == '/salford/trunk/Stage3CMS.php'){
 		$Stage3CMS = active;
-	}elseif($pageactive == '/salford/trunk/ConfirmationFinish.php'){
+	}elseif($pageactive == '/salford/trunk/ConfirmationFinish.php?userid='.$id){
 		$ConfirmationFinish = active;
 	}
 	if($id == ""){
