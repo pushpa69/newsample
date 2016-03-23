@@ -77,7 +77,7 @@
 			<div id="page2">
 				<form action="" method="POST">
 					<div>
-						<h2 style="font-size:22px;">General Information About Organization(optional)</h2><br><br>
+						<h2>General Information About Organization(optional)</h2><br><br>
 					</div>
 					<div>
 						<label style="font-weight:bold;font-size:14px;">1.Name Of The Organization(optional)</label>
@@ -112,7 +112,7 @@
 							echo $row['gi_u_id'];
 						} else { echo "0"; }?>"/>									
 							
-			</div><br>
+				</div><br>
 			<div style="float:right;margin-top:10px;">	
 				<input type="submit" name="submit" value="Next" />
 			</div>
