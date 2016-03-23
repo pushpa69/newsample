@@ -307,8 +307,9 @@
 						
 				</div>				
 			</div>
-			<div style="text-align:left;margin-left:20px;">
-				<a href="Stage3CMS.php"><input type="button" value="Back"></a>
+			<div >
+				<a style="float:left;margin-left:20px;"href="Stage3CMS.php"><input type="button" value="Back"></a>
+				<a href="Feedback.php" style="float:right;margin-right:20px;"><button type="submit" name="submit" style="margin-left:587px;">Next</button></a>
 			</div>
 			<div class="push"></div>
 		</div>
