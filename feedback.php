@@ -10,15 +10,16 @@
 							<h2 style="font-size:22px;">Overal Efficiency Of The Framework</h2><br><br>
 						</div>
 						<div>
-							<input type="radio" id="feed" name="feed" value="Excellent and very confident">Excellent and very confident<br>
-							<input type="radio" id="feed" name="feed" value="Good and some what confident">Good and some what confident<br>
-							<input type="radio" id="feed" name="feed" value="Average and still not sure">Average and still not sure<br>
-							<input type="radio" id="feed" name="feed" value="Poor and i still consider cloud computing as a threat to my enterprise">Poor and i still consider cloud computing as a threat to my enterprise	<br>						
+							<input type="radio" id="feed" name="feed" value="Excellent and very confident" <?php echo $excellent;?>>Excellent and very confident<br>
+							<input type="radio" id="feed" name="feed" value="Good and some what confident" <?php echo $Good;?>>Good and some what confident<br>
+							<input type="radio" id="feed" name="feed" value="Average and still not sure" <?php echo $Average;?>>Average and still not sure<br>
+							<input type="radio" id="feed" name="feed" value="Poor and i still consider cloud computing as a threat to my enterprise" <?php echo $Poor;?>>Poor and i still consider cloud computing as a threat to my enterprise	<br>						
 						</div><br><br>
 						<div>
 							<label style="margin-left:100px;">Further suggestions(&comments)</label><br>
 							<textarea name="comments"rows="6"cols="40" ><?php echo $row['comments'] ?></textarea>
 						</div>
+						<input type="submit" name="submit" value="Next" onclick="return validate();"/>
 					</form>					
 				</div><br><br>
 					<div>
@@ -29,6 +30,6 @@
 			<div class="push"></div>			
 		</div>
 				
-	<?php include("footer.php");
-	
+	</body>	
+</html>	
 	
