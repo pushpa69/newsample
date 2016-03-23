@@ -1,27 +1,7 @@
-<html>
-	<head>
-	<style>
-		#page8{
-			width:560px;
-			background-color: skyblue;
-			border-radius: 10px;
-			float:left;
-			padding:24px 182px 45px 90px;
-			margin-left:256px;
-		}
-		#page8 h2{
-			text-align:center;
-			font-size:23px;
-			width:492px;
-		}
-		#page8 input,textarea{
-			margin-left:100px;
-		}
-	</style>
-	</head>
+</head>
 	<body style="background-color:FloralWhite">
 		<div class="wrapper">
-			
+			<?php include("menu.php");?>
 			<div class="container">
 				<div id="page8">
 					<form action="" method="POST">
@@ -49,7 +29,6 @@
 					<span style="float:right">
 					<input type="submit" name="submit" value="Next" onclick="return validate();"/></span>
 				</div>	
-	</body>	
-</html>	
+	<?php include("footer.php");
 	
 	
