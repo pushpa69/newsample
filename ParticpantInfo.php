@@ -17,18 +17,36 @@
 		$other_info=$_POST['other_info'];
 		date_default_timezone_set("Asia/Calcutta");
 		$date=date("Y-m-d h:i:s");
+
+		//echo '<pre>'; print_r($_POST);exit;
+		
 		//print_r($_POST);exit;
 		 if($_POST['hid'] == "0")
+
 		{ 
-			
-		 $sql="INSERT INTO general_information (gi_u_id, name_oraganization,designation, expereince, other_info,  updated_at)	VALUES ('".$id."', '".$name_org."','".$desig."', '".$experience."', '".$other_info."', '".$date."')"; 
-			//print_r($sql);exit;
+
+	
+		 $sql="INSERT INTO general_information 
+		 (gi_u_id, name_oraganization,designation, expereince, other_info,  updated_at)	
+		 VALUES ('".$id."', '".$name_org."','".$desig."', '".$experience."', '".$other_info."', '".$date."')"; 
+			//echo'pre';print_r($sql);
+	
+		 $sql="INSERT INTO general_information (gi_u_id, name_oraganization,designation, expereince, other_info,  updated_at, updated_by,created_at)	VALUES ('','".$id."', '".$name_org."','".$desig."', '".$experience."', '".$other_info."', '".$date."')"; 
+			//echo'pre';print_r($sql);		
+		
 		 } 
 		 else
 			 
 		{
-			$sql="UPDATE general_information SET gi_u_id='".$id."',name_oraganization='".$name_org."',designation='".$desig."',expereince='".$experience."',other_info='".$other_info."',updated_at='".$date."',updated_by='".$id."' WHERE gi_u_id='$hid'";
-			//echo'pre';print_r($sql);exit;
+
+			$sql="UPDATE general_information SET 
+			gi_u_id='".$id."',name_oraganization='".$name_org."',
+			designation='".$desig."',expereince='".$experience."',
+			other_info='".$other_info."',updated_at='".$date."',
+			updated_by='".$id."' WHERE gi_u_id='".$hid."'";
+			//print_r($sql);exit;
+
+			$sql="UPDATE general_information SET gi_u_id='".$id."',name_oraganization='".$name_org."',designation='".$desig."',expereince='".$experience."',other_info='".$other_info."',updated_at='".$date."',updated_by='".$id."' WHERE gi_u_id=$hid";
 		} 
 		mysql_query($sql);
 		header("location:ProposedFramework.php?id=$id");
@@ -88,8 +106,9 @@
 					<div>
 						<!--<input type="submit" id="button" onclick="" name="submit" value="submit"/>-->
 					</div>					
-						<input type="hidden" name="hid" id="hid"   value="<?php if(isset($row['gi_id'])){
-							echo $row['gi_id'];
+						<input type="hidden" name="hid" id="hid"  
+						value="<?php if(isset($row['gi_u_id'])){
+							echo $row['gi_u_id'];
 						} else { echo "0"; }?>"/>									
 							
 			</div><br>
