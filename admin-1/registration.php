@@ -90,7 +90,7 @@
 		document.myform.fname.focus();
 		return false;
 		}
-	if(lname!=="")
+	if(lname=="")
 		{
 		document.getElementById("lname").style.border="1px solid red";
 		document.getElementById("lname").focus();
@@ -126,7 +126,7 @@
 			document.myform.dob.focus();
 			return false;
 		}
-	if(address!=="")
+	if(address=="")
 		{
 		document.getElementById("address").style.border="1px solid red";
 		document.myform.address.focus();
