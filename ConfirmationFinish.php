@@ -136,14 +136,14 @@
 		<div class="container">
 			<div id="page7">
 				<div>
-					<h1>RESULTS AND RECOMMENDATIONS.</h1><br>
+					<h1 style="color:blue;">RESULTS AND RECOMMENDATIONS.</h1><br>
 				</div>
 				<div>
 					<p>1.Cloud Requirement Stage:</p><br>					
 				</div>
 				<div>
 					<p>2.Cloud Preparation Stage:</p><br>
-					<p style="color:purple;font-size:20px;font-weight:bold;">>Your Preparedness</p><br>
+					<p style="color:green;font-size:20px;font-weight:bold;">>Your Preparedness</p><br>
 					<div>
 					<?php foreach($questionArray as $key=>$val)
 						{ ?>  
@@ -154,7 +154,7 @@
 								if($key1== 0)
 								{
 								?>
-								<p><?php echo $val1?></p>
+								<p style="font-weight:bold;"><?php echo $val1?></p>
 									
 								<?php 
 								}
@@ -177,7 +177,7 @@
 							}?> 
 						<?php }}?>							
 						<br>
-					<p style="font-size:19px;color:Maroon ;">What you need to prepare</p><br>
+					<p style="font-size:19px;color:Maroon ;font-weight:bold">What you need to prepare</p><br>
 					 
 						<?php foreach($questionArray as $key=>$val)
 						{ ?>  
@@ -188,7 +188,7 @@
 								if($key1== 0)
 								{
 								?>
-								<p><?php echo $val1?></p>
+								<p style="font-weight:bold;"><?php echo $val1?></p>
 									
 								<?php 
 								}
@@ -214,8 +214,8 @@
 						<?php }}?>							
 					 
 						 <br>
-					<p style="font-size:23px;color:DarkGreen ;" >3.Cloud Migration Stage:</p>
-					<p style="font-size:19px;color:Maroon ;">Your Preparedness</p><br>
+					<p style="font-size:23px;color:DarkGreen ;font-weight:bold;" >3.Cloud Migration Stage:</p>
+					<p style="font-size:19px;color:Maroon ;font-weight:bold;">Your Preparedness</p><br>
 					 
 						<?php foreach($questionArray1 as $key=>$val)
 						{ ?>  
@@ -226,7 +226,7 @@
 								if($key1== 0)
 								{
 								?>
-								<p><?php echo $val1?></p>
+								<p style="font-weight:bold;"><?php echo $val1?></p>
 									
 								<?php 
 								}
@@ -245,7 +245,7 @@
 							}?>								
 						<?php }}?>							
 							<br>
-					<p style="font-size:19px;color:Maroon ;">What you need to prepare</p> <br>
+					<p style="font-size:19px;color:Maroon ;font-weight:bold">What you need to prepare</p> <br>
 					 
 						<?php foreach($questionArray1 as $key=>$val)
 						{ ?>  
@@ -256,7 +256,7 @@
 								if($key1== 0)
 								{
 								?>
-								<p><?php echo $val1?></p>
+								<p style="font-weight:bold;"><?php echo $val1?></p>
 									
 								<?php 
 								}
