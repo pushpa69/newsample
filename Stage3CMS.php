@@ -69,7 +69,7 @@ if(isset($_SESSION) && $_SESSION['uid']!=''){
 		<div class="container">
 			<div id="page6">
 				<div>
-					<h1>CLOUD MIGRATION STAGE: Focuses on migration.</h1><br>
+					<h1 style="color:blue;">CLOUD MIGRATION STAGE: Focuses on migration.</h1><br>
 				</div>
 				<div>
 					<form action="" method="POST" name="myform" onsubmit="return validate();">
@@ -83,7 +83,7 @@ if(isset($_SESSION) && $_SESSION['uid']!=''){
 								{
 									if($key1==0){
 							?>
-							<p><?php echo $val1;?></p><br>
+							<p style="font-weight:bold;"><?php echo $val1;?></p><br>
 									<?php 		}
 									else { 
 										$u ='_';
