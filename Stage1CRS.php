@@ -178,8 +178,8 @@
 						</div><br>
 						<div>
 							
-							<input type="hidden" name="hid" id="hid"   value="<?php if(isset($row['gi_id'])){
-							echo $row['gi_id'];
+							<input type="hidden" name="hid" id="hid"   value="<?php if(isset($row['gi_u_id'])){
+							echo $row['gi_u_id'];
 						}?>"/>
 							
 						</div>
