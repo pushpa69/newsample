@@ -31,17 +31,17 @@
 				<form action="" method="POST" onsubmit="return regValidate();" name="registrationform" >
 					<h1 id="head" style="font-size:27px;">Edit Profile</h1>
 					<label>First name:</label>
-						<input type="text" name="Firstname" id="Firstname" placeholder="enter your firstname" value="<?php echo $row['firstname'];?>"><br>
+						<input type="text" name="Firstname" id="Firstname" value="<?php echo $row['firstname'];?>"><br>
 					<label>Last name:</label>
-						<input type="text" name="Lastname" id="Lastname" placeholder="enter your lastname" value="<?php echo $row['lastname'];?>" /><br>
+						<input type="text" name="Lastname" id="Lastname" value="<?php echo $row['lastname'];?>" /><br>
 					<label>Email:</label>
-						<input type="Email" name="Email" id="Email" placeholder="enter your email id " value="<?php echo $row['email'];?>" /><br>				
+						<input type="Email" name="Email" id="Email"  value="<?php echo $row['email'];?>" /><br>				
 					<label>Change Password:</label>
-						<input type="Password" name="Password" id="Password"placeholder="enter your password"/><br>
+						<input type="Password" name="password" id="password" value="<?php echo $row['u_password'];?>" /><br>
 					<label>Mobile:</label>
-						<input type="text" name="Mobile"  id="Mobile" placeholder="enter your mobile number" value="<?php echo $row['mobile'];?>"/><br>
+						<input type="text" name="Mobile"  id="Mobile"  value="<?php echo $row['mobile'];?>"/><br>
 					<label>DOB</label>
-						<input type="text"name="DOB" id="DOB" placeholder="enter your mobile DOB" value="<?php echo $row['date_of_birth'];?>"/><br><br>
+						<input type="text"name="DOB" id="DOB"  value="<?php echo $row['date_of_birth'];?>"/><br><br>
 					<label>Address</label>
 						<textarea style="margin-left:0px;" rows="3"cols="20" maxlength="20" name="Add"id="Add"> <?php echo $row['address'];?></textarea><br>
 					<label>Gender</label>
