@@ -78,19 +78,19 @@
 				
 				//alert('dob');
 				var a=0;
-				var fexp=/[a-z]/;
+				//var fexp=/[a-z]/;
 				var eexp=/^[a-z0-9._]+@+[a-z0-9]+.+[a-z]{2,4}/;
 				var epsd=/^[0-9a-zA-Z]+$/;
 				var moble=/^[0-9]+$/;
 				var dexp=/^^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/
 				
-	if(!fname.match(fexp))
+	if(fname=="")
 		{                           
 		document.getElementById("fname").style.border="1px solid red";
 		document.myform.fname.focus();
 		return false;
 		}
-	if(!lname.match(fexp))
+	if(lname!=="")
 		{
 		document.getElementById("lname").style.border="1px solid red";
 		document.getElementById("lname").focus();
@@ -126,7 +126,7 @@
 			document.myform.dob.focus();
 			return false;
 		}
-	if(!address.match(epsd))
+	if(address!=="")
 		{
 		document.getElementById("address").style.border="1px solid red";
 		document.myform.address.focus();
