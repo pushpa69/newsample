@@ -176,8 +176,8 @@
 				</div>				
 			</div><br><br>
 			<div>
-				<a href="Stage1CRS.php"  style="float:left;margin-left:20px;"><input type="button" value="Back"></a>			
-				<a href="Stage3CMS.php" style="float:right;margin-left:20px;"><input type="submit" name="submit" value="Next" onclick="return validate();"/></a>
+				<a href="Stage1CRS.php"  style="float:left;margin-left:20px;text-decoration:none;"><input type="button" value="Back"></a>			
+				<a href="Stage3CMS.php" style="float:right;margin-left:20px;text-decoration:none;"><input type="submit" name="submit" value="Next" onclick="return validate();"/></a>
 			</div>
 			</form>
 		</div>	
