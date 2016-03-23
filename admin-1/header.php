@@ -11,26 +11,16 @@
 	 
 	$pageactive = $_SERVER['REQUEST_URI'];
 	
-	if($pageactive == '/salford/trunk/admin-1/user.php'){
-		if(strpos($pageactive,'user.php')!=false){
-		$user= active;
-		}
-	}elseif ($pageactive == '/salford/trunk/admin-1/report.php'){
-		if(strpos($pageactive,'report.php')!=false){
+	if(strpos($pageactive,'user.php')!=false){		
+		$user= active;	
+	}elseif (strpos($pageactive,'report.php')!=false){		
+		$report = active;	
+	}else if(strpos($pageactive,'registration.php')!=false){		
+		$user= active;	
+	}elseif(strpos($pageactive,'editprofile.php')!=false){		
+		$user= active;	
+	}else if(strpos($pageactive,'viewreport.php')!=false){		
 		$report = active;
-		}
-	}elseif($pageactive == '/salford/trunk/admin-1/registration.php'){
-		if(strpos($pageactive,'registration.php')!=false){
-		$user= active;
-		}
-	}elseif($pageactive == '/salford/trunk/admin-1/editprofile.php?'.$_SERVER['QUERY_STRING']){
-		if(strpos($pageactive,'editprofile.php')!=false){
-		$user= active;
-		}
-	}else if ($pageactive == '/salford/trunk/admin-1/viewreport.php?'.$_SERVER['QUERY_STRING']){
-		if(strpos($pageactive,'viewreport.php')!=false){
-		$report = active;
-		}
 	}
 ?>
 <html>
