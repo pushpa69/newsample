@@ -1,5 +1,54 @@
-
-</head>
+<?php
+include('db.php');
+include('menu.php');
+$id=$_SESSION['uid'];
+//echo $id;exit;
+	if(isset($_POST['submit']))
+	{
+		$feed=$_POST['feed'];
+		$coment=$_POST['coment'];
+		//print_r($_POST);
+		$sql="INSERT INTO feedback (fb_u_id,feedback_options,comments) VALUES ('$id','$feed','$coment')";
+		mysql_query($sql);
+	}
+	$sql=mysql_query("select * from feedback where id=$id");
+	$row=mysql_fetch_assoc($sql);
+	if($row['feedback_options'] == 'Excellent and very confident')
+	{
+		$excellent="checked";
+	}elseif($row['feedback_options'] == 'Good and some what confident' )
+	{
+		$good="checked";
+	}elseif($row['feedback_options'] == 'Average and still not sure')
+	{
+		$avg="checked";
+	}
+	elseif($row['feedback_options'] == 'Poor and i still consider cloud computing as a threat to my enterprise')
+	{
+		$poor="checked";
+	}
+?>
+<html>
+	<head>
+	<style>
+		#page8{
+			width:560px;
+			background-color: skyblue;
+			border-radius: 10px;
+			float:left;
+			padding:24px 182px 45px 90px;
+			margin-left:256px;
+		}
+		#page8 h2{
+			text-align:center;
+			font-size:23px;
+			width:492px;
+		}
+		#page8 input,textarea{
+			margin-left:100px;
+		}
+	</style>
+	</head>
 	<body style="background-color:FloralWhite">
 		<div class="wrapper">
 			
@@ -17,19 +66,21 @@
 						</div><br><br>
 						<div>
 							<label style="margin-left:100px;">Further suggestions(&comments)</label><br>
-							<textarea name="comments"rows="6"cols="40" ><?php echo $row['comments'] ?></textarea>
+							<textarea rows="6"cols="40" name="coment"></textarea>
 						</div>
 						<input type="submit" name="submit" value="Next" onclick="return validate();"/>
 					</form>					
-				</div><br><br>
-					<div>
-						<a href="ConfirmationFinish.php?id=<?php echo $id;?>"  style="float:left;margin-left:90px;"><input type="button" value="Back" /></a>					
-						<input style="float:right;margin-right:20px;" type="button" name="submit" value="submit" />
-					</div>	
-			</div>									
+				</div>				
+			</div>
+									
 			<div class="push"></div>			
-		</div>
-				
+		</div><br>
+				<div>
+					<a style="float:left;margin-left:20px;"><input type="button" value="Back" /></a>			
+					<span style="float:right">
+					</span>
+				</div>	
 	</body>	
 </html>	
+	
 	
