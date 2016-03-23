@@ -187,7 +187,7 @@
 				</div>
 			</div><br><br>
 			<div>
-				<a href="ProposedFramework.php?id=<?php echo $id;?>"  style="float:left;margin-left:20px;"><input type="button" value="Back" /></a>			
+				<a href="ProposedFramework.php?id=<?php echo $id;?>"  style="float:left;margin-left:20px;text-decoration:none;"><input type="button" value="Back" /></a>			
 				<span style="float:right">
 				<input type="submit" name="submit" value="Next" onclick="return validate();"/></span>
 			</div>
