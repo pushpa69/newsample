@@ -98,7 +98,7 @@ $id=$_SESSION['uid'];
 			<div class="push"></div>			
 				<br>
 				<div>
-					<a href="ConfirmationFinish?userid=<?php echo $id;?>" style="float:left;margin-left:20px;"><input id="button" type="button" value="Back"></a>			
+					<a href="ConfirmationFinish.php?userid=<?php echo $id;?>" style="float:left;margin-left:20px;"><input id="button" type="button" value="Back"></a>			
 					
 				</div>
 		</div>
