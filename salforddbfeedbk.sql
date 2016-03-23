@@ -39,10 +39,11 @@ DROP TABLE IF EXISTS `feedback`;
 
 CREATE TABLE `feedback` (
   `fb_id` int(11) DEFAULT NULL,
+  `fb_u_id` int(11) DEFAULT NULL,
   `feedback_options` varchar(100) DEFAULT NULL,
   `comments` text,
   `created_at` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
 
 /*Data for the table `feedback` */
 
