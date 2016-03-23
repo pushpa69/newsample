@@ -130,7 +130,7 @@
 		<div class="container">
 			<div id="page5">
 				<div>
-					<h1>CLOUD PREPARATION STAGE: Focuses on preparation of enterprise for cloud migration.</h1><br>
+					<h1 style="color:blue;">CLOUD PREPARATION STAGE: Focuses on preparation of enterprise for cloud migration.</h1><br>
 				</div>
 				<div>
 					<form action="" method="POST" name="myform" onsubmit="return validate();">
@@ -146,7 +146,7 @@
 								if($key1==0)
 								{
 								?>
-								<p><?php echo $val1?></p>
+								<p style="font-weight:bold;"><?php echo $val1?></p>
 									
 								<?php 
 								}
