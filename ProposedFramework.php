@@ -1,6 +1,5 @@
 <?php 
 	session_start();
-	$id=$_SESSION['uid'];
 	if(isset($_SESSION) && $_SESSION['uid']!=''){
 
 ?>
@@ -13,7 +12,7 @@
 			<?php include("menu.php");?>
 			<div id="page3">
 				<div>
-					<p>Proposed Framework</p>
+					<p style="color:blue;margin-bottom:20px;">Proposed Framework</p>
 				</div>
 				<div id="figure">
 					<img src="images/frame.png" alt="framework">
