@@ -145,14 +145,14 @@
 					<?php $result=mysql_query('SELECT * FROM general_information WHERE gi_u_id="'.$_GET['userid'].'"');
 					 // echo'<pre>'; print_r($result);exit;
 					 $arr=mysql_fetch_array($result);
-					 // echo'<pre>';
-					 // print_r($arr);
-					 // exit;
-					 if ($arr['size_enterprise']="micro"){ 
+					  // echo'<pre>';
+					  // print_r($arr);
+					  // exit;
+					 if ($arr['size_enterprise']=="micro"){ 
 					 echo "Services suitable are IaaS** or SaaS* on public cloud depending upon usage and requirement.";
-					 }else if($arr['size_enterprise']="small"){
+					 }else if($arr['size_enterprise']=="small"){
 						 echo "Service suitable are IaaS as a standalone service on public cloud, else amalgamated services (IaaS and PaaS***) on hybrid cloud depending upon usage and requirement. ";
-					 }else if($arr['size_enterprise']="medium"){
+					 }else if($arr['size_enterprise']=="medium"){
 						  echo "Service suitable are either SaaS as a standalone service on public cloud or amalgamated services (IaaS and PaaS) on hybrid cloud or two or more services (PaaS, IaaS, SaaS) on hybrid, depending upon usage and requirement. ";
 					 }echo "<br>";
 					  echo "<br>";?>
