@@ -106,7 +106,7 @@ if(isset($_SESSION) && $_SESSION['uid']!=''){
 				</div><br>
 			</div><br><br>
 			<div>
-				<a href="Stage2CPS.php" style="float:left;margin-left:20px;"><input type="button" value="Back"></a>			
+				<a href="Stage2CPS.php?userid=<?php echo $id;?>" style="float:left;margin-left:20px;"><input type="button" value="Back"></a>			
 				<a href="ConfirmationFinish.php" style="float:right;margin-right:20px;"><button type="submit" name="submit" style="margin-left:587px;">Next</button></a>
 			</div>
 		</form>			
