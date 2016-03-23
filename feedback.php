@@ -88,6 +88,7 @@ $id=$_SESSION['uid'];
 							<p style="margin-top:20px;"><textarea rows="6"cols="40" name="coment"><?php if(isset($row['comments'])){ echo $row['comments'];}?></textarea></p>
 						</div>
 						<div style="margin-top:40px;">
+						
 						<input type="submit" name="submit" value="Submit" onclick="return validate();"/>
 						<input type="hidden" name="hid" value="<?php if(isset($row['fb_u_id'])){ echo $row['fb_u_id'];} ?>" />
 					</form>					
@@ -97,8 +98,8 @@ $id=$_SESSION['uid'];
 			<div class="push"></div>			
 				<br>
 				<div>
-					<a href="Stage2CPS.php?userid=<?php echo $id;?>" style="float:left;margin-left:20px;"><input id="button" type="button" value="Back"></a>			
-					<a href="ConfirmationFinish.php" style="float:right;margin-right:20px;"><button id="button" type="submit" name="submit" style="margin-left:587px;">submit</button></a>
+					<a href="ConfirmationFinish?userid=<?php echo $id;?>" style="float:left;margin-left:20px;"><input id="button" type="button" value="Back"></a>			
+					
 				</div>
 		</div>
 	</body>	
