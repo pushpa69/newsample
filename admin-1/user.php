@@ -35,7 +35,7 @@
 					<td > <?php echo $row['firstname'];?></td>
 					<td > <?php echo $row['lastname'];?> </td>		
 					<td > <?php echo $row['email'];?></td>
-					<td><a style="text-decoration:none;" title="Edit" href="editprofile.php?id=<?php echo $row['u_id'];?>"><img style="margin-left:47px;width:22px;height:22px;"src="images/edit.png" alt="edit"></img></a>
+					<td><a style="text-decoration:none;" title="Edit" href="editprofile.php?id=<?php echo $row['u_id'];?>"><img style="margin-left:47px;width:22px;height:22px;" src="images/edit.png" alt="edit"></img></a>
 					<img title="Delete" style="margin-left:25px;width:21px;height:21px; cursor: pointer;" src="images/delete.png" alt="delete" onclick="deleteUser(<?php echo $row['u_id'];?>)"> </img> </td>				  
 				 </tr>
 				   <?php }?>				   				  
