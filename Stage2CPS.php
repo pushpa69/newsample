@@ -6,7 +6,7 @@
 	$questionArray[0][1]='Study of an existing data and applications to get desired output by embracing cloud solution.';
 	$questionArray[0][2]='Availability of supporting hardware for proposed cloud solution';
 	$questionArray[0][3]='Detailed carry out feasibility analysis of an enterprise.outline of cost/benefit model  of an enterprise.';
-	$questionArray[0][4]="Recommended tools like maturity, technical and business feasibility tools to";
+	$questionArray[0][4]="Recommended tools like maturity, technical and business feasibility tools to carry out feasibility analysis of an enterprise.";
 	$questionArray[100][0]='2. Assessing Enterprise readiness: Factors comprising enterprise preparedness.';
 	$questionArray[1][0]='2.1 Governance: How well policies and rules have been implemented to ensure smooth operation within enterprise.';
 	$questionArray[1][1]='Assessing business oriented decisions in predicting performance and taking responsibilities.';
