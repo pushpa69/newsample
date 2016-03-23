@@ -168,7 +168,7 @@
 				</div>
 				<div>
 					<p style="color:green;font-size:20px;font-weight:bold;">2.Cloud Preparation Stage:</p><br>
-					<p style="font-size:19px;color:Maroon ;font-weight:bold">>Your Preparedness</p><br>
+					<p style="font-size:19px;color:Maroon ;font-weight:bold">Your Preparedness</p><br>
 					<div>
 					<?php foreach($questionArray as $key=>$val)
 						{ ?>  
