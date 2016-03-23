@@ -139,9 +139,9 @@
 					<h1 style="color:blue;">RESULTS AND RECOMMENDATIONS.</h1><br>
 				</div>
 				<div>
-					<p>1.Cloud Requirement Stage:</p><br>					
+					<p style="color:green;font-size:20px;font-weight:bold;">1.Cloud Requirement Stage:</p><br>					
 				</div>
-				<div>
+				<div style="margin-left:150px;	">
 					<?php $result=mysql_query('SELECT * FROM general_information WHERE gi_u_id="'.$_GET['userid'].'"');
 					 // echo'<pre>'; print_r($result);exit;
 					 $arr=mysql_fetch_array($result);
@@ -154,16 +154,21 @@
 						 echo "Service suitable are IaaS as a standalone service on public cloud, else amalgamated services (IaaS and PaaS***) on hybrid cloud depending upon usage and requirement. ";
 					 }else if($arr['size_enterprise']="medium"){
 						  echo "Service suitable are either SaaS as a standalone service on public cloud or amalgamated services (IaaS and PaaS) on hybrid cloud or two or more services (PaaS, IaaS, SaaS) on hybrid, depending upon usage and requirement. ";
-					 }echo "NOTE:
-							*SaaS(software as a service): could be an email solution or any software solution like customer relationship management (CRM), content management system (CMS), Enterprise resource planning (ERP), HR related software’s etc.
-							**IaaS(Infrastructure as a service): could be a remote data center for storing and managing data, virtual monitors (machines), cloud hosting and networks, etc. 
-							***Paas(platform as a Service): could be a platform for development like operating systems, virtualized servers, various frameworks used for development etc.
-							";					 
+					 }echo "<br>";
+					  echo "<br>";?>
+					  <p style="font-weight:bold;margin-left:10px;"><?php echo "NOTE:";?></p>
+					  <?php echo "
+							*SaaS(software as a service): could be an email solution or any software solution like customer relationship management (CRM), content management system (CMS), Enterprise resource planning (ERP), HR related software’s etc.";
+					  echo "<br>";
+					  echo "**IaaS(Infrastructure as a service): could be a remote data center for storing and managing data, virtual monitors (machines), cloud hosting and networks, etc."; 
+					  echo "<br>";
+					  echo "***Paas(platform as a Service): could be a platform for development like operating systems, virtualized servers, various frameworks used for development etc.";
+												 
 					?>
 				</div>
 				<div>
-					<p>2.Cloud Preparation Stage:</p><br>
-					<p style="color:green;font-size:20px;font-weight:bold;">>Your Preparedness</p><br>
+					<p style="color:green;font-size:20px;font-weight:bold;">2.Cloud Preparation Stage:</p><br>
+					<p style="font-size:19px;color:Maroon ;font-weight:bold">>Your Preparedness</p><br>
 					<div>
 					<?php foreach($questionArray as $key=>$val)
 						{ ?>  
