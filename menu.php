@@ -5,34 +5,20 @@ session_start();
 	  $id=$_SESSION['uid'];
 	 /*  echo $id;exit; */
 	$pageactive = $_SERVER['REQUEST_URI'];
-	if($pageactive == '/salford/trunk/index.php'){
-		if(strpos($pageactive,'index.php')!=false){
-		$home = active;
-		}
-	}elseif ($pageactive == '/salford/trunk/ParticpantInfo.php?id='.$id){
-		if(strpos($pageactive,'ParticpantInfo.php')!=false){
-		$ParticpantInfo = active;
-		}
-	}elseif ($pageactive == '/salford/trunk/ProposedFramework.php?id='.$id){
-		if(strpos($pageactive,'ProposedFramework.php')!=false){
-		$ProposedFramework = active;
-		}
-	}elseif ($pageactive == '/salford/trunk/Stage1CRS.php'){
-		if(strpos($pageactive,'Stage1CRS.php')!=false){
-		$Stage1CRS = active;
-		}
-	}elseif ($pageactive == '/salford/trunk/Stage2CPS.php?userid='.$id){
-		if(strpos($pageactive,'Stage2CPS.php')!=false){
-		$Stage2CPS = active;
-		}
-	}elseif ($pageactive == '/salford/trunk/Stage3CMS.php'){
-		if(strpos($pageactive,'Stage3CMS.php')!=false){
-		$Stage3CMS = active;
-		}
-	}elseif($pageactive == '/salford/trunk/ConfirmationFinish.php?userid='.$id){
-		if(strpos($pageactive,'ConfirmationFinish.php')!=false){
-		$ConfirmationFinish = active;
-		}
+	if(strpos($pageactive,'index.php')!=false){		
+		$home = active;	
+	}else if(strpos($pageactive,'ParticpantInfo.php')!=false){		
+		$ParticpantInfo = active;		
+	}else if(strpos($pageactive,'ProposedFramework.php')!=false){		
+		$ProposedFramework = active;		
+	}else if(strpos($pageactive,'Stage1CRS.php')!=false){		
+		$Stage1CRS = active;		
+	}else if(strpos($pageactive,'Stage2CPS.php')!=false){		
+		$Stage2CPS = active;		
+	}else if(strpos($pageactive,'Stage3CMS.php')!=false){		
+		$Stage3CMS = active;		
+	}else if(strpos($pageactive,'ConfirmationFinish.php')!=false){		
+		$ConfirmationFinish = active;		
 	}
 	if($id == ""){
 ?>
