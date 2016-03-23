@@ -126,7 +126,8 @@ height: 2em;
 	font-size:29px;
 }
 #figure{
-	margin-left:450px;
+	/* margin-left:450px; */
+	text-align:center;
 }
 #page4{
 	background-color: skyblue;
@@ -197,6 +198,9 @@ height: 2em;
 #page6 span{
 	margin-left:80px;
 }
+/* #page7 span{
+	margin-left:170px;
+} */
 #page7{
 	background-color:skyblue;
 	border-radius:5px;

@@ -48,7 +48,7 @@
 						<div>
 							<label style="font-weight:bold;font-size:14px;width:300px;">1.Size of your enterprise.</label>
 							<select name="size_of_enter" id="size_of_enter" onblur="myfunction();">
-							<option value="default" >---select size of your enterprize---</option>
+							<option value="default" >---select size of your enterprise---</option>
 							<?php
                                 if($row['size_enterprise']== 'micro')	{
 											

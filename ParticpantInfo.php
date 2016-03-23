@@ -31,7 +31,7 @@
 		 VALUES ('".$id."', '".$name_org."','".$desig."', '".$experience."', '".$other_info."', '".$date."')"; 
 			//echo'pre';print_r($sql);
 	
-		 $sql="INSERT INTO general_information (gi_u_id, name_oraganization,designation, expereince, other_info,  updated_at, updated_by,created_at)	VALUES ('','".$id."', '".$name_org."','".$desig."', '".$experience."', '".$other_info."', '".$date."')"; 
+		 //$sql="INSERT INTO general_information (gi_u_id, name_oraganization,designation, expereince, other_info,  updated_at, updated_by,created_at)	VALUES ('','".$id."', '".$name_org."','".$desig."', '".$experience."', '".$other_info."', '".$date."')"; 
 			//echo'pre';print_r($sql);		
 		
 		 } 
@@ -98,7 +98,7 @@
 						}?>" size="30"/>
 					</div>
 					<div>
-						<label style="font-weight:bold;font-size:14px;">4.Any of Other Information(optional)</label>
+						<label style="font-weight:bold;font-size:14px;">4.Any Other Information(optional)</label>
 						<input type="text" id="" name="other_info" value="<?php if(isset($row['other_info'])){
 							echo $row['other_info'];
 						}?>" size="30"/>

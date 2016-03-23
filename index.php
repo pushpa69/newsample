@@ -27,7 +27,7 @@
 					else
 					{?>
 						<p style="text-align:center;color:red;font-size:16px;">
-						<?php echo "worng creditionals";?></p>
+						<?php echo "Wrong Credentials";?></p>
 					<?php
 					}
 				}

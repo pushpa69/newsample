@@ -15,7 +15,7 @@
 					<p style="color:blue;margin-bottom:20px;">Proposed Framework</p>
 				</div>
 				<div id="figure">
-					<img src="images/frame.png" alt="framework">
+					<img src="images/Framework.png" alt="framework">
 				</div>
 			</div>
 			<div style="text-align:left;margin-left:20px;">
