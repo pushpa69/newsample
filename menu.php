@@ -19,6 +19,8 @@ session_start();
 		$Stage3CMS = active;		
 	}else if(strpos($pageactive,'ConfirmationFinish.php')!=false){		
 		$ConfirmationFinish = active;		
+	}else if(strpos($pageactive,'Feedback.php')!=false){		
+		$Feedback = active;		
 	}
 	if($id == ""){
 ?>
@@ -82,6 +84,7 @@ session_start();
 								<li><a href="#" class="<?php echo $Stage2CPS ?>">Stage2CPS</a></li>
 								<li><a href="#" class="<?php echo $Stage3CMS ?>">Stage3CMS</a></li>
 								<li><a href="#" class="<?php echo $ConfirmationFinish ?>">ConfirmationFinish</a></li>
+								<li><a href="#" class="<?php echo $Feedback ?>">Feedback</a></li>
 								<li><a href="logout.php" class="<?php echo $Logout ?>">Logout</a></li>
 							</ul>
 					</div>					
