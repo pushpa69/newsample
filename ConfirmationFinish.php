@@ -207,7 +207,7 @@
 							}?> 
 						<?php }}?>							
 						<br>
-					<p style="font-size:17px;color:Maroon ;font-weight:bold;text-decoration:underline;">What need to prepare of</p><br>
+					<p style="font-size:17px;color:Maroon ;font-weight:bold;text-decoration:underline;">What you need to prepare for</p><br>
 					 
 						<?php foreach($questionArray as $key=>$val)
 						{ ?>  

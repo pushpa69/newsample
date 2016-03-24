@@ -171,7 +171,7 @@
 								else
 								{
 									?>
-							<option value="medium" >Less than 10M£</option>
+							<option value="medium" >Less than 43M£</option>
 							<?php
 							}?>
 							</select><br><br>
