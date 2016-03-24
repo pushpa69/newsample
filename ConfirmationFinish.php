@@ -11,7 +11,7 @@
 	$questionArray[1][0]='<span style="text-decoration:underline;margin-left:0px;">2.1 Governance:</span> How well policies and rules have been implemented to ensure smooth operation within enterprise.';
 	$questionArray[1][1]='Assessing business oriented decisions in predicting performance and taking responsibilities.';
 	$questionArray[1][2]='Availability of IT governance, which is combination of business and IT members of an enterprise.';
-	$questionArray[1][3]='Proper implementation of IT governance(maintenance, control and contribution of available assests )to accomplish business strategy and <span>goals.';
+	$questionArray[1][3]='Proper implementation of IT governance(maintenance, control and contribution of available assests )to accomplish business strategy <p>and goals.</p>';
 	$questionArray[1][4]='For medium and some small enterprises, ensure Service Oriented Architecture (SOA) is running which manages a relationship <p> between customer and provider in various management activities.</p>';
 	
 	$questionArray[200][0]='<span style="text-decoration:underline;margin-left:0px;">2.2 Top Cloud Risks and its assessment:</span> Technical and organizational risks associated with cloud computing.';
@@ -82,7 +82,7 @@
 	$questionArray[16][3]='Select CSP who demonstrates cloud services prior to migration and is transparent to SLAs.';
 	$questionArray[16][4]='Involve cloud insurers as they are better in assessing and monitoring cloud associated risks.';
 	$questionArray[16][5]='Ensure interoperability among legacy systems and cloud is addressed using mulesoft, Unified Cloud interface.';
-	$questionArray[16][6]='Ensure CSP complies with open standardizations like: Open cloud computing interface, Webs service agreement specification,cloud <span>infrastructure Management Interface, Open virtualization format and cloud data management interface, to avoid interoperability issues.';
+	$questionArray[16][6]='Ensure CSP complies with open standardizations like: Open cloud computing interface, Webs service agreement specification,cloud <p>infrastructure Management Interface, Open virtualization format and cloud data management interface, to avoid interoperability issues.</p>';
 	$questionArray[16][7]='Ask for solutions that provides data location of the users at all time.';
 	$questionArray[16][8]='Ensure CSP use two layered data ware houses for data storage and are at least in European economic Zone.';
 
@@ -207,7 +207,7 @@
 							}?> 
 						<?php }}?>							
 						<br>
-					<p style="font-size:17px;color:Maroon ;font-weight:bold;text-decoration:underline;">What you need to be aware of</p><br>
+					<p style="font-size:17px;color:Maroon ;font-weight:bold;text-decoration:underline;">What need to prepare of</p><br>
 					 
 						<?php foreach($questionArray as $key=>$val)
 						{ ?>  
