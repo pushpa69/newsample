@@ -21,6 +21,8 @@
 		$user= active;	
 	}else if(strpos($pageactive,'viewreport.php')!=false){		
 		$report = active;
+	}else if(strpos($pageactive,'feedbak.php')!=false){		
+		$report = active;
 	}
 ?>
 <html>

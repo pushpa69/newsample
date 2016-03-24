@@ -268,3 +268,15 @@ body form {
 #result input{
 	margin-left:95px;
 } */
+#feed{
+	background-color:#F7D9BB;
+	border-radius:5px;
+	width:540px;
+	margin-left:330px;
+	margin-top:70px;
+	padding:13px 10px 90px 80px;
+}
+#feed p,h2{
+	margin-left:-35px;
+	font-size:22px;	
+}

@@ -23,7 +23,9 @@
 					<td><?php echo $row['firstname'];?></td>
 					<td><?php echo $row['lastname'];?></td>		
 					<td><?php echo $row['email'];?></td>
-					<td><a href="viewreport.php?userid=<?php echo $row['u_id'];?>" ><button>View Report</button></a></td>
+					<td><a href="viewreport.php?userid=<?php echo $row['u_id'];?>" ><button>View Report</button></a>
+						<a href="feedbak.php?userid=<?php echo $row['u_id'];?>" ><button>Feed Back</button></a>
+					</td>
 				  </tr>	
 					<?php } ?>
 				</table>
