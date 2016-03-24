@@ -228,7 +228,7 @@ $questionArray[0][0]='<span style="text-decoration:underline;margin-left:0px;">1
 							}?> 
 						<?php }}?>							
 						<br>
-					<p style="font-size:17px;color:Maroon ;text-decoration:underline;">What you need to be aware of</p><br>
+					<p style="font-size:17px;color:Maroon ;text-decoration:underline;">What need to prepare of</p><br>
 					 
 						<?php foreach($questionArray as $key=>$val)
 						{ ?>  
